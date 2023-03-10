@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="main__container">
       <NavBar />
-      <img src={LineLeft} alt="Line left" className="line__left" />
-      <img src={LineRight} alt="Line right" className="line__right" />
+      {/* <img src={LineLeft} alt="Line left" className="line__left" />
+      <img src={LineRight} alt="Line right" className="line__right" /> */}
     </div>
   );
 }

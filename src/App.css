@@ -3,11 +3,13 @@
 body {
   font-family: "Overlock", cursive;
   background-color: #0d1217;
+  overflow-x: hidden;
 }
 
 .main__container {
   margin: 0 auto;
   padding: 0 auto;
+  height: 2000px;
 }
 
 .line__left {
