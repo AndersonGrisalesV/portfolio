@@ -9,6 +9,24 @@ function App() {
       <NavBar />
       {/* <img src={LineLeft} alt="Line left" className="line__left" />
       <img src={LineRight} alt="Line right" className="line__right" /> */}
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
+      <p>Interesting</p>
     </div>
   );
 }

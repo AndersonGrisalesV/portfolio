@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Overlock:400,700,900");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
   font-family: "Overlock", cursive;
   background-color: #0d1217;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .main__container {
@@ -24,4 +31,23 @@ body {
   object-fit: cover;
   width: 1px;
   margin-left: 1169px;
+}
+
+.right-to-left-enter {
+  transform: translateX(100%);
+}
+.right-to-left-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.right-to-left-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+.right-to-left-exit-active {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
