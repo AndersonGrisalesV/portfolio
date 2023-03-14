@@ -1,12 +1,16 @@
 .side__drawer {
   position: fixed;
   right: 0;
-
   top: 0;
-  z-index: 10001;
+  z-index: 3;
   height: 100vh;
   width: 50%;
-  background: red;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  background: #0d1217a1;
+  box-shadow: 0 2px 8px rgba(22, 146, 6, 0.26);
   overflow-y: scroll;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

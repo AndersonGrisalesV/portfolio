@@ -16,7 +16,7 @@ body {
 .main__container {
   margin: 0 auto;
   padding: 0 auto;
-  height: 2000px;
+  height: 100vh;
 }
 
 .line__left {
