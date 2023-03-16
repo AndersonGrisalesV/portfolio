@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Overlock:400,700,900");
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -50,4 +54,74 @@ body {
   transform: translateX(100%);
   opacity: 0;
   transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+#hamburguer-hook {
+  display: none;
+}
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #f7f7f7, #e6e6e6);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #fe6d73, #ea4853);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #ff454f, #ea4853);
+}
+
+@media only screen and (max-width: 860px) {
+  #hamburguer-hook {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 62px;
+    margin-right: 28px;
+    height: 80px;
+
+    right: 0;
+
+    position: fixed;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 6;
+
+    /* height: 44.4px;
+    display: flex;
+    position: relative;
+    margin-right: 32px;
+    justify-content: inherit;
+    z-index: 4;
+  
+    justify-content: space-between;
+    align-items: center;
+  
+    background-color: #0d1217;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    z-index: 4; */
+  }
+
+  .show__hamburger__menu {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .hide__hamburguer__menu {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    top: -100px;
+  }
 }

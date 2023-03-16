@@ -1,4 +1,10 @@
 .hamburguer__react {
+  position: fixed;
   outline: none;
-  z-index: 4;
+}
+
+.hide__hamburguer__menu {
+  transform: translateY(-100%);
+  transition: transform 5s ease-in-out, opacity 5s ease-in-out;
+  top: -100px;
 }
