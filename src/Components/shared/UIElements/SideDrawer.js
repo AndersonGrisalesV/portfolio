@@ -13,7 +13,26 @@ const SideDrawer = (props) => {
       unmountOnExit
     >
       <aside className={styles.side__drawer} onClick={props.onClick}>
-        {props.children}
+        <ol className={styles.navbar__links__responsive}>
+          <li className={styles.navbar__item__responsive}>
+            <a href="#home">Home</a>
+          </li>
+          <li className={styles.navbar__item__responsive}>
+            <a href="#expertise">Expertise</a>
+          </li>
+          <li className={styles.navbar__item__responsive}>
+            <a href="#work">Work</a>
+          </li>
+          <li className={styles.navbar__item__responsive}>
+            <a href="#about">About</a>
+          </li>
+          <li className={styles.navbar__item__responsive}>
+            <a href="#contact">Contact</a>
+          </li>
+          <div className={styles.button__responsive}>
+            <button className={styles.navbar__button__responsive}>Don't</button>
+          </div>
+        </ol>
       </aside>
     </CSSTransition>
   );
