@@ -6,6 +6,7 @@ import Backdrop from "../shared/UIElements/Backdrop";
 import SideDrawer from "../shared/UIElements/SideDrawer";
 import Hamburger from "hamburger-react";
 import ReactDOM from "react-dom";
+import "./../../App.css";
 
 const NavBar = () => {
   const [visibleNavBar, setVisibleNavBar] = useState(true);
@@ -14,12 +15,26 @@ const NavBar = () => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
+  const [delayShowgHamburguerMenu, setDelayShowHamburguerMenu] =
+    useState(false);
+
   const closeDrawerHandler = () => {
     setOpenHamburguerMenu(false);
   };
 
   useEffect(() => {
     let prevScrollPos = window.pageYOffset;
+    // const container = document.getElementById("container__navbar__hamburguer");
+    // if (visibleNavBar) {
+    //   setTimeout(() => {
+    //     container.classList.remove("hide__hamburger__menu");
+    //     container.classList.add("show__hamburger__menu");
+    //   }, 2000);
+    // } else {
+    //   container.classList.remove("show__hamburger__menu");
+    //   container.classList.add("hide__hamburger__menu");
+    // }
+
     window.onscroll = function () {
       let currentScrollPos = window.pageYOffset;
       if (prevScrollPos > currentScrollPos) {
@@ -29,6 +44,14 @@ const NavBar = () => {
       }
       prevScrollPos = currentScrollPos;
     };
+
+    if (visibleNavBar) {
+      setTimeout(() => {
+        setDelayShowHamburguerMenu(true);
+      }, 200);
+    } else {
+      setDelayShowHamburguerMenu(false);
+    }
   }, [visibleNavBar, scrollPosition]);
 
   useEffect(() => {
@@ -37,7 +60,9 @@ const NavBar = () => {
     } else {
       document.body.style.overflow = "scroll";
     }
-  });
+  }, [openHamburguerMenu]);
+
+  const mq = window.matchMedia("(max-width: 860px)");
 
   return (
     <React.Fragment>
@@ -76,20 +101,9 @@ const NavBar = () => {
             <button className={styles.navbar__button}>Don't</button>
           </div>
         </div>
-        {/* <div className={styles.menu__responsive}>
-          <Hamburger
-            color="linear-gradient(90deg, #19c78e, #3c9ce5)"
-            hideOutline={false}
-            size="30"
-            rounded
-            toggled={openHamburguerMenu}
-            toggle={setOpenHamburguerMenu}
-          />
-        </div> */}
-      </div>
-      <React.Fragment>
-        {visibleNavBar &&
-          ReactDOM.createPortal(
+
+        {!delayShowgHamburguerMenu && (
+          <div className={styles.menu__responsive}>
             <Hamburger
               color="linear-gradient(90deg, #19c78e, #3c9ce5)"
               hideOutline={false}
@@ -97,10 +111,24 @@ const NavBar = () => {
               rounded
               toggled={openHamburguerMenu}
               toggle={setOpenHamburguerMenu}
-            />,
-            document.getElementById("hamburguer-hook")
-          )}
-      </React.Fragment>
+            />
+          </div>
+        )}
+        <React.Fragment>
+          {delayShowgHamburguerMenu &&
+            ReactDOM.createPortal(
+              <Hamburger
+                color="linear-gradient(90deg, #19c78e, #3c9ce5)"
+                hideOutline={false}
+                size="30"
+                rounded
+                toggled={openHamburguerMenu}
+                toggle={setOpenHamburguerMenu}
+              />,
+              document.getElementById("hamburguer-hook")
+            )}
+        </React.Fragment>
+      </div>
     </React.Fragment>
   );
 };

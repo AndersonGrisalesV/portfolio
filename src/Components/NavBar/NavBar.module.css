@@ -61,7 +61,7 @@
 .navbar__links {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: self-end;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -287,12 +287,7 @@ box-shadow: 2px 1000px 1px #fff inset; */
   }
 
   .menu__responsive {
-    display: flex;
-    /* margin-left: 290px; */
-    flex-direction: row-reverse;
-    margin-top: -0.050000000000000044rem;
-    margin-right: 1.8rem;
-    z-index: 2;
+    margin-right: 28px;
   }
 
   /* rest of the CSS for small screens */
@@ -324,7 +319,7 @@ box-shadow: 2px 1000px 1px #fff inset; */
   .navbar__links {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: self-end;
     list-style: none;
     margin: 0;
     padding: 0;
