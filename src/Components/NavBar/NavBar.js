@@ -7,6 +7,7 @@ import SideDrawer from "../shared/UIElements/SideDrawer";
 import Hamburger from "hamburger-react";
 import ReactDOM from "react-dom";
 import "./../../App.css";
+import Button from "../shared/UIElements/Button";
 
 const NavBar = () => {
   const [visibleNavBar, setVisibleNavBar] = useState(true);
@@ -62,7 +63,18 @@ const NavBar = () => {
     }
   }, [openHamburguerMenu]);
 
-  const mq = window.matchMedia("(max-width: 860px)");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 860px)");
+    setIsMobile(mq.matches);
+    const handleResize = () => setIsMobile(mq.matches);
+    mq.addEventListener("change", handleResize);
+    if (!isMobile) {
+      setOpenHamburguerMenu(false);
+      mq.removeEventListener("change", handleResize);
+    }
+  }, [isMobile]);
 
   return (
     <React.Fragment>
@@ -98,7 +110,7 @@ const NavBar = () => {
             </li>
           </ul>
           <div className={styles.button}>
-            <button className={styles.navbar__button}>Don't</button>
+            <Button onText={"Don't"}></Button>
           </div>
         </div>
 

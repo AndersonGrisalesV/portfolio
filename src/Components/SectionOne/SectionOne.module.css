@@ -1,0 +1,26 @@
+.section__container {
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.container__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 32%;
+}
+
+.container__3dAnimation {
+  zoom: 140%;
+  display: contents;
+  touch-action: manipulation;
+  overflow: hidden; /* Hides any content outside of the div */
+  touch-action: pan-y; /* Allows vertical scrolling */
+  height: 100vh; /* Sets the height of the div to the full viewport height */
+  background-color: #eee;
+  position: absolute;
+  overflow: hidden;
+}

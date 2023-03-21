@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
+import Button from "./Button";
 import styles from "./SideDrawer.module.css";
 
 const SideDrawer = (props) => {
@@ -29,8 +30,8 @@ const SideDrawer = (props) => {
           <li className={styles.navbar__item__responsive}>
             <a href="#contact">Contact</a>
           </li>
-          <div className={styles.button__responsive}>
-            <button className={styles.navbar__button__responsive}>Don't</button>
+          <div className={styles.container__button__sideDrawer}>
+            <Button onText={"Don't"}></Button>
           </div>
         </ol>
       </aside>

@@ -102,7 +102,7 @@ body {
 
     width: min(75vw, 138.5px);
     height: 100vh;
-    animation: slide-down 0.1s backwards;
+
     z-index: 6;
   }
 
@@ -117,9 +117,6 @@ body {
     right: 0;
 
     z-index: 6;
-  }
-
-  .container__navbar__hamburguer {
   }
 
   .show__hamburger__menu {

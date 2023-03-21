@@ -75,6 +75,10 @@
   display: none;
 }
 
+.menu__responsive {
+  display: none;
+}
+
 .navbar__item a {
   color: #fff;
   opacity: 0.95;
