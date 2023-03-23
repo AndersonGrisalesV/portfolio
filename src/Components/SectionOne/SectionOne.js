@@ -12,7 +12,7 @@ const SectionOne = () => {
         </div>
 
         <div>
-          <h1>Anderson Grisales</h1>
+          <h1 className={styles.name}>Anderson Grisales</h1>
         </div>
 
         <div>
@@ -20,7 +20,7 @@ const SectionOne = () => {
         </div>
 
         <div>
-          <p>
+          <p className={styles.description}>
             I'm a systems engineer turned web developer and UX/UI designer who
             specializes in crafting exceptional digital experiences. My passion
             for building digital products is driven by a strong emphasis on
@@ -35,7 +35,7 @@ const SectionOne = () => {
       <div className={styles.container__3dAnimation}>
         <Spline
           scene="https://draft.spline.design/3kHh0pZ9i-yEo366/scene.splinecode"
-          setZoom={180}
+          setZoom={100}
         />
       </div>
     </section>
