@@ -32,9 +32,11 @@ const SectionOne = () => {
           <Button onText={"Resume"}></Button>
         </div>
       </div>
-
       <div className={styles.container__3dAnimation}>
-        <Spline scene="https://prod.spline.design/mTrvEh8lCBeDU00r/scene.splinecode" />
+        <Spline
+          scene="https://draft.spline.design/3kHh0pZ9i-yEo366/scene.splinecode"
+          setZoom={180}
+        />
       </div>
     </section>
   );
