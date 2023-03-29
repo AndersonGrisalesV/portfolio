@@ -2,7 +2,11 @@
    <a href='https://dplace-3d5f4.web.app/api/homepage?utm_source=GitHub&utm_medium=readme&utm_campaign=well_app_readme'>
         <img src="https://user-images.githubusercontent.com/94204560/228659183-bf7b8217-a654-4383-8927-6f5714584226.png" width=20% height=20%>
   </a>
-  <h1>My Portfolio</h1>
+  <div align="center">
+ 
+   <img src="https://user-images.githubusercontent.com/94204560/228667708-b289dd64-9955-4ed3-a2c2-5fa01beff1bb.png">
+</div>
+
  </div>
 
 </br>
