@@ -15,16 +15,17 @@
 
 <div align="center">
   <a href='https://dplace-3d5f4.web.app/api/homepage?utm_source=GitHub&utm_medium=readme&utm_campaign=well_app_readme'>
-      <img src='https://user-images.githubusercontent.com/94204560/219815507-de294321-2e6d-44b8-9d60-e68d331d5a57.png'>
+      <img src='https://user-images.githubusercontent.com/94204560/228684711-9f760caa-680c-4449-866e-38547e04d917.png'>
   </a>
 </div>
 
 
 
+
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/94204560/219816085-dbfcf7c0-32c0-4125-86aa-66626ac0c115.png" alt="mockup" /></td>
-    <td><img src="https://user-images.githubusercontent.com/94204560/219816240-a23487f9-1b30-4084-bdd3-56d37ca91219.png" alt="mockups" /></td>
+    <td><img src="https://user-images.githubusercontent.com/94204560/228683807-ea31989e-adb6-40f5-b1e0-0e72d3807b40.png" alt="mockup" /></td>
+    <td><img src="https://user-images.githubusercontent.com/94204560/228684877-d2dc1ea7-b798-490e-8363-243f9113a566.png" alt="mockups" /></td>
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/94204560/219818373-d09fd93d-6077-4753-9aeb-00b7f45102e9.png" alt="mockup" /></td>
