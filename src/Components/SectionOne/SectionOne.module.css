@@ -6,13 +6,88 @@
   height: 100%;
 }
 
-.container__text {
+.container__left__section {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  min-height: 468px;
+  padding: 0 3px;
+  width: 584px;
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start; */
 
   margin-left: 62px;
   margin-right: 62px;
+}
+
+.greeting__text {
+  background: linear-gradient(
+    180deg,
+    rgb(25, 199, 142) 0%,
+    rgb(60.24, 156.34, 229.5) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.name__text {
+  font-size: 72px;
+  letter-spacing: -2px;
+  font-weight: 800;
+  line-height: 80px;
+  color: rgba(255, 255, 255, 0.949);
+  font-style: normal;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.lets__design__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.lets__text {
+  font-size: 66px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.design__text {
+  background: linear-gradient(
+    180deg,
+    rgb(25, 199, 142) 0%,
+    rgb(60.24, 156.34, 229.5) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 66px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  margin: 0;
+  margin-left: 12px;
+}
+
+.description__text {
+  font-size: 18px;
+  color: #f9f9f9;
+  letter-spacing: 0;
+  line-height: 32px;
+  min-height: 144px;
+  width: 527px;
+}
+
+.button__container {
+  margin-top: 28px;
 }
 
 .container__3dAnimation {
@@ -27,23 +102,4 @@
   /* background-color: #eee; */
   /* margin-left: 62px;
   margin-right: 62px; */
-}
-
-.name {
-  font-size: 72px;
-  font-weight: 800;
-  line-height: 80px;
-  color: rgba(255, 255, 255, 0.949);
-  font-style: normal;
-  letter-spacing: -2px;
-  margin-top: 31px;
-  white-space: nowrap;
-}
-
-.description {
-  font-size: 16px;
-  color: rgba(249, 249, 249, 0.949);
-  letter-spacing: 0px;
-  min-height: 144px;
-  width: 527px;
 }
