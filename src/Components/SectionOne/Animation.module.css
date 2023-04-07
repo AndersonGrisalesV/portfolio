@@ -1,0 +1,9 @@
+.container__right__section {
+  width: 100%;
+  display: flex;
+  padding: 16px;
+  padding-left: 485px;
+  padding-right: 0px;
+  position: absolute;
+  height: 100%;
+}

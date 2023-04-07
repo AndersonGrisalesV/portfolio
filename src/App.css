@@ -70,26 +70,26 @@ body {
 
 /* Hide the default scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  background-color: #fff;
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: linear-gradient(to bottom, #f7f7f7, #e6e6e6);
-  border-radius: 10px;
+  background: linear-gradient(to bottom, transparent, transparent);
+  border-radius: 6px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #fe6d73, #ea4853);
-  border-radius: 10px;
+  background: linear-gradient(to bottom, #038d87, #038d87);
+  border-radius: 6px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #ff454f, #ea4853);
+  background: linear-gradient(to bottom, #038d87, #038d87);
 }
 
 @media only screen and (max-width: 860px) {

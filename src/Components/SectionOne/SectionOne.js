@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../shared/UIElements/Button";
-import Spline from "@splinetool/react-spline";
 import styles from "./SectionOne.module.css";
+import Animation from "./Animation";
 
 const SectionOne = () => {
   return (
@@ -33,12 +33,8 @@ const SectionOne = () => {
           <Button onText={"Resume"}></Button>
         </div>
       </div>
-      <div className={styles.container__3dAnimation}>
-        <Spline
-          scene="https://draft.spline.design/3kHh0pZ9i-yEo366/scene.splinecode"
-          setZoom={100}
-        />
-      </div>
+      <div className={styles.container__right__section}></div>
+      <Animation />
     </section>
   );
 };
