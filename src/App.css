@@ -17,7 +17,6 @@ html {
 }
 
 body {
-  display: flex;
   font-family: "Overlock", cursive;
   background-color: #0d1217;
   overflow-x: hidden;
@@ -26,8 +25,8 @@ body {
 }
 
 .main__container {
-  margin: 0 auto;
-  padding: 0 auto;
+  margin: 0;
+  padding: 0;
   height: 100vh;
 }
 

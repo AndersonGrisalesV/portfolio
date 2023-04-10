@@ -5,7 +5,7 @@ import styles from "./Animation.module.css";
 const Animation = () => {
   return (
     <div className={styles.container__right__section}>
-      <Spline scene="https://draft.spline.design/fQZfl7e3mHqUIf36/scene.splinecode" />
+      <Spline scene="https://draft.spline.design/ke-925JRMxdge4-o/scene.splinecode" />
     </div>
   );
 };

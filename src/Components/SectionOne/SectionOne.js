@@ -33,7 +33,7 @@ const SectionOne = () => {
           <Button onText={"Resume"}></Button>
         </div>
       </div>
-      <div className={styles.container__right__section}></div>
+
       <Animation />
     </section>
   );

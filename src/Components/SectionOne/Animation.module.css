@@ -1,9 +1,18 @@
 .container__right__section {
   width: 100%;
-  display: flex;
-  padding: 16px;
-  padding-left: 485px;
-  padding-right: 0px;
   position: absolute;
-  height: 100%;
+  padding-left: 30%;
+  height: 95vh;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1470px) {
+  .container__right__section {
+    width: 100%;
+    position: absolute;
+    padding-left: 40%;
+    top: 0;
+    height: 95vh;
+    box-sizing: border-box;
+  }
 }
