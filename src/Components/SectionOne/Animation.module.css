@@ -1,18 +1,27 @@
 .container__right__section {
-  width: 100%;
+  width: calc(100% - -614px);
+  top: -7px;
   position: absolute;
-  padding-left: 30%;
-  height: 95vh;
+  overflow-x: hidden;
+
+  height: 90%;
+
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 1470px) {
+/* @media only screen and (max-width: 1000px) {
   .container__right__section {
-    width: 100%;
+    width: calc(100% - -550px);
+    top: -7px;
     position: absolute;
-    padding-left: 40%;
-    top: 0;
-    height: 95vh;
+    overflow-x: hidden;
+    height: 50%;
     box-sizing: border-box;
-  }
-}
+  } */
+
+/* width: calc(100% - -614px);
+top: 1px;
+position: absolute;
+overflow-x: hidden;
+height: 45%;
+box-sizing: border-box; */
