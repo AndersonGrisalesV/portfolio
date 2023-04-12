@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../shared/UIElements/Button";
 import Spline from "@splinetool/react-spline";
 import styles from "./SectionOne.module.css";
+import ReactDOM from "react-dom";
 import Animation from "./Animation";
 
 const SectionOne = () => {
@@ -35,11 +36,24 @@ const SectionOne = () => {
             <Button onText={"Resume"}></Button>
           </div>
         </div>
+        <div className={styles.container__right__section}>
+          <Spline
+            style={{ width: "100%", height: "105%" }}
+            scene="https://draft.spline.design/ke-925JRMxdge4-o/scene.splinecode"
+          />
+        </div>
 
-        <Spline
+        {/* <Spline
           className={styles.container__right__section}
           scene="https://draft.spline.design/ke-925JRMxdge4-o/scene.splinecode"
-        />
+        /> */}
+        {/* {true &&
+          ReactDOM.createPortal(
+            <div className={styles.container__right__section}>
+              <Spline scene="https://draft.spline.design/ke-925JRMxdge4-o/scene.splinecode" />
+            </div>,
+            document.getElementById("animation-avatar-hook")
+          )} */}
       </section>
     </div>
   );
