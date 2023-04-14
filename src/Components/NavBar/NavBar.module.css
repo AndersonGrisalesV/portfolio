@@ -152,7 +152,7 @@ background-origin: border-box;
 background-clip: content-box, border-box;
 box-shadow: 2px 1000px 1px #fff inset; */
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 960px) {
   /* Small screens */
   .nav__bar {
     display: flex;

@@ -22,7 +22,7 @@
 .container__right__section {
   /* width: calc(100% - -614px);
   top: -7px; */
-  width: 120%;
+  width: 106%;
   position: absolute;
   display: flex;
   align-items: self-end;
@@ -105,6 +105,344 @@
   height: 100%;
 }
 
+@media only screen and (max-width: 10000px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: -923px;
+    /* margin-left: 62px;
+    margin-right: 1220px; */
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 108%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 105%;
+  }
+}
+
+@media only screen and (max-width: 8000px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: -923px;
+    /* margin-left: 62px;
+    margin-right: 1220px; */
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 110%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 105%;
+  }
+}
+
+@media only screen and (max-width: 7000px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: -923px;
+    /* margin-left: 62px;
+    margin-right: 1220px; */
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 111%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 105%;
+  }
+}
+
+@media only screen and (max-width: 4000px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: -923px;
+    /* margin-left: 62px;
+    margin-right: 1220px; */
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 113%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 105%;
+  }
+}
+
+@media only screen and (max-width: 3000px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 650px;
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 124%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 110%;
+  }
+}
+
+@media only screen and (max-width: 2700px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 607px;
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 124%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 110%;
+  }
+}
+
+@media only screen and (max-width: 2400px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 429px;
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 128%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 110%;
+  }
+}
+
+@media only screen and (max-width: 2100px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 358px;
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 133%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 110%;
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 240px;
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 133%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 110%;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 208px;
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 133%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -50px;
+    left: 0px;
+    height: 110%;
+  }
+}
+
 @media only screen and (max-width: 1366px) {
   .section__container {
     box-sizing: border-box;
@@ -122,7 +460,7 @@
 
     display: flex;
     flex-direction: column;
-    margin-left: 156px;
+    margin-left: 146px;
   }
 
   .container__right__section {
@@ -138,7 +476,7 @@
   }
 }
 
-@media only screen and (max-width: 1920px) and (min-width: 1366px) {
+@media only screen and (max-width: 1266px) {
   .section__container {
     box-sizing: border-box;
     margin-top: 112px;
@@ -155,11 +493,46 @@
 
     display: flex;
     flex-direction: column;
-    margin-left: 333px;
+    margin-left: 94px;
   }
 
   .container__right__section {
-    width: 128%;
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 143%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 105%;
+  }
+}
+
+@media only screen and (max-width: 1166px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 62px;
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 143%;
     position: absolute;
     display: flex;
     align-items: self-end;
