@@ -97,7 +97,7 @@ body {
     display: flex;
     position: fixed;
 
-    /* bottom: 0px; */
+    bottom: 0px;
     right: 0px;
 
     width: min(75vw, 138.5px);

@@ -3,7 +3,7 @@
   margin-top: 112px;
   display: flex;
   position: relative;
-  /* margin-left: 62px; */
+
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
@@ -14,17 +14,20 @@
 
   display: flex;
   flex-direction: column;
-  margin-left: 62px;
-  margin-right: 1220px;
+  margin-left: -827px;
+  /* margin-left: 62px;
+  margin-right: 1220px; */
 }
 
 .container__right__section {
   /* width: calc(100% - -614px);
   top: -7px; */
-  width: 100%;
+  width: 120%;
   position: absolute;
-  top: -86px;
-  left: 250px;
+  display: flex;
+  align-items: self-end;
+  top: -20px;
+  left: 0px;
   height: 105%;
 }
 
@@ -98,21 +101,80 @@
 }
 
 .container__3dAnimation {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  display: contents;
-  /* position: absolute; */
-  /* height: 100vh; 
-  width: 100%; */
-  padding-right: 180px;
-  /* background-color: #eee; */
-  /* margin-left: 62px;
-  margin-right: 62px; */
+  width: 110%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1366px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 156px;
+  }
+
+  .container__right__section {
+    /* width: calc(100% - -614px);
+    top: -7px; */
+    width: 140%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 105%;
+  }
+}
+
+@media only screen and (max-width: 1920px) and (min-width: 1366px) {
+  .section__container {
+    box-sizing: border-box;
+    margin-top: 112px;
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container__left__section {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 333px;
+  }
+
+  .container__right__section {
+    width: 128%;
+    position: absolute;
+    display: flex;
+    align-items: self-end;
+    top: -20px;
+    left: 0px;
+    height: 105%;
+  }
 }
 
 /* 
-@media only screen and (min-width: 1024px) {
- 
-
-} */
+Mobile: 360 x 640.
+Mobile: 375 x 667.
+Mobile: 360 x 720.
+iPhone X: 375 x 812.
+Pixel 2: 411 x 731.
+Tablet: 768 x 1024.
+Laptop: 1366 x 768.
+High-res laptop or desktop: 1920 x 1080. */
