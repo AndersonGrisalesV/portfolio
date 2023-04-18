@@ -14,7 +14,7 @@ const SectionOne = () => {
             <h5 className={styles.greeting__text}>Hi, my name is</h5>
           </div>
 
-          <div>
+          <div className={styles.responsive__name__text}>
             <h1 className={styles.name__text}>Anderson Grisales</h1>
           </div>
 

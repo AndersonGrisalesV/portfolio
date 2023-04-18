@@ -66,7 +66,7 @@ const NavBar = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mq = window.matchMedia("(max-width: 860px)");
+    const mq = window.matchMedia("(max-width: 960px)");
     setIsMobile(mq.matches);
     const handleResize = () => setIsMobile(mq.matches);
     mq.addEventListener("change", handleResize);
@@ -128,6 +128,7 @@ const NavBar = () => {
         )}
         <React.Fragment>
           {delayShowgHamburguerMenu &&
+            visibleNavBar &&
             ReactDOM.createPortal(
               <Hamburger
                 color="linear-gradient(90deg, #19c78e, #3c9ce5)"
