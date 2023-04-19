@@ -5,6 +5,7 @@ import SectionOne from "./Components/SectionOne/SectionOne";
 import LineLeft from "./Line 2.svg";
 import LineRight from "./Line 2.svg";
 import styles from "./Components/SectionOne/SectionOne.module.css";
+import SectionTwo from "./Components/SectionTwo/SectionTwo";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <img src={LineRight} alt="Line right" className="line__right" /> */}
 
       <SectionOne />
+      <SectionTwo />
 
       <p>Interesting</p>
       <p>Interesting</p>

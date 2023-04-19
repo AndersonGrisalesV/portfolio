@@ -37,23 +37,11 @@ const SectionOne = () => {
           </div>
         </div>
         <div className={styles.container__right__section}>
-          <Spline
+          {/* <Spline
             style={{ width: "100%", height: "105%" }}
             scene="https://draft.spline.design/ke-925JRMxdge4-o/scene.splinecode"
-          />
+          /> */}
         </div>
-
-        {/* <Spline
-          className={styles.container__right__section}
-          scene="https://draft.spline.design/ke-925JRMxdge4-o/scene.splinecode"
-        /> */}
-        {/* {true &&
-          ReactDOM.createPortal(
-            <div className={styles.container__right__section}>
-              <Spline scene="https://draft.spline.design/ke-925JRMxdge4-o/scene.splinecode" />
-            </div>,
-            document.getElementById("animation-avatar-hook")
-          )} */}
       </section>
     </div>
   );
