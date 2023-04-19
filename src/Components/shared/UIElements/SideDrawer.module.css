@@ -259,7 +259,7 @@
   /* rest of the CSS for small screens */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 666px) {
   .navbar__button__responsive {
     font-size: 14px;
     width: 120px;

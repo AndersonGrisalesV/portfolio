@@ -18,7 +18,7 @@ const SectionOne = () => {
             <h1 className={styles.name__text}>Anderson Grisales</h1>
           </div>
 
-          <div className={styles.lets__design__container}>
+          <div className={styles.responsive__lets__design__text}>
             <h1 className={styles.lets__text}>Let's</h1>
             <h1 className={styles.design__text}>design</h1>
           </div>
