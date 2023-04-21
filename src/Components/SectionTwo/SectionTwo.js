@@ -33,8 +33,8 @@ const SectionTwo = () => {
         </div>
         <div className={styles.container__right__section}>
           <Spline
-            style={{ width: "100%", height: "105%" }}
-            scene="https://draft.spline.design/0OiVeXuGn3xcPIEc/scene.splinecode"
+            style={{ width: "100%", height: "100%" }}
+            scene="https://draft.spline.design/cKkZ8nclvPv8ZdJ6/scene.splinecode"
           />
         </div>
       </section>

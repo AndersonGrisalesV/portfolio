@@ -2,8 +2,8 @@
 
 /* Define your font sizes for small and large screens */
 :root {
-  --fz-sm: 18px;
-  --fz-md: 16px;
+  --fz-sm: 16px;
+  --fz-md: 18px;
   --fz-lg: 20px;
   --fz-smlg: 34px;
   --fz-glg: 40px;

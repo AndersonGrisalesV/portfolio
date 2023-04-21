@@ -17,6 +17,7 @@ function App() {
       <SectionOne />
       <SectionTwo />
 
+      {/* <p>Interesting</p>
       <p>Interesting</p>
       <p>Interesting</p>
       <p>Interesting</p>
@@ -68,8 +69,7 @@ function App() {
       <p>Interesting</p>
       <p>Interesting</p>
       <p>Interesting</p>
-      <p>Interesting</p>
-      <p>Interesting</p>
+      <p>Interesting</p> */}
     </div>
   );
 }
