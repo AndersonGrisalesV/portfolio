@@ -74,6 +74,23 @@
   height: 100%;
 }
 
+.image__wrapper {
+  margin: 0px 0px;
+  width: 10%;
+  height: 10%;
+}
+
+.image__wrapper img {
+  width: 80%;
+}
+
+.container__skills__section {
+  width: 51%;
+  margin-top: 107px;
+  /* display: flex;
+  flex-direction: row; */
+}
+
 @media only screen and (max-width: 10000px) {
   .section__two__container {
     box-sizing: border-box;

@@ -15,6 +15,7 @@ function App() {
       <img src={LineRight} alt="Line right" className="line__right" /> */}
 
       <SectionOne />
+
       <SectionTwo />
 
       {/* <p>Interesting</p>
