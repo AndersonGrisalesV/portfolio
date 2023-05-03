@@ -84,8 +84,7 @@
 }
 
 .image__wrapper img {
-  width: 10%;
-  height: 10%;
+  height: 245px;
 
   /* width: 3%;
   height: 3%; */
@@ -110,6 +109,12 @@
 
 .skills__groups {
   margin: 0px;
+}
+
+.marquee__one {
+}
+
+.marquee__two {
 }
 
 @media only screen and (max-width: 10000px) {
@@ -206,9 +211,9 @@
   }
 
   .container__skills__section {
-    max-width: 765px;
+    max-width: 1018px;
     display: flex;
-    margin-left: 421px;
+    margin-left: 758px;
     /* margin-left: 62px;
       margin-right: 1220px; */
     /* width: 51%;
@@ -218,7 +223,7 @@
   }
 
   .image__wrapper {
-    margin: 0px -288px;
+    margin: 0px 79px;
     /* 
     width: 10%;
     height: 10%; */
