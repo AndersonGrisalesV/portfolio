@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../shared/UIElements/Button";
 import Spline from "@splinetool/react-spline";
 import Marquee from "react-fast-marquee";
+
 import styles from "./SectionTwo.module.css";
 
 const SectionTwo = () => {
@@ -32,46 +33,25 @@ const SectionTwo = () => {
             </p>
           </div>
         </div>
-        {/* <div className={styles.container__right__section}> */}
-        {/* <Spline
-            style={{ width: "100%", height: "100%" }}
-            scene="https://draft.spline.design/cKkZ8nclvPv8ZdJ6/scene.splinecode"
-          /> */}
-
         <div className={styles.container__skills__section}>
-          <Marquee speed={100}>
+          <Marquee
+            speed={200}
+            delay={-20}
+            direction="right"
+            gradient={true}
+            gradientColor={[13, 18, 23, 0.5]}
+            // style={{ minWidth: "50%" }}
+          >
             <div className={styles.image__wrapper}>
               <img
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373588/Portfolio/React_svihuw.png"
                 alt="React"
               />
             </div>
-          </Marquee>
-          <Marquee speed={100}>
             <div className={styles.image__wrapper}>
               <img
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373588/Portfolio/NodeJS_bhqj1m.png"
                 alt="NodeJS"
-              />
-            </div>
-            <div className={styles.image__wrapper}>
-              <img
-                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373587/Portfolio/HTML_qp3lay.png"
-                alt="HTML"
-              />
-            </div>
-          </Marquee>
-          <Marquee speed={100}>
-            <div className={styles.image__wrapper}>
-              <img
-                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373587/Portfolio/CSS_tjxjw6.png"
-                alt="CSS"
-              />
-            </div>
-            <div className={styles.image__wrapper}>
-              <img
-                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373587/Portfolio/Javascript_evjufn.png"
-                alt="Javascript"
               />
             </div>
             <div className={styles.image__wrapper}>
@@ -82,16 +62,36 @@ const SectionTwo = () => {
             </div>
             <div className={styles.image__wrapper}>
               <img
-                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373589/Portfolio/JWT_zltie2.png"
-                alt="JWT"
-              />
-            </div>
-            <div className={styles.image__wrapper}>
-              <img
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373588/Portfolio/ReactRouter_pbffiq.png"
                 alt="React Router"
               />
             </div>
+            <div className={styles.image__wrapper}>
+              <img
+                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373587/Portfolio/Javascript_evjufn.png"
+                alt="Javascript"
+              />
+            </div>
+            <div className={styles.image__wrapper}>
+              <img
+                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373587/Portfolio/HTML_qp3lay.png"
+                alt="HTML"
+              />
+            </div>
+            <div className={styles.image__wrapper}>
+              <img
+                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373587/Portfolio/CSS_tjxjw6.png"
+                alt="CSS"
+              />
+            </div>
+          </Marquee>
+          <Marquee
+            speed={200}
+            direction="left"
+            gradient={true}
+            gradientColor={[13, 18, 23, 0.5]}
+            // style={{ minWidth: "50%" }}
+          >
             <div className={styles.image__wrapper}>
               <img
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373589/Portfolio/Figma_mae3tv.png"
@@ -122,6 +122,25 @@ const SectionTwo = () => {
                 alt="Bulma"
               />
             </div>
+            <div className={styles.image__wrapper}>
+              <img
+                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373589/Portfolio/Git_f9gosr.png"
+                alt="Git"
+              />
+            </div>
+            <div className={styles.image__wrapper}>
+              <img
+                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373589/Portfolio/Github_cmuw6l.png"
+                alt="Github"
+              />
+            </div>
+
+            <div className={styles.image__wrapper}>
+              <img
+                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373589/Portfolio/JWT_zltie2.png"
+                alt="JWT"
+              />
+            </div>
 
             <div className={styles.image__wrapper}>
               <img
@@ -147,18 +166,7 @@ const SectionTwo = () => {
                 alt="Cloudinary"
               />
             </div>
-            <div className={styles.image__wrapper}>
-              <img
-                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373589/Portfolio/Git_f9gosr.png"
-                alt="Git"
-              />
-            </div>
-            <div className={styles.image__wrapper}>
-              <img
-                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373589/Portfolio/Github_cmuw6l.png"
-                alt="Github"
-              />
-            </div>
+
             <div className={styles.image__wrapper}>
               <img
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373589/Portfolio/Postman_rv8vkf.png"
@@ -173,7 +181,11 @@ const SectionTwo = () => {
             </div>
           </Marquee>
         </div>
-        {/* </div> */}
+        {/* <div className={styles.container__right__section}> */}
+        {/* <Spline
+            style={{ width: "100%", height: "100%" }}
+            scene="https://draft.spline.design/cKkZ8nclvPv8ZdJ6/scene.splinecode"
+          /> */}
       </section>
     </div>
   );
