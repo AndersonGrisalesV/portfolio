@@ -6,6 +6,7 @@ import LineLeft from "./Line 2.svg";
 import LineRight from "./Line 2.svg";
 import styles from "./Components/SectionOne/SectionOne.module.css";
 import SectionTwo from "./Components/SectionTwo/SectionTwo";
+import SectionThree from "./Components/SectionThree/SectionThree";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <SectionOne />
 
       <SectionTwo />
+
+      <SectionThree />
 
       {/* <p>Interesting</p>
       <p>Interesting</p>

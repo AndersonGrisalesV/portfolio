@@ -37,10 +37,10 @@ const SectionOne = () => {
           </div>
         </div>
         <div className={styles.container__right__section}>
-          <Spline
+          {/* <Spline
             style={{ width: "100%", height: "105%" }}
             scene="https://draft.spline.design/ke-925JRMxdge4-o/scene.splinecode"
-          />
+          /> */}
         </div>
       </section>
     </div>

@@ -689,6 +689,13 @@
     display: none;
   }
 
+  .responsive__marquee {
+    display: flex;
+
+    flex-direction: column;
+    margin: 42px;
+  }
+
   .container__right__section {
     /* width: calc(100% - -614px);
       top: -7px; */
@@ -724,6 +731,13 @@
 
   .container__skills__section {
     display: none;
+  }
+
+  .responsive__marquee {
+    display: flex;
+
+    flex-direction: column;
+    margin: 32px;
   }
 
   .container__right__section {
@@ -763,6 +777,17 @@
     display: none;
   }
 
+  .responsive__marquee {
+    display: flex;
+
+    flex-direction: column;
+    margin: 32px;
+  }
+
+  .description__text {
+    width: calc(100% - 151px);
+  }
+
   .container__right__section {
     /* width: calc(100% - -614px);
       top: -7px; */
@@ -796,6 +821,13 @@
     margin-left: 32px;
   }
 
+  .responsive__marquee {
+    display: flex;
+
+    flex-direction: column;
+    margin: 32px;
+  }
+
   .skills__text {
     font-size: var(--fz-slg);
   }
@@ -807,6 +839,7 @@
 
   .description__text {
     font-size: var(--fz-md);
+    width: calc(100% - 99px);
   }
 
   .container__skills__section {
@@ -845,6 +878,20 @@
     margin-left: 32px;
   }
 
+  .responsive__marquee {
+    display: flex;
+
+    flex-direction: column;
+    margin: 32px;
+  }
+
+  .responsive__marquee {
+    display: flex;
+
+    flex-direction: column;
+    margin: 32px;
+  }
+
   .skills__text {
     font-size: var(--fz-slg);
   }
@@ -854,7 +901,8 @@
   }
 
   .description__text {
-    width: 420px;
+    width: calc(100% - 48px);
+
     font-size: var(--fz-md);
   }
 
@@ -896,10 +944,12 @@
     margin-left: 32px;
   }
 
-  /* .responsive__skills__expertise__text {
-      display: flex;
-      flex-direction: column;
-    } */
+  .responsive__marquee {
+    display: flex;
+
+    flex-direction: column;
+    margin: 32px;
+  }
 
   .skills__text {
     font-size: var(--fz-smlg);
@@ -913,7 +963,7 @@
   }
 
   .description__text {
-    width: 300px;
+    width: calc(100% - 39px);
     font-size: var(--fz-sm);
   }
 
@@ -955,6 +1005,12 @@
     margin-left: 32px;
   }
 
+  .responsive__marquee {
+    display: contents;
+
+    /* flex-direction: column; */
+  }
+
   .responsive__skills__expertise__text {
     display: flex;
     flex-direction: column;
@@ -975,7 +1031,7 @@
   }
 
   .description__text {
-    width: 150px;
+    width: calc(100% - 34px);
     font-size: var(--fz-sm);
   }
 

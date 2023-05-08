@@ -736,7 +736,7 @@
   }
 
   .description__text {
-    width: calc(100% - 39px);
+    width: calc(100% - 48px);
     font-size: var(--fz-md);
   }
 
@@ -865,7 +865,7 @@
 
   .description__text {
     font-size: var(--fz-sm);
-    width: 150px;
+    width: calc(100% - 34px);
   }
 
   .responsive__name__text * {

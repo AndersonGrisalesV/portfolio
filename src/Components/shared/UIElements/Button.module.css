@@ -1,4 +1,4 @@
-.button {
+.button__dark {
   font-family: "Overlock", cursive;
   font-weight: 500;
   font-size: 17px;
@@ -24,7 +24,34 @@
   box-shadow: 2px 1000px 1px #0d1217 inset;
 }
 
-.button:hover {
+.button__light {
+  font-family: "Overlock", cursive;
+  font-weight: 500;
+  font-size: 17px;
+  text-align: center;
+  width: 138px;
+  height: 48px;
+  color: #fff;
+  opacity: 0.95;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  border-radius: 6px;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 1px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #19c78e, #3c9ce5);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #191d21 inset;
+}
+
+.button__dark:hover,
+.button__light:hover {
   background-color: transparent;
   color: #19c78e;
 }
