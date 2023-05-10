@@ -18,6 +18,10 @@
   background-color: #191d21;
 }
 
+.image__container img {
+  margin-right: 10px;
+}
+
 .description__text {
   font-size: 16px;
   font-weight: 400;
@@ -32,4 +36,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media only screen and (max-width: 566px) {
+}
+
+@media only screen and (max-width: 490px) {
+}
+
+@media only screen and (max-width: 344px) {
+}
+
+@media only screen and (max-width: 200px) {
 }
