@@ -1025,7 +1025,7 @@
 
   .expertise__text {
     font-size: var(--fz-smlg);
-    margin-top: 10px;
+    margin-top: -6px;
     letter-spacing: 0.4px;
     margin-left: 0px;
   }

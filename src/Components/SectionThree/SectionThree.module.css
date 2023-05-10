@@ -11,6 +11,45 @@
   width: 100%;
 }
 
+.my__projects__text__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  position: relative;
+  bottom: 50px;
+}
+
+.responsive__my__projects__text {
+  display: none;
+}
+
+.my__text {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 66px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.projects__text {
+  background: linear-gradient(
+    180deg,
+    rgb(25, 199, 142) 0%,
+    rgb(60.24, 156.34, 229.5) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 66px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  margin: 0;
+  margin-top: -25px;
+}
+
 .container__cards__left {
   display: flex;
   flex-direction: column;
@@ -22,7 +61,7 @@
   display: flex;
   flex-direction: column;
   gap: 155px;
-  top: 350px;
+  top: 200px;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -33,9 +72,21 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    margin-top: 112px;
+    margin-top: 68px;
 
     width: 100%;
+  }
+
+  .my__projects__text__container {
+    display: none;
+  }
+
+  .responsive__my__projects__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 62px;
+    margin-top: 112px;
   }
 
   .container__cards__left {
@@ -54,21 +105,41 @@
 }
 
 @media only screen and (max-width: 966px) {
+  .responsive__my__projects__text {
+    margin-right: 42px;
+  }
 }
 
 @media only screen and (max-width: 866px) {
+  .responsive__my__projects__text {
+    margin-right: 28px;
+  }
 }
 
 @media only screen and (max-width: 766px) {
 }
 
 @media only screen and (max-width: 666px) {
+  .my__text {
+    font-size: var(--fz-slg);
+  }
+  .projects__text {
+    font-size: var(--fz-slg);
+    margin-top: -20px;
+  }
 }
 
 @media only screen and (max-width: 566px) {
 }
 
 @media only screen and (max-width: 490px) {
+  .my__text {
+    font-size: var(--fz-smlg);
+  }
+  .projects__text {
+    font-size: var(--fz-smlg);
+    margin-top: -12px;
+  }
 }
 
 @media only screen and (max-width: 344px) {

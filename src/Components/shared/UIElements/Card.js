@@ -11,9 +11,9 @@ const Card = ({ onImg, onImgDescription, onText }) => {
       </div>
       <div className={styles.text__button__container}>
         <p className={styles.description__text}>{onText}</p>
-        <div className={styles.button__container}>
-          <Button onText={"See more"} onChangebackground={true}></Button>
-        </div>
+      </div>
+      <div className={styles.button__container}>
+        <Button onText={"See more"} onChangebackground={true}></Button>
       </div>
     </div>
   );

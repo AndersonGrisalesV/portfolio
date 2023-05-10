@@ -7,19 +7,19 @@
   /* padding: 27px 15px; */
   border-radius: 20px;
 
-  width: 500px;
-  height: 462px;
+  /* width: 500px;
+  */
 
-  /* width: 100%; 
-  max-width: 400px; /
-  margin: 0 auto;  */
+  width: 100%;
+  height: 462px;
+  max-width: 500px;
+  margin: 0 auto;
 
   box-shadow: 0 0 10px rgba(24, 28, 32, 1);
   background-color: #191d21;
 }
 
 .image__container img {
-  margin-right: 10px;
 }
 
 .description__text {
@@ -30,6 +30,9 @@
   min-height: 55px;
   color: #f9f9f9;
   width: 475px;
+  margin-top: 15px;
+  margin-left: 27px;
+  margin-bottom: 15px;
 }
 
 .text__button__container {
@@ -38,13 +41,63 @@
   align-items: center;
 }
 
+.button__container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 31px;
+}
+
 @media only screen and (max-width: 566px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+  }
+
+  .image__container img {
+    width: 100%;
+    height: 40%;
+    margin-right: 10px;
+  }
+
+  .description__text {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 27px;
+    margin-bottom: 15px;
+  }
+
+  .button__container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 31px;
+  }
+
+  .text__button__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 92%;
+  }
 }
 
 @media only screen and (max-width: 490px) {
 }
 
 @media only screen and (max-width: 344px) {
+  .description__text {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 7px;
+    margin-bottom: 15px;
+  }
+
+  .button__container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 @media only screen and (max-width: 200px) {
