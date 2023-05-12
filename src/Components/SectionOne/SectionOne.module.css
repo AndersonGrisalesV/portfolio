@@ -735,6 +735,10 @@
     font-size: var(--fz-slg);
   }
 
+  .responsive__lets__design__text {
+    margin-top: -20px;
+  }
+
   .description__text {
     width: calc(100% - 48px);
     font-size: var(--fz-md);

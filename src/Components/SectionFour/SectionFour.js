@@ -5,6 +5,14 @@ import styles from "./SectionFour.module.css";
 const SectionFour = () => {
   return (
     <div>
+      <div className={styles.responsive__container__left__section}>
+        <div className={styles.responsive__container__kanji__section}>
+          <img
+            src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1683757800/Lovekanji_bpvmac.svg"
+            alt="kanji love"
+          />
+        </div>
+      </div>
       <section className={styles.section__four__container}>
         <div className={styles.container__left__section}>
           <div className={styles.container__kanji__section}>

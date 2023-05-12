@@ -44,7 +44,7 @@ const SectionTwo = () => {
           /> */}
       </section>
       <div className={styles.responsive__marquee}>
-        {/* <SkillsMarquee /> */}
+        <SkillsMarquee />
       </div>
     </div>
   );
