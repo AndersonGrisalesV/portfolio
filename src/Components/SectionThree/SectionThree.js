@@ -3,14 +3,14 @@ import React from "react";
 import styles from "./SectionThree.module.css";
 import Card from "../shared/UIElements/Card";
 
-const SectionThree = () => {
+const SectionThree = ({ isActive }) => {
   return (
     <div>
       <div className={styles.responsive__my__projects__text}>
         <h1 className={styles.my__text}>My</h1>
         <h1 className={styles.projects__text}>Projects</h1>
       </div>
-      <section className={styles.section__three__container}>
+      <section className={styles.section__three__container} id="work">
         <div className={styles.container__cards__left}>
           <Card
             onImg={

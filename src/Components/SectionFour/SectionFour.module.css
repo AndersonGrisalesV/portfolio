@@ -10,10 +10,6 @@
   align-items: center;
 }
 
-.container__left__section {
-  /* margin-left: 273px; */
-}
-
 .container__kanji__section {
   margin-top: 150px;
   display: flex;
@@ -67,9 +63,17 @@
   width: 581px;
 }
 
+.responsive__container__kanji__section {
+  display: none;
+}
+
 @media only screen and (max-width: 10000px) {
   .section__four__container {
     gap: 4%;
+  }
+
+  .responsive__container__kanji__section {
+    display: none;
   }
 
   .container__kanji__section {
@@ -270,8 +274,5 @@
     margin-top: -6px;
     letter-spacing: 0.4px;
     margin-left: 0px;
-  }
-
-  .description__text {
   }
 }

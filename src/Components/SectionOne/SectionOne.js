@@ -7,7 +7,7 @@ import Animation from "./Animation";
 
 const SectionOne = () => {
   return (
-    <div>
+    <div id="home">
       <section className={styles.section__container}>
         <div className={styles.container__left__section}>
           <div>

@@ -24,6 +24,7 @@ html {
 
 body {
   font-family: "Overlock", cursive;
+  scroll-behavior: smooth;
   background-color: #0d1217;
   overflow-x: hidden;
   margin: 0;

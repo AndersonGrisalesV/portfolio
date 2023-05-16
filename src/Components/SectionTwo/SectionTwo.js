@@ -35,7 +35,7 @@ const SectionTwo = () => {
           </div>
         </div>
         <div className={styles.container__skills__section}>
-          <SkillsMarquee />
+          {/* <SkillsMarquee /> */}
         </div>
         {/* <div className={styles.container__right__section}> */}
         {/* <Spline

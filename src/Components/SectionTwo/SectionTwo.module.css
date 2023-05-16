@@ -37,6 +37,10 @@
   height: 105%;
 }
 
+.responsive__marquee {
+  display: none;
+}
+
 .responsive__skills__expertise__text {
   display: flex;
   flex-direction: column;

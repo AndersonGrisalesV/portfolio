@@ -4,6 +4,9 @@ import SectionOne from "../SectionOne/SectionOne";
 import SectionTwo from "../SectionTwo/SectionTwo";
 import SectionThree from "../SectionThree/SectionThree";
 import SectionFour from "../SectionFour/SectionFour";
+import SectionFive from "../SectionFive/SectionFive";
+import Footer from "../Footer/Footer";
+import { useState } from "react";
 
 const Home = () => {
   return (
@@ -17,6 +20,10 @@ const Home = () => {
       <SectionThree />
 
       <SectionFour />
+
+      <SectionFive />
+
+      <Footer />
     </React.Fragment>
   );
 };

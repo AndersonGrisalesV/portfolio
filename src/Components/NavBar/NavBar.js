@@ -8,8 +8,9 @@ import Hamburger from "hamburger-react";
 import ReactDOM from "react-dom";
 import "./../../App.css";
 import Button from "../shared/UIElements/Button";
+import { Link, animateScroll as scroll } from "react-scroll";
 
-const NavBar = () => {
+const NavBar = ({ onSectionChange }) => {
   const [visibleNavBar, setVisibleNavBar] = useState(true);
 
   const [openHamburguerMenu, setOpenHamburguerMenu] = useState(false);
@@ -19,22 +20,23 @@ const NavBar = () => {
   const [delayShowgHamburguerMenu, setDelayShowHamburguerMenu] =
     useState(false);
 
+  const scrollToTop = () => {
+    scroll.scrollToTop({
+      duration: 10, // Adjust the duration as desired
+      smooth: "easeOutQuart", // Adjust the easing function as desired
+    });
+  };
+
+  const handleClickNavLink = (section) => {
+    onSectionChange(section);
+  };
+
   const closeDrawerHandler = () => {
     setOpenHamburguerMenu(false);
   };
 
   useEffect(() => {
     let prevScrollPos = window.pageYOffset;
-    // const container = document.getElementById("container__navbar__hamburguer");
-    // if (visibleNavBar) {
-    //   setTimeout(() => {
-    //     container.classList.remove("hide__hamburger__menu");
-    //     container.classList.add("show__hamburger__menu");
-    //   }, 2000);
-    // } else {
-    //   container.classList.remove("show__hamburger__menu");
-    //   container.classList.add("hide__hamburger__menu");
-    // }
 
     window.onscroll = function () {
       let currentScrollPos = window.pageYOffset;
@@ -94,13 +96,26 @@ const NavBar = () => {
 
           <ul className={styles.navbar__links}>
             <li className={styles.navbar__item}>
-              <a href="#home">Home</a>
+              <Link
+                to="home"
+                smooth={true}
+                duration={10}
+                offset={-70}
+                onClick={scrollToTop}
+              >
+                Home
+              </Link>
+              {/* <a href="#home" onClick={() => handleClickNavLink("home")}>
+                Home
+              </a> */}
             </li>
             <li className={styles.navbar__item}>
               <a href="#expertise">Expertise</a>
             </li>
             <li className={styles.navbar__item}>
-              <a href="#work">Work</a>
+              <a href="#work" onClick={() => handleClickNavLink("work")}>
+                Work
+              </a>
             </li>
             <li className={styles.navbar__item}>
               <a href="#about">About</a>

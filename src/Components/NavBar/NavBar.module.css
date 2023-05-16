@@ -54,7 +54,7 @@
   flex: auto;
   justify-content: flex-end;
   margin-right: 62px;
-  margin-left: 62px;
+  /* margin-left: 62px; */
   text-align: right;
 }
 
@@ -86,18 +86,12 @@
   text-decoration: none;
   font-size: 17px;
   font-weight: 500;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 .navbar__item a:hover {
   background-color: transparent;
   color: #19c78e;
-  /* display: inline-block;
-  background-image: linear-gradient(90deg, #19c78e -12.78%, #3c9ce6 200.38%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent; */
 }
 
 .navbar__button {
@@ -124,33 +118,12 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 2px 1000px 1px #0d1217 inset;
-
-  /* border-image-slice: 1;
-
-  border-image-source: linear-gradient(
-    90deg,
-    rgba(25, 199, 142, 0.8) 33.46%,
-    rgba(60, 156, 230, 0.8) 111.29%
-  ); */
 }
 
 .navbar__button:hover {
   background-color: transparent;
   color: #19c78e;
 }
-
-/* border-radius: 100rem;
-padding: 1rem;
-font-family: 'Avenir Next';
-font-size: 1rem;
-padding: .5rem 3rem;
-color: $color-black;
-box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-border: solid 3px transparent;
-background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #ff48fa);
-background-origin: border-box;
-background-clip: content-box, border-box;
-box-shadow: 2px 1000px 1px #fff inset; */
 
 @media only screen and (max-width: 960px) {
   /* Small screens */
@@ -403,8 +376,5 @@ box-shadow: 2px 1000px 1px #fff inset; */
     font-size: 12px;
     width: 100px;
     height: 32px;
-  }
-
-  .navbar__links__responsive {
   }
 }

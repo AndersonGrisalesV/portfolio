@@ -1,0 +1,143 @@
+.section__five__container {
+  box-sizing: border-box;
+  margin-top: 62px;
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.container__center__section {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.getin__text {
+  font-size: 66px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.touch__text {
+  background: linear-gradient(
+    180deg,
+    rgb(25, 199, 142) 0%,
+    rgb(60.24, 156.34, 229.5) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 66px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  margin: 0;
+  margin-top: -25px;
+  margin-left: 47px;
+}
+
+.description__text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #f9f9f9;
+  letter-spacing: 0;
+  line-height: 32px;
+  min-height: 96px;
+  width: 380px;
+}
+
+.container__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 62px;
+}
+
+.button__container {
+  margin-top: 12px;
+}
+
+.container__social__media {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 29px;
+  padding-right: 15px;
+}
+
+@media only screen and (max-width: 666px) {
+  .getin__text {
+    font-size: var(--fz-slg);
+  }
+
+  .touch__text {
+    font-size: var(--fz-slg);
+    margin-left: 38px;
+  }
+
+  .description__text {
+    font-size: var(--fz-md);
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .getin__text {
+    font-size: var(--fz-smlg);
+    letter-spacing: 0.8px;
+  }
+
+  .touch__text {
+    font-size: var(--fz-smlg);
+    margin-top: -12px;
+    letter-spacing: 0.8px;
+    margin-left: 25px;
+  }
+
+  .container__description__text {
+    max-width: 100%;
+  }
+
+  .description__text {
+    font-size: var(--fz-sm);
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media only screen and (max-width: 344px) {
+  .getin__text {
+    letter-spacing: 0.4px;
+  }
+
+  .touch__text {
+    margin-top: -6px;
+    letter-spacing: 0.4px;
+    margin-left: 0px;
+  }
+
+  .container__description__text {
+    max-width: 80%;
+  }
+
+  .description__text {
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .container__social__media {
+    align-items: center;
+    flex-direction: column;
+    padding-right: 0px;
+  }
+}
