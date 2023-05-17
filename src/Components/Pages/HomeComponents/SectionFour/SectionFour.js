@@ -13,7 +13,7 @@ const SectionFour = () => {
           />
         </div>
       </div>
-      <section className={styles.section__four__container}>
+      <section className={styles.section__four__container} id="about">
         <div className={styles.container__left__section}>
           <div className={styles.container__kanji__section}>
             <img

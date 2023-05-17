@@ -1,12 +1,11 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar";
-import SectionOne from "../SectionOne/SectionOne";
-import SectionTwo from "../SectionTwo/SectionTwo";
-import SectionThree from "../SectionThree/SectionThree";
-import SectionFour from "../SectionFour/SectionFour";
-import SectionFive from "../SectionFive/SectionFive";
+import NavBar from "./../NavBar/NavBar";
+import SectionOne from "../Pages/HomeComponents/SectionOne/SectionOne";
+import SectionTwo from "../Pages/HomeComponents/SectionTwo/SectionTwo";
+import SectionThree from "../Pages/HomeComponents/SectionThree/SectionThree";
+import SectionFour from "../Pages/HomeComponents/SectionFour/SectionFour";
+import SectionFive from "../Pages/HomeComponents/SectionFive/SectionFive";
 import Footer from "../Footer/Footer";
-import { useState } from "react";
 
 const Home = () => {
   return (

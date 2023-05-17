@@ -1,15 +1,15 @@
 import React from "react";
-import Button from "../shared/UIElements/Button";
+
 import Spline from "@splinetool/react-spline";
 import Marquee from "react-fast-marquee";
 
 import styles from "./SectionTwo.module.css";
-import SkillsMarquee from "../Marquee/SkillsMarquee";
+import SkillsMarquee from "../../../shared/Marquee/SkillsMarquee";
 
 const SectionTwo = () => {
   return (
     <div>
-      <section className={styles.section__two__container}>
+      <section className={styles.section__two__container} id="expertise">
         <div className={styles.container__left__section}>
           <div className={styles.responsive__skills__expertise__text}>
             <h1 className={styles.skills__text}>Skills &</h1>

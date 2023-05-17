@@ -1,5 +1,6 @@
 import React from "react";
-import Button from "../shared/UIElements/Button";
+
+import Button from "../../../shared/UIElements/Button";
 import Spline from "@splinetool/react-spline";
 import styles from "./SectionOne.module.css";
 import ReactDOM from "react-dom";
@@ -7,8 +8,8 @@ import Animation from "./Animation";
 
 const SectionOne = () => {
   return (
-    <div id="home">
-      <section className={styles.section__container}>
+    <div>
+      <section className={styles.section__container} id="home">
         <div className={styles.container__left__section}>
           <div>
             <h5 className={styles.greeting__text}>Hi, my name is</h5>

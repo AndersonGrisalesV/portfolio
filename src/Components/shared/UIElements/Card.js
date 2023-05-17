@@ -5,7 +5,7 @@ import styles from "./Card.module.css";
 
 const Card = ({ onImg, onImgDescription, onText }) => {
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${styles.card__hover}`}>
       <div className={styles.image__container}>
         <img src={onImg} alt={onImgDescription} />
       </div>

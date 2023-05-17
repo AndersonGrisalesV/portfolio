@@ -17,6 +17,17 @@
 
   box-shadow: 0 0 10px rgba(24, 28, 32, 1);
   background-color: #191d21;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card__hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card__hover:hover {
+  transform: scale(
+    1.05
+  ); /* Increase the scale to make the image slightly bigger */
 }
 
 .image__container img {

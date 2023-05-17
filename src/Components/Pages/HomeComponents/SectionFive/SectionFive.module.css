@@ -1,6 +1,6 @@
 .section__five__container {
   box-sizing: border-box;
-  margin-top: 62px;
+  margin-top: 80px;
   display: flex;
   position: relative;
   width: 100%;
@@ -72,6 +72,14 @@
   align-items: flex-start;
   gap: 29px;
   padding-right: 15px;
+}
+
+.social__media__image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.social__media__image:hover {
+  transform: scale(1.1); /* Increase the scale to make the image slightly bigger */
 }
 
 @media only screen and (max-width: 666px) {

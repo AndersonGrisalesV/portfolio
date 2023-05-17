@@ -1,7 +1,7 @@
 import React from "react";
 
+import Card from "../../../shared/UIElements/Card";
 import styles from "./SectionThree.module.css";
-import Card from "../shared/UIElements/Card";
 
 const SectionThree = ({ isActive }) => {
   return (

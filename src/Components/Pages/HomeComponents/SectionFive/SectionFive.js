@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./SectionFive.module.css";
-import Button from "../shared/UIElements/Button";
+import Button from "../../../shared/UIElements/Button";
 
 const SectionFive = () => {
   const handleLinkedInClick = () => {
@@ -24,7 +24,7 @@ const SectionFive = () => {
 
   return (
     <div>
-      <section className={styles.section__five__container}>
+      <section className={styles.section__five__container} id="contact">
         <div className={styles.container__center__section}>
           <div className={styles.container__getin__touch__text}>
             <h1 className={styles.getin__text}>Get In</h1>
@@ -55,6 +55,7 @@ const SectionFive = () => {
                   src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684183917/ButtonLinkedIn_zkp3zk.svg"
                   alt="LinkedIn"
                   onClick={handleLinkedInClick}
+                  className={styles.social__media__image}
                 />
               </a>
               <a
@@ -66,6 +67,7 @@ const SectionFive = () => {
                   src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684183918/ButtonGithub_gg2fhm.svg"
                   alt="Github"
                   onClick={handleGithubClick}
+                  className={styles.social__media__image}
                 />
               </a>
               <a href="mailto:your-email@example.com">
@@ -73,6 +75,7 @@ const SectionFive = () => {
                   src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684183917/ButtonGmail_vv0rur.svg"
                   alt="Gmail"
                   onClick={handleGmailClick}
+                  className={styles.social__media__image}
                 />
               </a>
             </div>
