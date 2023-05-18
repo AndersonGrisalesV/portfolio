@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import styles from "./NavBar.module.css";
-import Logo from "./LogoHover.svg";
+import Logo from "./Logo.svg";
+import LogoDplace from "./LogoDplace.svg";
 import HamburguerMenuButton from "./HamburguerMenuButton";
-import Backdrop from "../shared/UIElements/Backdrop";
-import SideDrawer from "../shared/UIElements/SideDrawer";
+import Backdrop from "../UIElements/Backdrop";
+import SideDrawer from "../UIElements/SideDrawer";
 import Hamburger from "hamburger-react";
 import ReactDOM from "react-dom";
-import "./../../App.css";
-import Button from "../shared/UIElements/Button";
+import "../../../App.css";
+import Button from "../UIElements/Button";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ onDplace = false }) => {
   const [visibleNavBar, setVisibleNavBar] = useState(true);
 
   const [openHamburguerMenu, setOpenHamburguerMenu] = useState(false);
@@ -20,21 +22,32 @@ const NavBar = () => {
   const [delayShowgHamburguerMenu, setDelayShowHamburguerMenu] =
     useState(false);
 
-  const scrollToTop = (sectionName) => {
-    scroll.scrollToTop({
-      duration: 10, // Adjust the duration as desired
-      smooth: "easeOutQuart", // Adjust the easing function as desired
-    });
-    // Simulate a delay of 500 milliseconds
-    const delay = 650;
+  const navigate = useNavigate();
 
-    // Set the active link after the delay
-    const timeoutId = setTimeout(() => {
-      setActiveLink(sectionName);
-    }, delay);
+  const handleNavBarLinksClicks = (nameToScroolHome) => {
+    const scrollToTop = (sectionName) => {
+      scroll.scrollToTop({
+        duration: 10, // Adjust the duration as desired
+        smooth: "easeOutQuart", // Adjust the easing function as desired
+      });
+      // Simulate a delay of 500 milliseconds
+      const delay = 650;
 
-    // Clean up the timeout when the component unmounts or when the active link changes
-    return () => clearTimeout(timeoutId);
+      // Set the active link after the delay
+      const timeoutId = setTimeout(() => {
+        setActiveLink(sectionName);
+      }, delay);
+
+      // Clean up the timeout when the component unmounts or when the active link changes
+      return () => clearTimeout(timeoutId);
+    };
+
+    if (onDplace) {
+      navigate("/home");
+      setTimeout(() => {
+        scrollToTop(nameToScroolHome);
+      }, 200);
+    }
   };
 
   const closeDrawerHandler = () => {
@@ -126,21 +139,25 @@ const NavBar = () => {
       >
         <div className={styles.container__logo}>
           <div className={styles.logo}>
-            <img src={Logo} alt="Logo" />
+            <img src={`${onDplace ? LogoDplace : Logo}`} alt="Logo" />
           </div>
 
           <ul className={styles.navbar__links}>
             <li className={`${styles.navbar__item} `}>
               <Link
                 className={`${styles.links} ${
-                  activeLink === "home" ? styles.active__link : ""
+                  onDplace
+                    ? styles.active__link__dplace
+                    : activeLink === "home"
+                    ? styles.active__link
+                    : ""
                 }`}
                 to="home"
                 smooth={true}
                 duration={10}
                 offset={-100}
                 onClick={() => {
-                  scrollToTop("home");
+                  handleNavBarLinksClicks("home");
                 }}
               >
                 Home
@@ -149,14 +166,18 @@ const NavBar = () => {
             <li className={styles.navbar__item}>
               <Link
                 className={`${styles.links} ${
-                  activeLink === "expertise" ? styles.active__link : ""
+                  onDplace
+                    ? styles.active__link__dplace
+                    : activeLink === "expertise"
+                    ? styles.active__link
+                    : ""
                 }`}
                 to="expertise"
                 smooth={true}
                 duration={10}
                 offset={-100}
                 onClick={() => {
-                  scrollToTop("expertise");
+                  handleNavBarLinksClicks("expertise");
                 }}
               >
                 Expertise
@@ -165,14 +186,18 @@ const NavBar = () => {
             <li className={styles.navbar__item}>
               <Link
                 className={`${styles.links} ${
-                  activeLink === "work" ? styles.active__link : ""
+                  onDplace
+                    ? styles.active__link__dplace
+                    : activeLink === "work"
+                    ? styles.active__link
+                    : ""
                 }`}
                 to="work"
                 smooth={true}
                 duration={10}
-                onClick={() => {
-                  scrollToTop("work");
-                }}
+                // onClick={() => {
+                //   scrollToTop("work");
+                // }}
               >
                 Work
               </Link>
@@ -180,14 +205,18 @@ const NavBar = () => {
             <li className={styles.navbar__item}>
               <Link
                 className={`${styles.links} ${
-                  activeLink === "about" ? styles.active__link : ""
+                  onDplace
+                    ? styles.active__link__dplace
+                    : activeLink === "about"
+                    ? styles.active__link
+                    : ""
                 }`}
                 to="about"
                 smooth={true}
                 duration={10}
-                onClick={() => {
-                  scrollToTop("about");
-                }}
+                // onClick={() => {
+                //   scrollToTop("about");
+                // }}
               >
                 About
               </Link>
@@ -195,22 +224,26 @@ const NavBar = () => {
             <li className={styles.navbar__item}>
               <Link
                 className={`${styles.links} ${
-                  activeLink === "contact" ? styles.active__link : ""
+                  onDplace
+                    ? styles.active__link__dplace
+                    : activeLink === "contact"
+                    ? styles.active__link
+                    : ""
                 }`}
                 to="contact"
                 smooth={true}
                 duration={10}
                 offset={-100}
-                onClick={() => {
-                  scrollToTop("contact");
-                }}
+                // onClick={() => {
+                //   scrollToTop("contact");
+                // }}
               >
                 Contact
               </Link>
             </li>
           </ul>
           <div className={styles.button}>
-            <Button onText={"Don't"}></Button>
+            <Button onText={"Don't"} onDplaceColor={true}></Button>
           </div>
         </div>
 

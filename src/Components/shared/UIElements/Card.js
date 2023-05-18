@@ -3,7 +3,7 @@ import React from "react";
 import Button from "./Button";
 import styles from "./Card.module.css";
 
-const Card = ({ onImg, onImgDescription, onText }) => {
+const Card = ({ onImg, onImgDescription, onText, onDplace = false }) => {
   return (
     <div className={`${styles.card} ${styles.card__hover}`}>
       <div className={styles.image__container}>
@@ -13,7 +13,11 @@ const Card = ({ onImg, onImgDescription, onText }) => {
         <p className={styles.description__text}>{onText}</p>
       </div>
       <div className={styles.button__container}>
-        <Button onText={"See more"} onChangebackground={true}></Button>
+        <Button
+          onText={"See more"}
+          onChangebackground={true}
+          onDplace={onDplace}
+        ></Button>
       </div>
     </div>
   );

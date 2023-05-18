@@ -20,6 +20,7 @@ const SectionThree = ({ isActive }) => {
             onText={
               "Dplace is a web application to share and interact with other people's experiences around the world."
             }
+            onDplace={true}
           />
 
           <Card
