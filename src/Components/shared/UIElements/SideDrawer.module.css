@@ -5,6 +5,10 @@
   display: none;
 }
 
+.container {
+  display: none;
+}
+
 @media only screen and (max-width: 960px) {
   .side__drawer {
     display: flex;
@@ -17,12 +21,14 @@
     top: 0px;
     bottom: 0px;
     right: 0px;
-    padding: 50px 10px;
+    padding: 0px 10px;
+    /* padding: 50px 10px; */
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0px;
     background: #0d1217a1;
     box-shadow: 0 2px 8px rgba(22, 146, 6, 0.26);
+    overflow: hidden;
     z-index: 5;
     /* transform: translateX(0vw);
     visibility: visible;

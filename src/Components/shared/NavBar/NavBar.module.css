@@ -32,6 +32,7 @@
   margin-top: 5px;
   margin-left: 62px;
   margin-right: 62px;
+  cursor: pointer;
 }
 
 .logo img:hover {
@@ -42,6 +43,7 @@
 .container__logo {
   flex: 1 1;
   display: flex;
+
   justify-content: center;
 }
 
@@ -242,7 +244,6 @@
   .container__logo {
     flex: 1 1;
     display: flex;
-
     justify-content: inherit;
   }
 

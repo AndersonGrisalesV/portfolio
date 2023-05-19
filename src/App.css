@@ -11,15 +11,22 @@
   --fz-blg: 60px;
   --fz-mlg: 66px;
   --fz-xlg: 72px;
+  --scrollbar-color: linear-gradient(
+    to bottom,
+    #038d87,
+    #038d87
+  ); /* default color */
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
   color: white;
+  overflow-x: hidden;
 }
 
 body {
@@ -72,6 +79,7 @@ body {
 .right-to-left-exit-active {
   transform: translateX(100%);
   opacity: 0;
+
   transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -95,13 +103,13 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #038d87, #038d87);
+  background: var(--scrollbar-color);
   border-radius: 6px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #038d87, #038d87);
+  background: var(--scrollbar-color);
 }
 
 @media only screen and (max-width: 960px) {
@@ -111,9 +119,9 @@ body {
 
     bottom: 0px;
     right: 0px;
-
+    top: 0px;
     width: min(75vw, 138.5px);
-    height: 100vh;
+    height: 18vh;
 
     z-index: 6;
   }

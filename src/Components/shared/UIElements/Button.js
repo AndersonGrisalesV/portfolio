@@ -13,7 +13,7 @@ const Button = ({
 
   const handleButtonClick = () => {
     if (onDplace) {
-      navigate("/dplace");
+      navigate("/projects/dplace");
     }
   };
 

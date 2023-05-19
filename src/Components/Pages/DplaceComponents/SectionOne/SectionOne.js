@@ -6,10 +6,9 @@ import Button from "../../../shared/UIElements/Button";
 const SectionOne = () => {
   return (
     <div>
-      <section className={styles.section__five__container} id="contact">
+      <section className={styles.section__one__container} id="contact">
         <div className={styles.container__center__section}>
-          <div className={styles.container__getin__touch__text}>
-            <h1 className={styles.place__text}>place</h1>
+          <div className={styles.container__dimage__place__text}>
             <div className={styles.container__image}>
               <img
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684359106/DplaceLogo_jbfqhp.svg"
@@ -17,6 +16,7 @@ const SectionOne = () => {
                 className={styles.social__media__image}
               />
             </div>
+            <h1 className={styles.place__text}>place</h1>
           </div>
 
           <div className={styles.container__description__text}>
@@ -25,14 +25,6 @@ const SectionOne = () => {
               to share their experiences through photos and locations for others
               to see and visit. Creating an account on the website opens the
               door for users to share places and engage with other people, the
-              website gives users the ability to view each location on Google
-              Maps, comment, like, and share posts, Dplace creates a dynamic and
-              interactive community of explorers. Join us on our journey to see
-              the beauty of the world through each other's experiences.Dplace
-              website is an innovative web application that enables users to
-              share their experiences through photos and locations for others to
-              see and visit. Creating an account on the website opens the door
-              for users to share places and engage with other people, the
               website gives users the ability to view each location on Google
               Maps, comment, like, and share posts, Dplace creates a dynamic and
               interactive community of explorers. Join us on our journey to see

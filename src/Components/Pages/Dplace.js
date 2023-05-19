@@ -14,9 +14,9 @@ const Dplace = () => {
 
       <SectionOne />
 
-      {/* <SectionTwo />
+      <SectionTwo />
 
-      <SectionThree /> */}
+      {/*<SectionThree /> */}
 
       {/* <SectionFour /> */}
 

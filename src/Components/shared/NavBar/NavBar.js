@@ -7,7 +7,7 @@ import Backdrop from "../UIElements/Backdrop";
 import SideDrawer from "../UIElements/SideDrawer";
 import Hamburger from "hamburger-react";
 import ReactDOM from "react-dom";
-import "../../../App.css";
+// import "../../../App.css";
 import Button from "../UIElements/Button";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useNavigate } from "react-router-dom";
@@ -47,6 +47,8 @@ const NavBar = ({ onDplace = false }) => {
       setTimeout(() => {
         scrollToTop(nameToScroolHome);
       }, 200);
+    } else {
+      scrollToTop(nameToScroolHome);
     }
   };
 
@@ -139,115 +141,128 @@ const NavBar = ({ onDplace = false }) => {
       >
         <div className={styles.container__logo}>
           <div className={styles.logo}>
-            <img src={`${onDplace ? LogoDplace : Logo}`} alt="Logo" />
+            <img
+              src={`${onDplace ? LogoDplace : Logo}`}
+              alt="Logo"
+              onClick={() => {
+                handleNavBarLinksClicks("home");
+              }}
+            />
           </div>
 
-          <ul className={styles.navbar__links}>
-            <li className={`${styles.navbar__item} `}>
-              <Link
-                className={`${styles.links} ${
-                  onDplace
-                    ? styles.active__link__dplace
-                    : activeLink === "home"
-                    ? styles.active__link
-                    : ""
-                }`}
-                to="home"
-                smooth={true}
-                duration={10}
-                offset={-100}
-                onClick={() => {
-                  handleNavBarLinksClicks("home");
-                }}
-              >
-                Home
-              </Link>
-            </li>
-            <li className={styles.navbar__item}>
-              <Link
-                className={`${styles.links} ${
-                  onDplace
-                    ? styles.active__link__dplace
-                    : activeLink === "expertise"
-                    ? styles.active__link
-                    : ""
-                }`}
-                to="expertise"
-                smooth={true}
-                duration={10}
-                offset={-100}
-                onClick={() => {
-                  handleNavBarLinksClicks("expertise");
-                }}
-              >
-                Expertise
-              </Link>
-            </li>
-            <li className={styles.navbar__item}>
-              <Link
-                className={`${styles.links} ${
-                  onDplace
-                    ? styles.active__link__dplace
-                    : activeLink === "work"
-                    ? styles.active__link
-                    : ""
-                }`}
-                to="work"
-                smooth={true}
-                duration={10}
-                // onClick={() => {
-                //   scrollToTop("work");
-                // }}
-              >
-                Work
-              </Link>
-            </li>
-            <li className={styles.navbar__item}>
-              <Link
-                className={`${styles.links} ${
-                  onDplace
-                    ? styles.active__link__dplace
-                    : activeLink === "about"
-                    ? styles.active__link
-                    : ""
-                }`}
-                to="about"
-                smooth={true}
-                duration={10}
-                // onClick={() => {
-                //   scrollToTop("about");
-                // }}
-              >
-                About
-              </Link>
-            </li>
-            <li className={styles.navbar__item}>
-              <Link
-                className={`${styles.links} ${
-                  onDplace
-                    ? styles.active__link__dplace
-                    : activeLink === "contact"
-                    ? styles.active__link
-                    : ""
-                }`}
-                to="contact"
-                smooth={true}
-                duration={10}
-                offset={-100}
-                // onClick={() => {
-                //   scrollToTop("contact");
-                // }}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-          <div className={styles.button}>
-            <Button onText={"Don't"} onDplaceColor={true}></Button>
-          </div>
+          {!onDplace ? (
+            <React.Fragment>
+              <ul className={styles.navbar__links}>
+                <li className={`${styles.navbar__item} `}>
+                  <Link
+                    className={`${styles.links} ${
+                      onDplace
+                        ? styles.active__link__dplace
+                        : activeLink === "home"
+                        ? styles.active__link
+                        : ""
+                    }`}
+                    to="home"
+                    smooth={true}
+                    duration={10}
+                    offset={-100}
+                    onClick={() => {
+                      handleNavBarLinksClicks("home");
+                    }}
+                  >
+                    Home
+                  </Link>
+                </li>
+
+                <li className={styles.navbar__item}>
+                  <Link
+                    className={`${styles.links} ${
+                      onDplace
+                        ? styles.active__link__dplace
+                        : activeLink === "expertise"
+                        ? styles.active__link
+                        : ""
+                    }`}
+                    to="expertise"
+                    smooth={true}
+                    duration={10}
+                    offset={-100}
+                    onClick={() => {
+                      handleNavBarLinksClicks("expertise");
+                    }}
+                  >
+                    Expertise
+                  </Link>
+                </li>
+                <li className={styles.navbar__item}>
+                  <Link
+                    className={`${styles.links} ${
+                      onDplace
+                        ? styles.active__link__dplace
+                        : activeLink === "work"
+                        ? styles.active__link
+                        : ""
+                    }`}
+                    to="work"
+                    smooth={true}
+                    duration={10}
+                    // onClick={() => {
+                    //   scrollToTop("work");
+                    // }}
+                  >
+                    Work
+                  </Link>
+                </li>
+                <li className={styles.navbar__item}>
+                  <Link
+                    className={`${styles.links} ${
+                      onDplace
+                        ? styles.active__link__dplace
+                        : activeLink === "about"
+                        ? styles.active__link
+                        : ""
+                    }`}
+                    to="about"
+                    smooth={true}
+                    duration={10}
+                    // onClick={() => {
+                    //   scrollToTop("about");
+                    // }}
+                  >
+                    About
+                  </Link>
+                </li>
+                <li className={styles.navbar__item}>
+                  <Link
+                    className={`${styles.links} ${
+                      onDplace
+                        ? styles.active__link__dplace
+                        : activeLink === "contact"
+                        ? styles.active__link
+                        : ""
+                    }`}
+                    to="contact"
+                    smooth={true}
+                    duration={10}
+                    offset={-100}
+                    // onClick={() => {
+                    //   scrollToTop("contact");
+                    // }}
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+              <div className={styles.button}>
+                <Button onText={"Don't"} onDplaceColor={onDplace}></Button>
+              </div>
+            </React.Fragment>
+          ) : (
+            ""
+          )}
         </div>
 
-        {!delayShowgHamburguerMenu && (
+        {!delayShowgHamburguerMenu && !onDplace && (
           <div className={styles.menu__responsive}>
             <Hamburger
               color="linear-gradient(90deg, #19c78e, #3c9ce5)"
@@ -262,6 +277,7 @@ const NavBar = ({ onDplace = false }) => {
         <React.Fragment>
           {delayShowgHamburguerMenu &&
             visibleNavBar &&
+            !onDplace &&
             ReactDOM.createPortal(
               <Hamburger
                 color="linear-gradient(90deg, #19c78e, #3c9ce5)"
