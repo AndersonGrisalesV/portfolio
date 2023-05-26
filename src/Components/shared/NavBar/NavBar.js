@@ -86,19 +86,6 @@ const NavBar = ({ onDplace = false }) => {
     }
   }, [openHamburguerMenu]);
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 960px)");
-    setIsMobile(mq.matches);
-    const handleResize = () => setIsMobile(mq.matches);
-    mq.addEventListener("change", handleResize);
-    if (!isMobile) {
-      setOpenHamburguerMenu(false);
-      mq.removeEventListener("change", handleResize);
-    }
-  }, [isMobile]);
-
   // Add an effect to listen to scroll events
   useEffect(() => {
     const handleScroll = () => {
@@ -127,6 +114,19 @@ const NavBar = ({ onDplace = false }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 960px)");
+    setIsMobile(mq.matches);
+    const handleResize = () => setIsMobile(mq.matches);
+    mq.addEventListener("change", handleResize);
+    setOpenHamburguerMenu(false);
+    if (!isMobile) {
+      mq.removeEventListener("change", handleResize);
+    }
+  }, [isMobile]);
 
   return (
     <React.Fragment>

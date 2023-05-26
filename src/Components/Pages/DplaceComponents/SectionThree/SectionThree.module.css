@@ -1,4 +1,4 @@
-.section__one__container {
+.section__two__container {
   box-sizing: border-box;
   margin-top: 118px;
   display: flex;
@@ -17,16 +17,28 @@
   align-items: center;
 }
 
-.container__dimage__place__text {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 7px;
-  margin-bottom: 68px;
+.some__text {
+  font-size: 66px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  margin: 0;
 }
 
-.container__image {
-  margin-top: -30px;
+.features__text {
+  background: linear-gradient(
+    180deg,
+    rgb(25, 199, 142) 0%,
+    rgb(60.24, 156.34, 229.5) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 66px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  margin: 0;
+  margin-top: -25px;
 }
 
 .description__text {
@@ -34,6 +46,7 @@
   justify-content: center;
   text-align: center;
   font-size: var(--fz-md);
+  list-style: inside;
   font-weight: 400;
   color: #f9f9f9;
   letter-spacing: 0;
@@ -41,8 +54,4 @@
   min-height: 226px;
   width: 564px;
   margin: 0px;
-}
-
-.button__container {
-  margin-top: 60px;
 }
