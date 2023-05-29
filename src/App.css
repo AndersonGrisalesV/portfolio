@@ -13,6 +13,8 @@
   --fz-xlg: 72px;
   --scrollbar-color: linear-gradient(to bottom, #038d87, #038d87);
   --scrollbar-color-hover: linear-gradient(to bottom, #04c0b7, #04c0b7);
+  --selection-background-color: #da4453;
+  --selection-color: #f9f9f9;
 }
 
 html {
@@ -37,8 +39,10 @@ body {
 }
 
 ::selection {
-  background-color: #038d87;
-  color: #f9f9f9;
+  background: var(--selection-background-color);
+  color: var(--selection-color);
+  /* background-color: #038d87;
+  color: #f9f9f9; */
 }
 
 .main__container {

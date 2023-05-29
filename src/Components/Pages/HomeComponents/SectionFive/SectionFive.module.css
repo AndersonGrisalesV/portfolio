@@ -27,9 +27,9 @@
 
 .touch__text {
   background: linear-gradient(
-    180deg,
+    90deg,
     rgb(25, 199, 142) 0%,
-    rgb(60.24, 156.34, 229.5) 100%
+    rgb(60, 156, 229) 110%
   );
   background-clip: text;
   color: transparent;
@@ -79,7 +79,9 @@
 }
 
 .social__media__image:hover {
-  transform: scale(1.1); /* Increase the scale to make the image slightly bigger */
+  transform: scale(
+    1.1
+  ); /* Increase the scale to make the image slightly bigger */
 }
 
 @media only screen and (max-width: 666px) {

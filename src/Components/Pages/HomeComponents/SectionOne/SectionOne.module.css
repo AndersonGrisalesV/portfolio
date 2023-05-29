@@ -33,9 +33,11 @@
 
 .greeting__text {
   background: linear-gradient(
-    180deg,
-    rgb(25, 199, 142) 0%,
-    rgb(60.24, 156.34, 229.5) 100%
+    90deg,
+    rgb(25, 199, 142, 1) 0%,
+
+    rgb(60, 156, 229, 1) 100%,
+    rgb(60, 156, 229, 1) 110%
   );
   background-clip: text;
   color: transparent;
@@ -78,9 +80,10 @@
 
 .design__text {
   background: linear-gradient(
-    180deg,
-    rgb(25, 199, 142) 0%,
-    rgb(60.24, 156.34, 229.5) 100%
+    90deg,
+    rgb(25, 199, 142, 1) 0%,
+
+    rgb(60, 156, 229, 1) 120%
   );
   background-clip: text;
   color: transparent;
@@ -680,7 +683,17 @@
   }
 
   .design__text {
+    background: linear-gradient(
+      90deg,
+      rgb(25, 199, 142, 1) 0%,
+
+      rgb(60, 156, 229, 1) 45%
+    );
+    background-clip: text;
+
     font-size: var(--fz-slg);
+
+    padding-bottom: 1px;
 
     width: calc(100% - 159px);
   }
@@ -860,6 +873,13 @@
   }
 
   .design__text {
+    background: linear-gradient(
+      90deg,
+      rgb(25, 199, 142, 1) 0%,
+
+      rgb(60, 156, 229, 1) 65%
+    );
+    background-clip: text;
     font-size: var(--fz-smlg);
     margin-top: -6px;
     letter-spacing: 0.4px;

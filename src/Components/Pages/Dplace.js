@@ -18,7 +18,7 @@ const Dplace = () => {
 
       <SectionThree />
 
-      {/* <SectionFour /> */}
+      <SectionFour />
 
       <Footer />
     </React.Fragment>

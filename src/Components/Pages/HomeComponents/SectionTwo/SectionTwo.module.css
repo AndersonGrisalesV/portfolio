@@ -56,9 +56,10 @@
 
 .expertise__text {
   background: linear-gradient(
-    180deg,
-    rgb(25, 199, 142) 0%,
-    rgb(60.24, 156.34, 229.5) 100%
+    90deg,
+    rgb(25, 199, 142, 1) 5%,
+    rgb(60, 156, 229, 1) 60%,
+    rgb(60, 156, 229, 1) 100%
   );
   background-clip: text;
   color: transparent;

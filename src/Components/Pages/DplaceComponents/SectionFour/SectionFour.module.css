@@ -1,4 +1,4 @@
-.section__three__container {
+.section__four__container {
   box-sizing: border-box;
   margin-top: 118px;
   display: flex;
@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-.some__text {
+.tech__text {
   font-size: 66px;
   font-weight: 600;
   text-align: center;
@@ -26,7 +26,7 @@
   margin: 0;
 }
 
-.features__text {
+.stack__text {
   background: linear-gradient(
     90deg,
     rgb(218, 68, 83, 1) 0%,
@@ -41,33 +41,4 @@
   white-space: nowrap;
   margin: 0;
   margin-top: -25px;
-}
-
-.container__description__text {
-}
-
-.description__text {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-size: var(--fz-md);
-  list-style: inside;
-  font-weight: 400;
-  color: #f9f9f9;
-  letter-spacing: 0;
-  line-height: 32px;
-  min-height: 226px;
-  width: 564px;
-  margin: 0px;
-  padding: 0px;
-  margin-top: 54px;
-}
-
-.container__images {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 118px;
-  column-gap: 13.9%;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
-import styles from "./SectionOne.module.css";
 import Button from "../../../shared/UIElements/Button";
+import styles from "./SectionOne.module.css";
 
 const SectionOne = () => {
   return (
