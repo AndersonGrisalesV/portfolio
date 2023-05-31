@@ -20,7 +20,7 @@ const Dplace = () => {
 
       <SectionFour />
 
-      <Footer />
+      <Footer onDplace={true} />
     </React.Fragment>
   );
 };

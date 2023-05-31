@@ -7,14 +7,12 @@ const DplaceMarquee = () => {
     <div>
       <Marquee
         pauseOnClick={true}
-        speed={80}
+        speed={50}
         delay={-20}
-        direction="right"
+        direction="left"
         gradient={true}
         gradientColor={[13, 18, 23, 0.5]}
         gradientWidth={100}
-
-        // style={{ minWidth: "50%" }}
       >
         <div className={styles.image__wrapper}>
           <img

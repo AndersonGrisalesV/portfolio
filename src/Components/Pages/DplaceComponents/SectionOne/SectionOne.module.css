@@ -50,3 +50,58 @@
 .button__container {
   margin-top: 60px;
 }
+
+@media only screen and (max-width: 666px) {
+  .container__image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .place__text {
+    font-size: var(--fz-slg);
+  }
+
+  .description__text {
+    font-size: var(--fz-md);
+    padding-left: 42px;
+    padding-right: 42px;
+    width: calc(100% - 0px);
+  }
+}
+
+@media only screen and (max-width: 566px) {
+}
+
+@media only screen and (max-width: 490px) {
+  .container__image img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .place__text {
+    font-size: var(--fz-smlg);
+    letter-spacing: 0.8px;
+  }
+
+  .description__text {
+    font-size: var(--fz-sm);
+  }
+}
+
+@media only screen and (max-width: 344px) {
+  .skills__text {
+    font-size: var(--fz-smlg);
+    letter-spacing: 0.4px;
+  }
+}
+
+@media only screen and (max-width: 244px) {
+  .container__image {
+    margin-top: -8px;
+  }
+
+  .container__image img {
+    width: 60px;
+    height: 60px;
+  }
+}

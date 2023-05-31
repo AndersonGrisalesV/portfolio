@@ -7,9 +7,9 @@ import Button from "../../../shared/UIElements/Button";
 const SectionFour = () => {
   return (
     <div>
-      <section className={styles.section__four__container} id="contact">
+      <section className={styles.section__four__container}>
         <div className={styles.container__center__section}>
-          <div className={styles.responsive__some__features__text}>
+          <div className={styles.responsive__tech__stack__text}>
             <h1 className={styles.tech__text}>Tech</h1>
             <h1 className={styles.stack__text}>Stack</h1>
           </div>
@@ -19,10 +19,8 @@ const SectionFour = () => {
           </div>
         </div>
 
-        <div className={styles.container__buttons}>
-          <div className={styles.button__container}>
-            <Button onText={"Github"} onDplaceColor={true}></Button>
-          </div>
+        <div className={styles.button__container}>
+          <Button onText={"Github"} onDplaceColor={true}></Button>
         </div>
       </section>
     </div>

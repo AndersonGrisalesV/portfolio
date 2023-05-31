@@ -1,58 +1,62 @@
 .image__wrapper {
-  margin: 0px 79px;
+  margin: 0px 29px;
+  padding: 5px;
 }
 
 .image__wrapper img {
-  height: 141px;
+  height: 121px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image__wrapper img:hover {
+  transform: scale(
+    1.05
+  ); /* Increase the scale to make the image slightly bigger */
 }
 
 @media only screen and (max-width: 966px) {
+  .image__wrapper {
+    margin: 0px 19px;
+    padding: 5px;
+  }
+
   .image__wrapper img {
-    height: 156px;
+    height: 101px;
   }
 }
 
 @media only screen and (max-width: 866px) {
-  .image__wrapper img {
-    height: 136px;
-  }
 }
 
 @media only screen and (max-width: 766px) {
-  .image__wrapper {
-    margin: 0px 59px;
-  }
-
   .image__wrapper img {
-    height: 106px;
+    height: 91px;
   }
 }
 
 @media only screen and (max-width: 666px) {
+}
+
+@media only screen and (max-width: 566px) {
   .image__wrapper {
-    margin: 0px 49px;
+    margin: 12px;
   }
 }
 
 @media only screen and (max-width: 490px) {
+  .image__wrapper img {
+    height: 81px;
+  }
 }
 
 @media only screen and (max-width: 344px) {
-  .image__wrapper {
-    margin: 0px 29px;
-  }
-
   .image__wrapper img {
-    height: 96px;
+    height: 71px;
   }
 }
 
 @media only screen and (max-width: 200px) {
-  .image__wrapper {
-    margin: 0px 29px;
-  }
-
   .image__wrapper img {
-    height: 66px;
+    height: 61px;
   }
 }
