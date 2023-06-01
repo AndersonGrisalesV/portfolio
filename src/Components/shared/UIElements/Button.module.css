@@ -46,3 +46,16 @@
   background-color: transparent;
   color: #da4453;
 }
+
+.button__healthymindset {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #c0d731, #349965);
+}
+
+.button__healthymindset:hover {
+  background-color: transparent;
+  color: #008540;
+}

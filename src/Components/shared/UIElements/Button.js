@@ -7,13 +7,15 @@ const Button = ({
   onText,
   onChangebackground,
   onDplace = false,
-  onDplaceColor = false,
+  onHealthyMindset = false,
 }) => {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
     if (onDplace) {
       navigate("/projects/dplace");
+    } else if (onHealthyMindset) {
+      navigate("/projects/healthy_mindset");
     }
   };
 
@@ -24,8 +26,10 @@ const Button = ({
   return (
     <button
       className={`${styles.button} "" ${
-        onDplaceColor
+        onDplace
           ? styles.button__dplace
+          : onHealthyMindset
+          ? styles.button__healthymindset
           : onChangebackground
           ? styles.button__light
           : ""

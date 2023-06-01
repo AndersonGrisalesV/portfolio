@@ -5,7 +5,7 @@ import styles from "./SectionTwo.module.css";
 const SectionTwo = () => {
   return (
     <div>
-      <section className={styles.section__two__container} id="contact">
+      <section className={styles.section__two__container}>
         <div className={styles.container__center__section}>
           <div className={styles.container__image}>
             <img

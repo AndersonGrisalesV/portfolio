@@ -1,0 +1,39 @@
+.section__one__container {
+  box-sizing: border-box;
+  margin-top: 64px;
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.container__center__section {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__healthy__mindset__image__text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+
+.healthy__mindset__text {
+  font-size: var(--fz-xlg);
+  margin: 0px;
+}
+
+.container__image {
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+  padding-left: 18px;
+  padding-right: 18px;
+}

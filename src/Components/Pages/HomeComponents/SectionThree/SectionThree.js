@@ -3,7 +3,7 @@ import React from "react";
 import Card from "../../../shared/UIElements/Card";
 import styles from "./SectionThree.module.css";
 
-const SectionThree = ({ isActive }) => {
+const SectionThree = () => {
   return (
     <div>
       <div className={styles.responsive__my__projects__text}>
@@ -47,6 +47,7 @@ const SectionThree = ({ isActive }) => {
             onText={
               "Healthy Mindset's cross-platform design provides counseling services, mental health assessments, and self-help tools for people in need."
             }
+            onHealthyMindset={true}
           />
 
           <Card

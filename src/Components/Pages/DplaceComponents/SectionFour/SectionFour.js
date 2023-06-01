@@ -20,7 +20,7 @@ const SectionFour = () => {
         </div>
 
         <div className={styles.button__container}>
-          <Button onText={"Github"} onDplaceColor={true}></Button>
+          <Button onText={"Github"} onDplace={true}></Button>
         </div>
       </section>
     </div>

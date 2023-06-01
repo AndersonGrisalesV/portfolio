@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Footer.module.css";
 
-const Footer = ({ onDplace }) => {
+const Footer = ({ onDplace = false, onHealthyMindset = false }) => {
   const currentYear = new Date().getFullYear();
 
   return (

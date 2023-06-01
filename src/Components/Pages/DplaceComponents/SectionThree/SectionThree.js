@@ -5,7 +5,7 @@ import styles from "./SectionThree.module.css";
 const SectionThree = () => {
   return (
     <div>
-      <section className={styles.section__three__container} id="contact">
+      <section className={styles.section__three__container}>
         <div className={styles.container__center__section}>
           <div className={styles.responsive__some__features__text}>
             <h1 className={styles.some__text}>Some</h1>

@@ -34,10 +34,20 @@
   margin-right: 62px;
   cursor: pointer;
 }
-
 .logo img:hover {
   transform: rotate(360deg) scale(1.2);
   transition: all 0.5s ease-in-out;
+}
+
+.logo__margin__correction img:hover {
+  transform: rotate(360deg) scale(1.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.container__projects__logos {
+  display: flex;
+
+  justify-content: center;
 }
 
 .container__logo {
@@ -129,10 +139,10 @@
   /* Additional styles... */
 }
 
-.active__link__dplace:hover {
+/* .active__link__dplace:hover {
   background-color: transparent;
   color: #da4453;
-}
+} */
 
 @media only screen and (max-width: 960px) {
   /* Small screens */

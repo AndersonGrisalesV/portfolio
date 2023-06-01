@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
-import styles from "./NavBar.module.css";
-import Logo from "./Logo.svg";
-import LogoDplace from "./LogoDplace.svg";
+import ReactDOM from "react-dom";
+import { useNavigate } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
+import Logo from "./Logos/Logo.svg";
+import LogoDplace from "./Logos/LogoDplace.svg";
+import LogoHealthyMindset from "./Logos/LogoHealthyMindset.svg";
 import HamburguerMenuButton from "./HamburguerMenuButton";
 import Backdrop from "../UIElements/Backdrop";
 import SideDrawer from "../UIElements/SideDrawer";
 import Hamburger from "hamburger-react";
-import ReactDOM from "react-dom";
 // import "../../../App.css";
 import Button from "../UIElements/Button";
-import { Link, animateScroll as scroll } from "react-scroll";
-import { useNavigate } from "react-router-dom";
+import styles from "./NavBar.module.css";
 
-const NavBar = ({ onDplace = false }) => {
+const NavBar = ({ onDplace = false, onHealthyMindset = false }) => {
   const [visibleNavBar, setVisibleNavBar] = useState(true);
 
   const [openHamburguerMenu, setOpenHamburguerMenu] = useState(false);
@@ -42,7 +43,7 @@ const NavBar = ({ onDplace = false }) => {
       return () => clearTimeout(timeoutId);
     };
 
-    if (onDplace) {
+    if (onDplace || onHealthyMindset) {
       navigate("/home");
       setTimeout(() => {
         scrollToTop(nameToScroolHome);
@@ -139,10 +140,22 @@ const NavBar = ({ onDplace = false }) => {
         }`}
         style={{ transitionDelay: visibleNavBar ? "0ms" : "300ms" }}
       >
-        <div className={styles.container__logo}>
+        <div
+          className={`${
+            onDplace || onHealthyMindset
+              ? styles.container__projects__logos
+              : styles.container__logo
+          }`}
+        >
           <div className={styles.logo}>
             <img
-              src={`${onDplace ? LogoDplace : Logo}`}
+              src={`${
+                onDplace
+                  ? LogoDplace
+                  : onHealthyMindset
+                  ? LogoHealthyMindset
+                  : Logo
+              }`}
               alt="Logo"
               onClick={() => {
                 handleNavBarLinksClicks("home");
@@ -150,14 +163,14 @@ const NavBar = ({ onDplace = false }) => {
             />
           </div>
 
-          {!onDplace ? (
+          {!onDplace && !onHealthyMindset ? (
             <React.Fragment>
               <ul className={styles.navbar__links}>
                 <li className={`${styles.navbar__item} `}>
                   <Link
                     className={`${styles.links} ${
-                      onDplace
-                        ? styles.active__link__dplace
+                      onDplace || onHealthyMindset
+                        ? ""
                         : activeLink === "home"
                         ? styles.active__link
                         : ""
@@ -254,7 +267,11 @@ const NavBar = ({ onDplace = false }) => {
                 </li>
               </ul>
               <div className={styles.button}>
-                <Button onText={"Don't"} onDplaceColor={onDplace}></Button>
+                <Button
+                  onText={"Don't"}
+                  onDplace={onDplace}
+                  onHealthyMindset={onHealthyMindset}
+                ></Button>
               </div>
             </React.Fragment>
           ) : (

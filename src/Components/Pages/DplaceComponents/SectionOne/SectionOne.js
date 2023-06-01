@@ -6,7 +6,7 @@ import styles from "./SectionOne.module.css";
 const SectionOne = () => {
   return (
     <div>
-      <section className={styles.section__one__container} id="contact">
+      <section className={styles.section__one__container}>
         <div className={styles.container__center__section}>
           <div className={styles.container__dimage__place__text}>
             <div className={styles.container__image}>
@@ -34,7 +34,7 @@ const SectionOne = () => {
 
           <div className={styles.container__buttons}>
             <div className={styles.button__container}>
-              <Button onText={"Demo"} onDplaceColor={true}></Button>
+              <Button onText={"Demo"} onDplace={true}></Button>
             </div>
           </div>
         </div>
