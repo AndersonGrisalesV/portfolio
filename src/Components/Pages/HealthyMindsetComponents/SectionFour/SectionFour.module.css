@@ -1,4 +1,4 @@
-.section__two__container {
+.section__four__container {
   box-sizing: border-box;
   margin-top: 233px;
   display: flex;
@@ -16,13 +16,13 @@
   align-items: center;
 }
 
-.container__app__project__text {
+.container__initiating__creative__text {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.app__text {
+.initiating__text {
   font-size: 66px;
   font-weight: 600;
   letter-spacing: 1.2px;
@@ -30,7 +30,7 @@
   margin: 0;
 }
 
-.project__text {
+.creative__text {
   background: linear-gradient(
     90deg,
     rgb(192, 215, 49, 1) 5%,
@@ -44,11 +44,10 @@
   letter-spacing: 1.2px;
   white-space: nowrap;
   margin: 0;
-  margin-top: -12px;
+  margin-top: -22px;
 }
-
 .container__description__text {
-  margin-top: 63px;
+  margin-top: 43px;
 }
 
 .description__text {
@@ -62,17 +61,13 @@
   margin: 0px;
 }
 
-.button__container {
-  margin-top: 63px;
-}
-
 .container__right__section {
   display: flex;
 }
 
 .container__images {
   position: relative;
-  top: 26px;
+  top: 56px;
 }
 
 .container__images img {

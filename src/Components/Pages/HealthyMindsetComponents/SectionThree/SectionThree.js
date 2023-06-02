@@ -8,12 +8,12 @@ const SectionTwo = () => {
     <div>
       <section className={styles.section__three__container}>
         <div className={styles.container__left__section}>
-          <div className={styles.container__app__project__text}>
+          <div className={styles.container__exploring__user__text}>
             <h1 className={styles.exploring__text}>Exploring</h1>
             <h1 className={styles.user__text}>user needs</h1>
           </div>
 
-          <div>
+          <div className={styles.container__description__text}>
             <p className={styles.description__text}>
               The research stage aimed to gather insights about the mental
               health needs and pain points of the target users. This was
@@ -36,13 +36,8 @@ const SectionTwo = () => {
                 "https://res.cloudinary.com/doa4qiuc2/image/upload/v1685647874/Portfolio/projects/HealthyMindset/healthyMindsetSectionThree_nsoqle.svg"
               }
               onImgDescription={"healthy mindset section three image"}
-              onHealthyMindset={true}
+              onCardHealthyMindset={true}
             />
-            {/* <img
-              src=""
-              alt="Healthy_Mindset_Section_Two_images"
-              className={styles.social__media__image}
-            /> */}
           </div>
         </div>
       </section>

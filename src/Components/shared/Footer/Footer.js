@@ -10,6 +10,8 @@ const Footer = ({ onDplace = false, onHealthyMindset = false }) => {
       className={`${
         onDplace
           ? styles.section__dplace__footer__margin
+          : onHealthyMindset
+          ? styles.section__healthy__mindset__footer__margin
           : styles.section__footer
       }`}
     >

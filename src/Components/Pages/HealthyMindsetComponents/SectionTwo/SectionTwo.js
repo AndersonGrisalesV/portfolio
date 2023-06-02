@@ -10,10 +10,10 @@ const SectionTwo = () => {
         <div className={styles.container__left__section}>
           <div className={styles.container__app__project__text}>
             <h1 className={styles.app__text}>App and Website</h1>
-            <h1 className={styles.project__text}>Project Vision</h1>
+            <h1 className={styles.project__text}>project vision</h1>
           </div>
 
-          <div>
+          <div className={styles.container__description__text}>
             <p className={styles.description__text}>
               Healthy Mindset is a cross-platform mental health application and
               responsive website designed to provide online support to

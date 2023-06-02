@@ -9,9 +9,14 @@ const Card = ({
   onText = false,
   onDplace = false,
   onHealthyMindset = false,
+  onCardHealthyMindset = false,
 }) => {
   return (
-    <div className={`${styles.card} ${styles.card__hover}`}>
+    <div
+      className={`${onCardHealthyMindset ? styles.card__big : styles.card} ${
+        styles.card__hover
+      }`}
+    >
       <div className={styles.image__container}>
         <img src={onImg} alt={onImgDescription} />
       </div>

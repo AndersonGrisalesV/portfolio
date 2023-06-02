@@ -279,7 +279,7 @@ const NavBar = ({ onDplace = false, onHealthyMindset = false }) => {
           )}
         </div>
 
-        {!delayShowgHamburguerMenu && !onDplace && (
+        {!delayShowgHamburguerMenu && !onDplace && !onHealthyMindset && (
           <div className={styles.menu__responsive}>
             <Hamburger
               color="linear-gradient(90deg, #19c78e, #3c9ce5)"
@@ -295,6 +295,7 @@ const NavBar = ({ onDplace = false, onHealthyMindset = false }) => {
           {delayShowgHamburguerMenu &&
             visibleNavBar &&
             !onDplace &&
+            !onHealthyMindset &&
             ReactDOM.createPortal(
               <Hamburger
                 color="linear-gradient(90deg, #19c78e, #3c9ce5)"

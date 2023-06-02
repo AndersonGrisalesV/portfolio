@@ -1,10 +1,10 @@
-.section__two__container {
+.section__seven__container {
   box-sizing: border-box;
-  margin-top: 233px;
+  margin-top: 223px;
   display: flex;
   position: relative;
   width: 100%;
-  gap: 10%;
+  gap: 8%;
   justify-content: center;
   align-items: center;
 }
@@ -16,13 +16,13 @@
   align-items: center;
 }
 
-.container__app__project__text {
+.container__conslusion__design__text {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.app__text {
+.conclusion__text {
   font-size: 66px;
   font-weight: 600;
   letter-spacing: 1.2px;
@@ -30,7 +30,7 @@
   margin: 0;
 }
 
-.project__text {
+.design__text {
   background: linear-gradient(
     90deg,
     rgb(192, 215, 49, 1) 5%,
@@ -44,7 +44,7 @@
   letter-spacing: 1.2px;
   white-space: nowrap;
   margin: 0;
-  margin-top: -12px;
+  margin-top: -22px;
 }
 
 .container__description__text {
@@ -63,16 +63,19 @@
 }
 
 .button__container {
-  margin-top: 63px;
 }
 
 .container__right__section {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  margin-top: 26px;
 }
 
 .container__images {
   position: relative;
-  top: 26px;
+  top: 40px;
 }
 
 .container__images img {
