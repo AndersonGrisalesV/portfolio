@@ -8,6 +8,8 @@ const Button = ({
   onChangebackground,
   onDplace = false,
   onHealthyMindset = false,
+  onCodeFinder = false,
+  onGroceryShop = false,
 }) => {
   const navigate = useNavigate();
 
@@ -16,6 +18,10 @@ const Button = ({
       navigate("/projects/dplace");
     } else if (onHealthyMindset) {
       navigate("/projects/healthy_mindset");
+    } else if (onCodeFinder) {
+      navigate("/projects/code_finder");
+    } else if (onGroceryShop) {
+      navigate("/projects/grocery_shop");
     }
   };
 
@@ -30,6 +36,10 @@ const Button = ({
           ? styles.button__dplace
           : onHealthyMindset
           ? styles.button__healthymindset
+          : onCodeFinder
+          ? styles.button__codefinder
+          : onGroceryShop
+          ? styles.button_groceryshop
           : onChangebackground
           ? styles.button__light
           : ""

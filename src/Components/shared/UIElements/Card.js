@@ -10,12 +10,19 @@ const Card = ({
   onDplace = false,
   onHealthyMindset = false,
   onCardHealthyMindset = false,
+  onCodeFinder = false,
+  onCardCodeFinder = false,
+  onGroceryShop = false,
 }) => {
   return (
     <div
-      className={`${onCardHealthyMindset ? styles.card__big : styles.card} ${
-        styles.card__hover
-      }`}
+      className={`${
+        onCardHealthyMindset
+          ? styles.card__big
+          : onCardCodeFinder
+          ? styles.card__big__black
+          : styles.card
+      } ${styles.card__hover}`}
     >
       <div
         className={` ${
@@ -37,6 +44,8 @@ const Card = ({
               onChangebackground={true}
               onDplace={onDplace}
               onHealthyMindset={onHealthyMindset}
+              onCodeFinder={onCodeFinder}
+              onGroceryShop={onGroceryShop}
             />
           </div>
         </React.Fragment>

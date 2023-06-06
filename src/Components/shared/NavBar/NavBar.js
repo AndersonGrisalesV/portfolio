@@ -5,6 +5,8 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import Logo from "./Logos/Logo.svg";
 import LogoDplace from "./Logos/LogoDplace.svg";
 import LogoHealthyMindset from "./Logos/LogoHealthyMindset.svg";
+import LogoCodeFinder from "./Logos/LogoCodeFinder.svg";
+import LogoGroceryShop from "./Logos/LogoGroceryShop.svg";
 import HamburguerMenuButton from "./HamburguerMenuButton";
 import Backdrop from "../UIElements/Backdrop";
 import SideDrawer from "../UIElements/SideDrawer";
@@ -13,7 +15,12 @@ import Hamburger from "hamburger-react";
 import Button from "../UIElements/Button";
 import styles from "./NavBar.module.css";
 
-const NavBar = ({ onDplace = false, onHealthyMindset = false }) => {
+const NavBar = ({
+  onDplace = false,
+  onHealthyMindset = false,
+  onCodeFinder = false,
+  onGroceryShop = false,
+}) => {
   const [visibleNavBar, setVisibleNavBar] = useState(true);
 
   const [openHamburguerMenu, setOpenHamburguerMenu] = useState(false);
@@ -43,7 +50,7 @@ const NavBar = ({ onDplace = false, onHealthyMindset = false }) => {
       return () => clearTimeout(timeoutId);
     };
 
-    if (onDplace || onHealthyMindset) {
+    if (onDplace || onHealthyMindset || onCodeFinder || onGroceryShop) {
       navigate("/home");
       setTimeout(() => {
         scrollToTop(nameToScroolHome);
@@ -142,7 +149,7 @@ const NavBar = ({ onDplace = false, onHealthyMindset = false }) => {
       >
         <div
           className={`${
-            onDplace || onHealthyMindset
+            onDplace || onHealthyMindset || onCodeFinder || onGroceryShop
               ? styles.container__projects__logos
               : styles.container__logo
           }`}
@@ -154,6 +161,10 @@ const NavBar = ({ onDplace = false, onHealthyMindset = false }) => {
                   ? LogoDplace
                   : onHealthyMindset
                   ? LogoHealthyMindset
+                  : onCodeFinder
+                  ? LogoCodeFinder
+                  : onGroceryShop
+                  ? LogoGroceryShop
                   : Logo
               }`}
               alt="Logo"
@@ -163,7 +174,7 @@ const NavBar = ({ onDplace = false, onHealthyMindset = false }) => {
             />
           </div>
 
-          {!onDplace && !onHealthyMindset ? (
+          {!onDplace && !onHealthyMindset && !onCodeFinder && !onGroceryShop ? (
             <React.Fragment>
               <ul className={styles.navbar__links}>
                 <li className={`${styles.navbar__item} `}>
@@ -279,23 +290,29 @@ const NavBar = ({ onDplace = false, onHealthyMindset = false }) => {
           )}
         </div>
 
-        {!delayShowgHamburguerMenu && !onDplace && !onHealthyMindset && (
-          <div className={styles.menu__responsive}>
-            <Hamburger
-              color="linear-gradient(90deg, #19c78e, #3c9ce5)"
-              hideOutline={false}
-              size="30"
-              rounded
-              toggled={openHamburguerMenu}
-              toggle={setOpenHamburguerMenu}
-            />
-          </div>
-        )}
+        {!delayShowgHamburguerMenu &&
+          !onDplace &&
+          !onHealthyMindset &&
+          !onCodeFinder &&
+          !onGroceryShop && (
+            <div className={styles.menu__responsive}>
+              <Hamburger
+                color="linear-gradient(90deg, #19c78e, #3c9ce5)"
+                hideOutline={false}
+                size="30"
+                rounded
+                toggled={openHamburguerMenu}
+                toggle={setOpenHamburguerMenu}
+              />
+            </div>
+          )}
         <React.Fragment>
           {delayShowgHamburguerMenu &&
             visibleNavBar &&
             !onDplace &&
             !onHealthyMindset &&
+            !onCodeFinder &&
+            !onGroceryShop &&
             ReactDOM.createPortal(
               <Hamburger
                 color="linear-gradient(90deg, #19c78e, #3c9ce5)"

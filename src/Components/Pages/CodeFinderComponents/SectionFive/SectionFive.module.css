@@ -1,0 +1,87 @@
+.section__five__container {
+  box-sizing: border-box;
+  margin-top: 188px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  gap: 8%;
+  justify-content: center;
+  align-items: center;
+  padding-left: 42px;
+  padding-right: 42px;
+}
+
+.container__left__section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__app__project__text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.high__text {
+  font-size: 66px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.prototype__text {
+  background: linear-gradient(
+    90deg,
+    rgb(224, 44, 80, 1) 60%,
+    rgb(224, 44, 80, 1) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 66px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  margin: 0;
+  margin-top: -24px;
+}
+
+.container__description__text {
+  margin-top: 63px;
+}
+
+.description__text {
+  font-size: 18px;
+  color: #f9f9f9;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 32px;
+  min-height: 144px;
+  width: 560px;
+  margin: 0px;
+}
+
+.button__container {
+  margin-top: 63px;
+}
+
+.container__right__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__right__image {
+  margin-top: 86px;
+}
+
+.container__images {
+  position: relative;
+  top: 26px;
+}
+
+.container__images img {
+  width: 100%;
+}

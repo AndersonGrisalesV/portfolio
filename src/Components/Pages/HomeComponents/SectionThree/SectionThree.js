@@ -30,6 +30,7 @@ const SectionThree = () => {
       onText={
         "CodeFinder's cross-platform design offers coding tutorials, official documentation, and more to help people learn how to code."
       }
+      onCodeFinder={true}
     />
   );
 
@@ -82,6 +83,7 @@ const SectionThree = () => {
             onText={
               "The Grocery Shop is an app design that offers affordable grocery products, with a focus on convenience and easy payment options."
             }
+            onGroceryShop={true}
           />
         </div>
       </section>

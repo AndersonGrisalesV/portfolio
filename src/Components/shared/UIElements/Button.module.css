@@ -59,3 +59,29 @@
   background-color: transparent;
   color: #008540;
 }
+
+.button__codefinder {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #ffffff, #e02c50);
+}
+
+.button__codefinder:hover {
+  background-color: transparent;
+  color: #e02c50;
+}
+
+.button_groceryshop {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #ffffff, #3194ef);
+}
+
+.button_groceryshop:hover {
+  background-color: transparent;
+  color: #3a98fe;
+}
