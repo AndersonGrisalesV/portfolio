@@ -7,6 +7,8 @@
   gap: 10%;
   justify-content: center;
   align-items: center;
+  padding-left: 42px;
+  padding-right: 42px;
 }
 
 .container__left__section {
@@ -25,7 +27,7 @@
 .app__text {
   font-size: 66px;
   font-weight: 600;
-  letter-spacing: 1.2px;
+  letter-spacing: -1px;
   white-space: nowrap;
   margin: 0;
 }
@@ -41,7 +43,7 @@
   color: transparent;
   font-size: 66px;
   font-weight: 600;
-  letter-spacing: 1.2px;
+  letter-spacing: -1px;
   white-space: nowrap;
   margin: 0;
   margin-top: -12px;
@@ -77,4 +79,110 @@
 
 .container__images img {
   width: 100%;
+}
+
+@media only screen and (max-width: 1266px) {
+  .project__vision__image {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .section__two__container {
+    box-sizing: border-box;
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .container__right__section {
+    margin-top: 62px;
+  }
+
+  .project__vision__image {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 966px) {
+}
+
+@media only screen and (max-width: 866px) {
+}
+
+@media only screen and (max-width: 766px) {
+}
+
+@media only screen and (max-width: 666px) {
+  .app__text {
+    font-size: var(--fz-slg);
+  }
+
+  .project__text {
+    font-size: var(--fz-slg);
+    margin-top: -20px;
+  }
+
+  .description__text {
+    font-size: var(--fz-md);
+    width: calc(100% - 0px);
+  }
+
+  .container__images {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 566px) {
+}
+
+@media only screen and (max-width: 490px) {
+  .section__two__container {
+    margin-top: 140px;
+  }
+
+  .app__text {
+    font-size: var(--fz-smlg);
+    letter-spacing: 0.8px;
+  }
+
+  .project__text {
+    font-size: var(--fz-smlg);
+    margin-top: -12px;
+    letter-spacing: 0.8px;
+  }
+
+  .description__text {
+    font-size: var(--fz-sm);
+  }
+}
+
+@media only screen and (max-width: 344px) {
+  .container__left__section {
+    width: calc(100% - 0px);
+  }
+
+  .container__app__project__text h1 {
+    white-space: normal;
+  }
+
+  .container__images {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 180px) {
+  .container__images img {
+    width: 100px;
+    height: 100px;
+  }
 }

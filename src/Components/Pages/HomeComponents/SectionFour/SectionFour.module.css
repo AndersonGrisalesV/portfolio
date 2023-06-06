@@ -276,3 +276,10 @@
     margin-left: 0px;
   }
 }
+
+@media only screen and (max-width: 180px) {
+  .responsive__container__kanji__section img {
+    width: 65px;
+    height: 65px;
+  }
+}

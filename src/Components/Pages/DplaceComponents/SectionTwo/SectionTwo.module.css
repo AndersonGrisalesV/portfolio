@@ -40,3 +40,10 @@
 
 @media only screen and (max-width: 344px) {
 }
+
+@media only screen and (max-width: 180px) {
+  .container__image img {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -17,7 +17,13 @@ const Card = ({
         styles.card__hover
       }`}
     >
-      <div className={styles.image__container}>
+      <div
+        className={` ${
+          onCardHealthyMindset
+            ? styles.image__container__card__correction
+            : styles.image__container
+        }`}
+      >
         <img src={onImg} alt={onImgDescription} />
       </div>
       {onText ? (

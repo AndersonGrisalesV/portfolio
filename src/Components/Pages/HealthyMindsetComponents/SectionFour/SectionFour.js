@@ -29,7 +29,7 @@ const SectionFour = () => {
             <img
               src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685647872/Portfolio/projects/HealthyMindset/healthyMindsetSectionFour_saaudf.svg"
               alt="Healthy_Mindset_Section_Four_images"
-              className={styles.social__media__image}
+              className={styles.initiating__creative__image}
             />
           </div>
         </div>

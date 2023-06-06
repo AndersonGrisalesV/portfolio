@@ -35,7 +35,7 @@ const SectionTwo = () => {
             <img
               src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685647872/Portfolio/projects/HealthyMindset/healthyMindsetSectionTwo_gq3lgv.svg"
               alt="Healthy_Mindset_Section_Two_images"
-              className={styles.social__media__image}
+              className={styles.project__vision__image}
             />
           </div>
         </div>

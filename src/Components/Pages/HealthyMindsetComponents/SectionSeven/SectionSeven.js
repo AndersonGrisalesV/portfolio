@@ -32,7 +32,7 @@ const SectionSeven = () => {
             <img
               src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685647873/Portfolio/projects/HealthyMindset/healthyMindsetSectionSeven_qntaoj.svg"
               alt="Healthy_Mindset_Section_Seven_images"
-              className={styles.social__media__image}
+              className={styles.conslusion__design__image}
             />
           </div>
           <div className={styles.button__container}>

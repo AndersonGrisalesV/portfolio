@@ -48,9 +48,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.image__container img {
-}
-
 .description__text {
   font-size: 16px;
   font-weight: 400;
@@ -112,9 +109,22 @@
 }
 
 @media only screen and (max-width: 490px) {
+  .card__big {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 @media only screen and (max-width: 344px) {
+  .card__big {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 11px;
+    padding-left: 11px;
+  }
+
   .description__text {
     width: 100%;
     margin-top: 15px;
@@ -129,5 +139,16 @@
   }
 }
 
-@media only screen and (max-width: 200px) {
+@media only screen and (max-width: 180px) {
+  .card__big {
+    padding-top: 8px;
+    padding-bottom: 4px;
+    padding-right: 12px;
+    padding-left: 8px;
+  }
+
+  .image__container__card__correction img {
+    width: 110px;
+    height: 110px;
+  }
 }

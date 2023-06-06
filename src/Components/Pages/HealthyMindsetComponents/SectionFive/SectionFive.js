@@ -10,7 +10,7 @@ const SectionFive = () => {
         <div className={styles.container__left__section}>
           <div className={styles.container__improving__visual__text}>
             <h1 className={styles.improving__text}>Improving the</h1>
-            <h1 className={styles.visul__text}>visual interface</h1>
+            <h1 className={styles.visual__text}>visual interface</h1>
           </div>
 
           <div className={styles.container__description__text}>
