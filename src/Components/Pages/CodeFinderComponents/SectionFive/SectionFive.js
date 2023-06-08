@@ -32,7 +32,7 @@ const SectionFive = () => {
           </div>
         </div>
         <div className={styles.container__right__section}>
-          <div className={styles.container__app__project__text}>
+          <div className={styles.container__high__prototype__text}>
             <h1 className={styles.high__text}>High-fidelity</h1>
             <h1 className={styles.prototype__text}>Prototype</h1>
           </div>
@@ -40,7 +40,7 @@ const SectionFive = () => {
             <img
               src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742491/Portfolio/projects/CodeFinder/ImageFour_roffmw.svg"
               alt="Code_Finder_Section_five_image"
-              className={styles.project__vision__image}
+              className={styles.section__five__image__one}
             />
           </div>
         </div>

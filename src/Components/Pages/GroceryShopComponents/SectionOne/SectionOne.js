@@ -33,7 +33,7 @@ const SectionOne = () => {
             <img
               src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742987/Portfolio/projects/GroceryShop/GroceryShopimageSectionOne_qdnzmd.svg"
               alt="Grocery_Shop_Section_One_images"
-              className={styles.project__vision__image}
+              className={styles.grocery__shop__image}
             />
           </div>
         </div>

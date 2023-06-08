@@ -24,7 +24,7 @@ const SectionThree = () => {
   const cardCodeFinder = (
     <Card
       onImg={
-        "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683749039/codefinder_s8egbl.svg"
+        "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683749039/Portfolio/codefinder_s8egbl.svg"
       }
       onImgDescription={"codefinder project"}
       onText={
@@ -37,7 +37,7 @@ const SectionThree = () => {
   const cardHealthyMindset = (
     <Card
       onImg={
-        "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748837/healthy_mindset_zf4jwe.svg"
+        "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748837/Portfolio/healthy_mindset_zf4jwe.svg"
       }
       onImgDescription={"healthy mindset project"}
       onText={
@@ -57,7 +57,7 @@ const SectionThree = () => {
         <div className={styles.container__cards__left}>
           <Card
             onImg={
-              "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748938/dplace_baoklg.svg"
+              "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748938/Portfolio/dplace_baoklg.svg"
             }
             onImgDescription={"dplace project"}
             onText={
@@ -77,7 +77,7 @@ const SectionThree = () => {
 
           <Card
             onImg={
-              "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748742/grocery_shop_gliuhh.svg"
+              "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748742/Portfolio/grocery_shop_gliuhh.svg"
             }
             onImgDescription={"grocery shop project"}
             onText={

@@ -52,7 +52,7 @@ const SectionFive = () => {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684183917/ButtonLinkedIn_zkp3zk.svg"
+                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684183917/Portfolio/ButtonLinkedIn_zkp3zk.svg"
                   alt="LinkedIn"
                   onClick={handleLinkedInClick}
                   className={styles.social__media__image}
@@ -64,7 +64,7 @@ const SectionFive = () => {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684183918/ButtonGithub_gg2fhm.svg"
+                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684183918/Portfolio/ButtonGithub_gg2fhm.svg"
                   alt="Github"
                   onClick={handleGithubClick}
                   className={styles.social__media__image}
@@ -72,7 +72,7 @@ const SectionFive = () => {
               </a>
               <a href="mailto:your-email@example.com">
                 <img
-                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684183917/ButtonGmail_vv0rur.svg"
+                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684183917/Portfolio/ButtonGmail_vv0rur.svg"
                   alt="Gmail"
                   onClick={handleGmailClick}
                   className={styles.social__media__image}

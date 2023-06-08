@@ -4,7 +4,7 @@
   display: flex;
   position: relative;
   width: 100%;
-  gap: 10%;
+  gap: 10.1%;
   justify-content: center;
   align-items: center;
   padding-left: 42px;
@@ -81,13 +81,10 @@
 }
 
 @media only screen and (max-width: 1266px) {
-  .project__vision__image {
-    width: 100%;
-  }
 }
 
 @media only screen and (max-width: 1199px) {
-  .section__two__container {
+  .section__one__container {
     box-sizing: border-box;
     margin-top: 180px;
     display: flex;
@@ -105,7 +102,7 @@
     margin-top: 62px;
   }
 
-  .project__vision__image {
+  .grocery__shop__image {
     width: 100%;
   }
 }
@@ -120,7 +117,7 @@
 }
 
 @media only screen and (max-width: 666px) {
-  .app__text {
+  .grocery__text {
     font-size: var(--fz-slg);
   }
 
@@ -144,11 +141,11 @@
 }
 
 @media only screen and (max-width: 490px) {
-  .section__two__container {
-    margin-top: 140px;
+  .section__one__container {
+    margin-top: 110px;
   }
 
-  .app__text {
+  .grocery__text {
     font-size: var(--fz-smlg);
     letter-spacing: 0.8px;
   }
@@ -169,7 +166,7 @@
     width: calc(100% - 0px);
   }
 
-  .container__app__project__text h1 {
+  .container__grocery__project__text h1 {
     white-space: normal;
   }
 

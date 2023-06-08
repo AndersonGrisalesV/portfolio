@@ -8,7 +8,7 @@ const SectionThree = () => {
     <div>
       <section className={styles.section__three__container}>
         <div className={styles.container__left__section}>
-          <div className={styles.container__starting__understanding__the__text}>
+          <div className={styles.container__starting__the__text}>
             <h1 className={styles.starting__text}>Starting</h1>
             <h1 className={styles.the__text}>the design</h1>
           </div>

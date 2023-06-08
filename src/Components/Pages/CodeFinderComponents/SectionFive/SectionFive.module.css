@@ -4,7 +4,7 @@
   display: flex;
   position: relative;
   width: 100%;
-  gap: 8%;
+  gap: 7%;
   justify-content: center;
   align-items: center;
   padding-left: 42px;
@@ -18,7 +18,7 @@
   align-items: center;
 }
 
-.container__app__project__text {
+.container__high__prototype__text {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -84,4 +84,111 @@
 
 .container__images img {
   width: 100%;
+}
+
+.container__right__image img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1266px) {
+}
+
+@media only screen and (max-width: 1199px) {
+  .section__five__container {
+    box-sizing: border-box;
+    margin-top: -4px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .container__right__section {
+    margin-top: 148px;
+  }
+}
+
+@media only screen and (max-width: 966px) {
+}
+
+@media only screen and (max-width: 866px) {
+}
+
+@media only screen and (max-width: 766px) {
+}
+
+@media only screen and (max-width: 666px) {
+  .high__text {
+    font-size: var(--fz-slg);
+  }
+
+  .prototype__text {
+    font-size: var(--fz-slg);
+    margin-top: -20px;
+  }
+
+  .section__five__image__one {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+
+@media only screen and (max-width: 566px) {
+}
+
+@media only screen and (max-width: 490px) {
+  /* .section__four__container {
+    margin-top: 130px;
+  } */
+
+  .high__text {
+    font-size: var(--fz-smlg);
+    letter-spacing: 0.8px;
+  }
+
+  .prototype__text {
+    font-size: var(--fz-smlg);
+    margin-top: -12px;
+    letter-spacing: 0.8px;
+  }
+
+  .section__five__image__one {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+@media only screen and (max-width: 344px) {
+  .container__right__section {
+    width: calc(100% - 0px);
+  }
+
+  .container__high__prototype__text h1 {
+    white-space: normal;
+  }
+
+  .section__five__image__one {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .container__images,
+  .container__right__image img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 180px) {
+  .section__five__image__one {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }

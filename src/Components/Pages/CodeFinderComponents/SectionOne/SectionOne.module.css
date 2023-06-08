@@ -24,7 +24,7 @@
   align-items: flex-start;
 }
 
-.container__code__finder__image__text {
+.container__code__finder__text {
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -53,6 +53,8 @@
   display: flex;
   flex-direction: row;
   margin-top: 24px;
+  padding-left: 42px;
+  padding-right: 42px;
   gap: 190px;
 }
 
@@ -62,6 +64,7 @@
 
 .container__right__section {
   display: flex;
+  justify-content: center;
 }
 
 .container__images {
@@ -70,4 +73,113 @@
 }
 .container__images img {
   width: 100%;
+}
+
+@media only screen and (max-width: 1266px) {
+  .container__left__right__images {
+    gap: 14%;
+  }
+
+  .container__images img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .container__left__right__images {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+@media only screen and (max-width: 966px) {
+}
+
+@media only screen and (max-width: 866px) {
+  .container__code__finder__text {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .website__text,
+  .design__text {
+    margin-top: -24px;
+  }
+}
+
+@media only screen and (max-width: 766px) {
+}
+
+@media only screen and (max-width: 666px) {
+  .codefinder__text,
+  .website__text,
+  .design__text {
+    font-size: var(--fz-slg);
+  }
+
+  .section__one__image__two {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+
+@media only screen and (max-width: 566px) {
+  .container__center__section {
+    margin-top: 4px;
+  }
+
+  .codefinder__text,
+  .website__text,
+  .design__text {
+    font-size: var(--fz-glg);
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .container__center__section {
+    margin-top: 8px;
+  }
+
+  .codefinder__text,
+  .website__text,
+  .design__text {
+    font-size: var(--fz-smlg);
+  }
+
+  .section__one__image__two {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+@media only screen and (max-width: 344px) {
+  .container__healthy__mindset__image__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section__one__image__two {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 180px) {
+  .section__one__image__two {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .container__right__section {
+    margin-top: -20px;
+  }
+
+  .container__images img {
+    width: 100px;
+    height: 100px;
+  }
 }

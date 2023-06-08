@@ -12,7 +12,7 @@ const SectionSix = () => {
             <img
               src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742563/Portfolio/projects/CodeFinder/Image_vdn6zt.svg"
               alt="Code_Finder_Section_Six_image"
-              className={styles.project__vision__image}
+              className={styles.last__thoughts__image}
             />
           </div>
         </div>

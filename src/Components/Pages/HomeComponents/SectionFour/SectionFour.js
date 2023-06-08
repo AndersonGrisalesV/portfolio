@@ -8,7 +8,7 @@ const SectionFour = () => {
       <div className={styles.responsive__container__left__section}>
         <div className={styles.responsive__container__kanji__section}>
           <img
-            src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1683757800/Lovekanji_bpvmac.svg"
+            src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1683757800/Portfolio/Lovekanji_bpvmac.svg"
             alt="kanji love"
           />
         </div>
@@ -17,7 +17,7 @@ const SectionFour = () => {
         <div className={styles.container__left__section}>
           <div className={styles.container__kanji__section}>
             <img
-              src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1683757800/Lovekanji_bpvmac.svg"
+              src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1683757800/Portfolio/Lovekanji_bpvmac.svg"
               alt="kanji love"
             />
           </div>
