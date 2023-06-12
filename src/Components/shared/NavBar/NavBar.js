@@ -140,7 +140,7 @@ const NavBar = ({
     <React.Fragment>
       {openHamburguerMenu && <Backdrop onClick={closeDrawerHandler} />}
       <SideDrawer show={openHamburguerMenu} onClick={closeDrawerHandler} />
-
+      {/* //create here a portal and execute when user clicks to go to home to be able to load the page and have the loader as a placeholder */}
       <div
         className={`${styles.nav__bar} ${
           visibleNavBar ? "" : styles.nav__bar__hidden

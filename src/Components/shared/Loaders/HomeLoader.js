@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from "react";
 
-import styles from "./HomeLoader.module.css"; // Import your CSS module
+import styles from "./HomeLoader.module.css";
 
 const HomeLoader = () => {
   const [visibleLogo, setVisibleLogo] = useState("LogoZero");
+  const [reload, setReload] = useState(false);
 
   const handleLogoChange = useCallback(() => {
     if (visibleLogo === "LogoOne") {
@@ -24,11 +25,13 @@ const HomeLoader = () => {
     let LogoZeroOnce = true;
     if (visibleLogo === "LogoZero" && LogoZeroOnce === true) {
       valueInterval = 1000;
+
       LogoZeroOnce = false;
     } else if (visibleLogo === "LogoOne") {
       valueInterval = 200;
     } else if (visibleLogo === "LogoFour") {
       valueInterval = 1800;
+      setReload(true);
     } else if (visibleLogo === "LogoTwo" || visibleLogo === "LogoThree") {
       valueInterval = 160;
     }
@@ -37,15 +40,21 @@ const HomeLoader = () => {
 
     return () => {
       clearInterval(interval);
+      setReload(false);
     };
   }, [visibleLogo, handleLogoChange]);
 
   return (
-    <div className={styles.container__loader}>
+    <div
+      className={`${styles.container__loader} ${
+        reload ? styles.container__loader__animation : ""
+      }`}
+    >
       <svg
         // width="1366"
         // height="768"
-        viewBox="0 0 120 100"
+
+        viewBox="0 0 120 86"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

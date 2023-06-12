@@ -2,9 +2,9 @@ import React from "react";
 
 import Button from "../../../shared/UIElements/Button";
 import Spline from "@splinetool/react-spline";
-import styles from "./SectionOne.module.css";
 import ReactDOM from "react-dom";
 import Animation from "./Animation";
+import styles from "./SectionOne.module.css";
 
 const SectionOne = () => {
   return (
@@ -34,7 +34,7 @@ const SectionOne = () => {
           </div>
 
           <div className={styles.button__container}>
-            <Button onText={"Resume"}></Button>
+            <Button onText={"Resume"} />
           </div>
         </div>
         <div className={styles.container__right__section}>
