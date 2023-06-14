@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import HomeLoader from "../shared/Loaders/HomeLoader";
+import Loader from "../shared/Loaders/Loader";
 import NavBar from "./.././shared/NavBar/NavBar";
 import SectionOne from "../Pages/HomeComponents/SectionOne/SectionOne";
 import SectionTwo from "../Pages/HomeComponents/SectionTwo/SectionTwo";
@@ -19,7 +19,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setLoading(false);
-    }, 2200);
+    }, 2800);
 
     return () => {
       clearInterval(interval);
@@ -30,22 +30,16 @@ const Home = () => {
     <React.Fragment>
       {loading ? (
         <div className={styles.loader__container__animation}>
-          <HomeLoader />
+          <Loader />
         </div>
       ) : (
         <div className={styles.home__container__animation}>
           <NavBar />
-
           <SectionOne />
-
           <SectionTwo />
-
           <SectionThree />
-
           <SectionFour />
-
           <SectionFive />
-
           <Footer />
         </div>
       )}

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import Loader from "../shared/Loaders/Loader";
 import NavBar from "./.././shared/NavBar/NavBar";
 import SectionOne from "../Pages/HealthyMindsetComponents/SectionOne/SectionOne";
 import SectionTwo from "../Pages/HealthyMindsetComponents/SectionTwo/SectionTwo";
@@ -10,26 +12,48 @@ import SectionSeven from "../Pages/HealthyMindsetComponents/SectionSeven/Section
 
 import Footer from "./.././shared/Footer/Footer";
 
+import styles from "./HealthyMindset.module.css";
+
 const HealthyMindset = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLoading(false);
+    }, 2800);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <React.Fragment>
-      <NavBar onHealthyMindset={true} />
+      {loading ? (
+        <div className={styles.loader__container__animation}>
+          <Loader onLoaderHealthyMindset={true} />
+        </div>
+      ) : (
+        <div className={styles.healthyMindset__container__animation}>
+          <NavBar onHealthyMindset={true} />
 
-      <SectionOne />
+          <SectionOne />
 
-      <SectionTwo />
+          <SectionTwo />
 
-      <SectionThree />
+          <SectionThree />
 
-      <SectionFour />
+          <SectionFour />
 
-      <SectionFive />
+          <SectionFive />
 
-      <SectionSix />
+          <SectionSix />
 
-      <SectionSeven />
+          <SectionSeven />
 
-      <Footer onHealthyMindset={true} />
+          <Footer onHealthyMindset={true} />
+        </div>
+      )}
     </React.Fragment>
   );
 };

@@ -8,7 +8,7 @@ import HealthyMindset from "./Components/Pages/HealthyMindset";
 import "./App.css";
 import CodeFinder from "./Components/Pages/CodeFinder";
 import GroceryShop from "./Components/Pages/GroceryShop";
-import HomeLoader from "./Components/shared/Loaders/HomeLoader";
+import Loader from "./Components/shared/Loaders/Loader";
 
 function App() {
   const location = useLocation();
@@ -53,7 +53,7 @@ function App() {
         <Route path="/projects/healthy_mindset" element={<HealthyMindset />} />
         <Route path="/projects/code_finder" element={<CodeFinder />} />
         <Route path="/projects/grocery_shop" element={<GroceryShop />} />
-        <Route path="*" element={<HomeLoader />} />
+        <Route path="*" element={<Loader />} />
         {/* <Route path="*" element={<p>Not Found!</p>} /> */}
       </Routes>
     </div>

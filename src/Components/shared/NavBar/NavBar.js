@@ -282,7 +282,7 @@ const NavBar = ({
                   onText={"Don't"}
                   onDplace={onDplace}
                   onHealthyMindset={onHealthyMindset}
-                ></Button>
+                />
               </div>
             </React.Fragment>
           ) : (
