@@ -79,6 +79,20 @@
   /* transition: opacity 0.3s ease-in; */
 }
 
+.item {
+  width: 56%;
+  overflow: visible;
+  stroke: linear-gradient(
+    90deg,
+    rgb(25, 199, 142, 1) 0%,
+
+    rgb(60, 156, 229, 1) 120%
+  );
+  stroke-width: 0.4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

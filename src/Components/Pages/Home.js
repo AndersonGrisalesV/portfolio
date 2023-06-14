@@ -35,11 +35,15 @@ const Home = () => {
       ) : (
         <div className={styles.home__container__animation}>
           <NavBar />
-          <SectionOne />
+          {/* 
+          <SectionOne /> 
+
           <SectionTwo />
+          */}
           <SectionThree />
           <SectionFour />
-          <SectionFive />
+          {/* 
+          <SectionFive /> */}
           <Footer />
         </div>
       )}

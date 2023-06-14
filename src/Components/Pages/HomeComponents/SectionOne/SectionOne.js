@@ -5,10 +5,11 @@ import Spline from "@splinetool/react-spline";
 import ReactDOM from "react-dom";
 import Animation from "./Animation";
 import styles from "./SectionOne.module.css";
+import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
 
 const SectionOne = () => {
   return (
-    <div>
+    <ScrollAnimation>
       <section className={styles.section__container} id="home">
         <div className={styles.container__left__section}>
           <div>
@@ -44,7 +45,7 @@ const SectionOne = () => {
           /> */}
         </div>
       </section>
-    </div>
+    </ScrollAnimation>
   );
 };
 
