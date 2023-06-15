@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
-const ScrollAnimation = ({ children }) => {
+const ScrollAnimation = ({ children, onDuration = null, onDelay = null }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -23,8 +23,9 @@ const ScrollAnimation = ({ children }) => {
         initial="hidden"
         animate={mainControls}
         transition={{
-          duration: 0.9,
+          duration: onDuration ? onDuration : 0.9,
           ease: [0, 0.71, 0.2, 1.01],
+          delay: onDelay ? onDelay : 0,
         }}
       >
         {children}

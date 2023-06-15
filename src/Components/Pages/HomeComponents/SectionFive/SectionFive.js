@@ -2,6 +2,7 @@ import React from "react";
 
 import styles from "./SectionFive.module.css";
 import Button from "../../../shared/UIElements/Button";
+import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
 
 const SectionFive = () => {
   const handleLinkedInClick = () => {
@@ -23,7 +24,7 @@ const SectionFive = () => {
   };
 
   return (
-    <div>
+    <ScrollAnimation>
       <section className={styles.section__five__container} id="contact">
         <div className={styles.container__center__section}>
           <div className={styles.container__getin__touch__text}>
@@ -82,7 +83,7 @@ const SectionFive = () => {
           </div>
         </div>
       </section>
-    </div>
+    </ScrollAnimation>
   );
 };
 

@@ -138,6 +138,9 @@ body {
     right: 0;
 
     z-index: 6;
+    /* opacity: 1;
+    animation: container-fadeOut 1s ease-in;
+    animation-delay: 4s; */
   }
 
   .show__hamburger__menu {
@@ -156,3 +159,14 @@ body {
     }
   }
 }
+
+/* @keyframes container-fadeOut {
+  from {
+    opacity: 0;
+    transition: opacity 0.9s ease-in;
+  }
+  to {
+    opacity: 1;
+    transition: opacity 0.9s ease-in;
+  }
+} */

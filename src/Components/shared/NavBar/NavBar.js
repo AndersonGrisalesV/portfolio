@@ -13,7 +13,9 @@ import SideDrawer from "../UIElements/SideDrawer";
 import Hamburger from "hamburger-react";
 // import "../../../App.css";
 import Button from "../UIElements/Button";
+import { motion } from "framer-motion";
 import styles from "./NavBar.module.css";
+import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 
 const NavBar = ({
   onDplace = false,
@@ -136,6 +138,27 @@ const NavBar = ({
     }
   }, [isMobile]);
 
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      delay: 1,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { x: 20, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <React.Fragment>
       {openHamburguerMenu && <Backdrop onClick={closeDrawerHandler} />}
@@ -155,7 +178,15 @@ const NavBar = ({
           }`}
         >
           <div className={styles.logo}>
-            <img
+            <motion.img
+              initial={{ scale: 0 }}
+              animate={{ rotate: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 90,
+                damping: 5,
+                duration: 2,
+              }}
               src={`${
                 onDplace
                   ? LogoDplace
@@ -176,8 +207,17 @@ const NavBar = ({
 
           {!onDplace && !onHealthyMindset && !onCodeFinder && !onGroceryShop ? (
             <React.Fragment>
-              <ul className={styles.navbar__links}>
-                <li className={`${styles.navbar__item} `}>
+              <motion.ul
+                variants={container}
+                initial="hidden"
+                animate="visible"
+                className={styles.navbar__links}
+              >
+                <motion.li
+                  key={0}
+                  className={`${styles.navbar__item} `}
+                  variants={item}
+                >
                   <Link
                     className={`${styles.links} ${
                       onDplace || onHealthyMindset
@@ -196,9 +236,13 @@ const NavBar = ({
                   >
                     Home
                   </Link>
-                </li>
+                </motion.li>
 
-                <li className={styles.navbar__item}>
+                <motion.li
+                  key={1}
+                  className={styles.navbar__item}
+                  variants={item}
+                >
                   <Link
                     className={`${styles.links} ${
                       onDplace
@@ -217,8 +261,12 @@ const NavBar = ({
                   >
                     Expertise
                   </Link>
-                </li>
-                <li className={styles.navbar__item}>
+                </motion.li>
+                <motion.li
+                  key={2}
+                  className={styles.navbar__item}
+                  variants={item}
+                >
                   <Link
                     className={`${styles.links} ${
                       onDplace
@@ -236,8 +284,12 @@ const NavBar = ({
                   >
                     Work
                   </Link>
-                </li>
-                <li className={styles.navbar__item}>
+                </motion.li>
+                <motion.li
+                  key={3}
+                  className={styles.navbar__item}
+                  variants={item}
+                >
                   <Link
                     className={`${styles.links} ${
                       onDplace
@@ -255,8 +307,12 @@ const NavBar = ({
                   >
                     About
                   </Link>
-                </li>
-                <li className={styles.navbar__item}>
+                </motion.li>
+                <motion.li
+                  key={4}
+                  className={styles.navbar__item}
+                  variants={item}
+                >
                   <Link
                     className={`${styles.links} ${
                       onDplace
@@ -275,15 +331,26 @@ const NavBar = ({
                   >
                     Contact
                   </Link>
-                </li>
-              </ul>
-              <div className={styles.button}>
+                </motion.li>
+              </motion.ul>
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ rotate: 0, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 90,
+                  damping: 20,
+                  duration: 2,
+                  delay: 1.2,
+                }}
+                className={styles.button}
+              >
                 <Button
                   onText={"Don't"}
                   onDplace={onDplace}
                   onHealthyMindset={onHealthyMindset}
                 />
-              </div>
+              </motion.div>
             </React.Fragment>
           ) : (
             ""
