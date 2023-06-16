@@ -12,7 +12,7 @@ const SectionOne = () => {
   return (
     <div>
       <section className={styles.section__container} id="home">
-        <ScrollAnimation onDuration={2} onDelay={1.6}>
+        <ScrollAnimation onDuration={2} onDelay={1.8}>
           <div className={styles.container__left__section}>
             <div>
               <h5 className={styles.greeting__text}>Hi, my name is</h5>
@@ -36,9 +36,12 @@ const SectionOne = () => {
               </p>
             </div>
 
-            <div className={styles.button__container}>
+            <motion.div
+              whileTap={{ scale: 0.98 }}
+              className={styles.button__container}
+            >
               <Button onText={"Resume"} />
-            </div>
+            </motion.div>
           </div>
         </ScrollAnimation>
         <motion.div

@@ -23,7 +23,7 @@ const SectionThree = () => {
   }, []);
 
   const cardCodeFinder = (
-    <ScrollAnimation>
+    <ScrollAnimation onDelay={0.8}>
       <Card
         onImg={
           "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683749039/Portfolio/codefinder_s8egbl.svg"
@@ -38,7 +38,7 @@ const SectionThree = () => {
   );
 
   const cardHealthyMindset = (
-    <ScrollAnimation>
+    <ScrollAnimation onDelay={0.8}>
       <Card
         onImg={
           "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748837/Portfolio/healthy_mindset_zf4jwe.svg"
@@ -63,7 +63,7 @@ const SectionThree = () => {
 
       <section className={styles.section__three__container} id="work">
         <div className={styles.container__cards__left}>
-          <ScrollAnimation>
+          <ScrollAnimation onDelay={0.8}>
             <Card
               onImg={
                 "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748938/Portfolio/dplace_baoklg.svg"
@@ -78,14 +78,14 @@ const SectionThree = () => {
           {isMobile ? cardHealthyMindset : cardCodeFinder}
         </div>
         <div className={styles.container__cards__right}>
-          <ScrollAnimation>
+          <ScrollAnimation onDelay={0.8}>
             <div className={styles.my__projects__text__container}>
               <h1 className={styles.my__text}>My</h1>
               <h1 className={styles.projects__text}>Projects</h1>
             </div>
           </ScrollAnimation>
           {isMobile ? cardCodeFinder : cardHealthyMindset}
-          <ScrollAnimation>
+          <ScrollAnimation onDelay={0.8}>
             <Card
               onImg={
                 "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748742/Portfolio/grocery_shop_gliuhh.svg"

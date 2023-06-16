@@ -6,7 +6,7 @@ import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 const SkillsMarquee = () => {
   return (
     <div>
-      <ScrollAnimation>
+      <ScrollAnimation onDelay={0.8}>
         <Marquee
           pauseOnClick={true}
           speed={80}
@@ -64,7 +64,7 @@ const SkillsMarquee = () => {
         </Marquee>
       </ScrollAnimation>
 
-      <ScrollAnimation>
+      <ScrollAnimation onDelay={0.8}>
         <Marquee
           pauseOnClick={true}
           speed={100}

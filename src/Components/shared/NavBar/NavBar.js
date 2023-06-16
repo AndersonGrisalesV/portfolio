@@ -27,6 +27,8 @@ const NavBar = ({
 
   const [openHamburguerMenu, setOpenHamburguerMenu] = useState(false);
 
+  const [animationHamburguerMenu, setAnimationHamburguerMenu] = useState(false);
+
   const [activeLink, setActiveLink] = useState("home");
 
   const [delayShowgHamburguerMenu, setDelayShowHamburguerMenu] =
@@ -67,12 +69,13 @@ const NavBar = ({
   };
 
   useEffect(() => {
-    let prevScrollPos = window.pageYOffset;
+    let prevScrollPos = window.scrollY;
 
     window.onscroll = function () {
-      let currentScrollPos = window.pageYOffset;
+      let currentScrollPos = window.scrollY;
       if (prevScrollPos > currentScrollPos) {
         setVisibleNavBar(true);
+        setAnimationHamburguerMenu(true);
       } else {
         setVisibleNavBar(false);
       }
@@ -80,9 +83,9 @@ const NavBar = ({
     };
 
     if (visibleNavBar) {
-      setTimeout(() => {
-        setDelayShowHamburguerMenu(true);
-      }, 200);
+      // setTimeout(() => {
+      setDelayShowHamburguerMenu(true);
+      // }, 0);
     } else {
       setDelayShowHamburguerMenu(false);
     }
@@ -177,33 +180,38 @@ const NavBar = ({
               : styles.container__logo
           }`}
         >
-          <div className={styles.logo}>
-            <motion.img
-              initial={{ scale: 0 }}
-              animate={{ rotate: 0, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 90,
-                damping: 5,
-                duration: 2,
-              }}
-              src={`${
-                onDplace
-                  ? LogoDplace
-                  : onHealthyMindset
-                  ? LogoHealthyMindset
-                  : onCodeFinder
-                  ? LogoCodeFinder
-                  : onGroceryShop
-                  ? LogoGroceryShop
-                  : Logo
-              }`}
-              alt="Logo"
-              onClick={() => {
-                handleNavBarLinksClicks("home");
-              }}
-            />
-          </div>
+          <motion.div whileTap={{ scale: 0.98 }} className={styles.logo}>
+            {visibleNavBar && (
+              <motion.img
+                initial={{
+                  scale: !animationHamburguerMenu ? 0 : 0.9,
+                }}
+                animate={{ rotate: 0, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 90,
+                  damping: 5,
+                  duration: !animationHamburguerMenu ? 2 : 0.01,
+                  delay: !animationHamburguerMenu ? 0.17 : 0.01,
+                }}
+                src={`${
+                  onDplace
+                    ? LogoDplace
+                    : onHealthyMindset
+                    ? LogoHealthyMindset
+                    : onCodeFinder
+                    ? LogoCodeFinder
+                    : onGroceryShop
+                    ? LogoGroceryShop
+                    : Logo
+                }`}
+                alt="Logo"
+                onClick={() => {
+                  handleNavBarLinksClicks("home");
+                }}
+              />
+            )}
+          </motion.div>
 
           {!onDplace && !onHealthyMindset && !onCodeFinder && !onGroceryShop ? (
             <React.Fragment>
@@ -346,7 +354,7 @@ const NavBar = ({
                 className={styles.button}
               >
                 <Button
-                  onText={"Don't"}
+                  onText={"Mystery"}
                   onDplace={onDplace}
                   onHealthyMindset={onHealthyMindset}
                 />
@@ -356,13 +364,23 @@ const NavBar = ({
             ""
           )}
         </div>
-
+        {/* 
         {!delayShowgHamburguerMenu &&
           !onDplace &&
           !onHealthyMindset &&
           !onCodeFinder &&
           !onGroceryShop && (
-            <div className={styles.menu__responsive}>
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ rotate: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 90,
+                damping: 5,
+                duration: 0.5,
+              }}
+              className={styles.menu__responsive}
+            >
               <Hamburger
                 color="linear-gradient(90deg, #19c78e, #3c9ce5)"
                 hideOutline={false}
@@ -371,8 +389,8 @@ const NavBar = ({
                 toggled={openHamburguerMenu}
                 toggle={setOpenHamburguerMenu}
               />
-            </div>
-          )}
+            </motion.div>
+          )} */}
         <React.Fragment>
           {delayShowgHamburguerMenu &&
             visibleNavBar &&
@@ -381,14 +399,34 @@ const NavBar = ({
             !onCodeFinder &&
             !onGroceryShop &&
             ReactDOM.createPortal(
-              <Hamburger
-                color="linear-gradient(90deg, #19c78e, #3c9ce5)"
-                hideOutline={false}
-                size="30"
-                rounded
-                toggled={openHamburguerMenu}
-                toggle={setOpenHamburguerMenu}
-              />,
+              <motion.div
+                initial={{
+                  scale: !animationHamburguerMenu ? 0 : 0.9,
+                  y: animationHamburguerMenu ? -16 : 0,
+                }}
+                animate={{
+                  rotate: 0,
+                  scale: 1,
+                  y: 0,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 90,
+                  damping: !animationHamburguerMenu ? 5 : 18,
+                  duration: !animationHamburguerMenu ? 2 : 0.28,
+                  delay: !animationHamburguerMenu ? 0.6 : 0,
+                }}
+                style={{ opacity: visibleNavBar ? "1" : "0" }}
+              >
+                <Hamburger
+                  color="linear-gradient(90deg, #19c78e, #3c9ce5)"
+                  hideOutline={false}
+                  size="30"
+                  rounded
+                  toggled={openHamburguerMenu}
+                  toggle={setOpenHamburguerMenu}
+                />
+              </motion.div>,
               document.getElementById("hamburguer-hook")
             )}
         </React.Fragment>

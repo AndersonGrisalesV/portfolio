@@ -32,7 +32,7 @@ const SideDrawer = (props) => {
               <a href="#contact">Contact</a>
             </li>
             <div className={styles.container__button__sideDrawer}>
-              <Button onText={"Don't"}></Button>
+              <Button onText={"Mystery"}></Button>
             </div>
           </ol>
         </aside>

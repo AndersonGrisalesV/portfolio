@@ -11,7 +11,7 @@ const SectionTwo = () => {
   return (
     <div>
       <section className={styles.section__two__container} id="expertise">
-        <ScrollAnimation>
+        <ScrollAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.responsive__skills__expertise__text}>
               <h1 className={styles.skills__text}>Skills &</h1>
@@ -46,6 +46,7 @@ const SectionTwo = () => {
             scene="https://draft.spline.design/cKkZ8nclvPv8ZdJ6/scene.splinecode"
           /> */}
       </section>
+
       <div className={styles.responsive__marquee}>
         {/* <SkillsMarquee /> */}
       </div>
