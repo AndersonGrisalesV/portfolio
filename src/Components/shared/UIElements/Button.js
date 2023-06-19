@@ -2,6 +2,7 @@ import React, { useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./Button.module.css";
+import { motion } from "framer-motion";
 
 const Button = ({
   onText,
@@ -30,7 +31,8 @@ const Button = ({
   }, []);
 
   return (
-    <button
+    <motion.button
+      whileTap={{ scale: 0.98, x: 0 }}
       className={`${styles.button} "" ${
         onDplace
           ? styles.button__dplace
@@ -47,7 +49,7 @@ const Button = ({
       onClick={handleButtonClick}
     >
       {onText}
-    </button>
+    </motion.button>
   );
 };
 

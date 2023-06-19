@@ -180,38 +180,54 @@ const NavBar = ({
               : styles.container__logo
           }`}
         >
-          <motion.div whileTap={{ scale: 0.98 }} className={styles.logo}>
+          <div className={styles.logo}>
             {visibleNavBar && (
-              <motion.img
-                initial={{
-                  scale: !animationHamburguerMenu ? 0 : 0.9,
+              <motion.div
+                whileTap={{
+                  scale: 0.88,
+                  x: 0,
+                  transition: {
+                    duration: 0.06,
+                  },
                 }}
-                animate={{ rotate: 0, scale: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 90,
-                  damping: 5,
-                  duration: !animationHamburguerMenu ? 2 : 0.01,
-                  delay: !animationHamburguerMenu ? 0.17 : 0.01,
-                }}
-                src={`${
-                  onDplace
-                    ? LogoDplace
-                    : onHealthyMindset
-                    ? LogoHealthyMindset
-                    : onCodeFinder
-                    ? LogoCodeFinder
-                    : onGroceryShop
-                    ? LogoGroceryShop
-                    : Logo
-                }`}
-                alt="Logo"
-                onClick={() => {
-                  handleNavBarLinksClicks("home");
-                }}
-              />
+              >
+                <motion.img
+                  // whileHover={{
+                  //   scale: 1.08,
+                  //   x: 0,
+                  //   transition: { duration: 0.05 },
+                  // }}
+                  initial={{
+                    scale: !animationHamburguerMenu ? 0 : 0.9,
+                  }}
+                  animate={{ rotate: 0, scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 90,
+                    damping: 5,
+                    duration: !animationHamburguerMenu ? 2 : 0.01,
+                    delay: !animationHamburguerMenu ? 0.17 : 0.01,
+                  }}
+                  className={styles.image__logo}
+                  src={`${
+                    onDplace
+                      ? LogoDplace
+                      : onHealthyMindset
+                      ? LogoHealthyMindset
+                      : onCodeFinder
+                      ? LogoCodeFinder
+                      : onGroceryShop
+                      ? LogoGroceryShop
+                      : Logo
+                  }`}
+                  alt="Logo"
+                  onClick={() => {
+                    handleNavBarLinksClicks("home");
+                  }}
+                />
+              </motion.div>
             )}
-          </motion.div>
+          </div>
 
           {!onDplace && !onHealthyMindset && !onCodeFinder && !onGroceryShop ? (
             <React.Fragment>
@@ -225,6 +241,11 @@ const NavBar = ({
                   key={0}
                   className={`${styles.navbar__item} `}
                   variants={item}
+                  whileHover={{
+                    scale: 1.08,
+                    x: 0,
+                    transition: { duration: 0.05 },
+                  }}
                 >
                   <Link
                     className={`${styles.links} ${
@@ -250,6 +271,11 @@ const NavBar = ({
                   key={1}
                   className={styles.navbar__item}
                   variants={item}
+                  whileHover={{
+                    scale: 1.08,
+                    x: 0,
+                    transition: { duration: 0.05 },
+                  }}
                 >
                   <Link
                     className={`${styles.links} ${
@@ -274,6 +300,11 @@ const NavBar = ({
                   key={2}
                   className={styles.navbar__item}
                   variants={item}
+                  whileHover={{
+                    scale: 1.08,
+                    x: 0,
+                    transition: { duration: 0.05 },
+                  }}
                 >
                   <Link
                     className={`${styles.links} ${
@@ -297,6 +328,11 @@ const NavBar = ({
                   key={3}
                   className={styles.navbar__item}
                   variants={item}
+                  whileHover={{
+                    scale: 1.08,
+                    x: 0,
+                    transition: { duration: 0.05 },
+                  }}
                 >
                   <Link
                     className={`${styles.links} ${
@@ -320,6 +356,11 @@ const NavBar = ({
                   key={4}
                   className={styles.navbar__item}
                   variants={item}
+                  whileHover={{
+                    scale: 1.08,
+                    x: 0,
+                    transition: { duration: 0.05 },
+                  }}
                 >
                   <Link
                     className={`${styles.links} ${
@@ -341,15 +382,16 @@ const NavBar = ({
                   </Link>
                 </motion.li>
               </motion.ul>
+
               <motion.div
-                initial={{ scale: 0 }}
-                animate={{ rotate: 0, scale: 1 }}
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
                 transition={{
                   type: "spring",
                   stiffness: 90,
-                  damping: 20,
+                  damping: 5,
                   duration: 2,
-                  delay: 1.2,
+                  delay: 1.4,
                 }}
                 className={styles.button}
               >
