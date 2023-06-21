@@ -155,9 +155,9 @@ const NavBar = ({
   };
 
   const item = {
-    hidden: { x: 20, opacity: 0 },
+    hidden: { y: -20, opacity: 0 },
     visible: {
-      x: 0,
+      y: 0,
       opacity: 1,
     },
   };
@@ -239,8 +239,8 @@ const NavBar = ({
               >
                 <motion.li
                   key={0}
-                  className={`${styles.navbar__item} `}
                   variants={item}
+                  className={`${styles.navbar__item} `}
                   whileHover={{
                     scale: 1.08,
                     x: 0,
@@ -396,8 +396,8 @@ const NavBar = ({
                 className={styles.button}
               >
                 <Button
-                  onText={"Mystery"}
-                  onDplace={onDplace}
+                  onText={"Github"}
+                  onGithub={true}
                   onHealthyMindset={onHealthyMindset}
                 />
               </motion.div>

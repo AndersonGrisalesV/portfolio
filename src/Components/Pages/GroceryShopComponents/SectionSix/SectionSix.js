@@ -42,7 +42,11 @@ const SectionSix = () => {
           </div>
 
           <div className={styles.button__container}>
-            <Button onText={"Case study"} onGroceryShop={true}></Button>
+            <Button
+              onText={"Case study"}
+              onGroceryShop={true}
+              onCaseStudy={true}
+            />
           </div>
         </div>
       </section>

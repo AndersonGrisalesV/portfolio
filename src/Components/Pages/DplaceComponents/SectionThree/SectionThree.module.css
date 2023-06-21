@@ -43,9 +43,6 @@
   margin-top: -25px;
 }
 
-.container__description__text {
-}
-
 .description__text {
   box-sizing: border-box;
   display: flex;
@@ -62,6 +59,10 @@
   margin: 0px;
   padding: 0px;
   margin-top: 54px;
+}
+
+.description__text li::marker {
+  color: #da4453;
 }
 
 .container__images {

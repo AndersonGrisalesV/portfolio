@@ -9,7 +9,11 @@ const SectionTwo = () => {
       <section className={styles.section__two__container}>
         <div className={styles.container__center__section}>
           <div className={styles.button__container}>
-            <Button onText={"Prototype"} onCodeFinder={true}></Button>
+            <Button
+              onText={"Prototype"}
+              onCodeFinder={true}
+              onPrototype={true}
+            />
           </div>
           <div className={styles.container__description__text}>
             <p className={styles.description__text}>

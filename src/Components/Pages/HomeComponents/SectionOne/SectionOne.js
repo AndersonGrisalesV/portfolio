@@ -4,15 +4,15 @@ import Button from "../../../shared/UIElements/Button";
 import Spline from "@splinetool/react-spline";
 import ReactDOM from "react-dom";
 import Animation from "./Animation";
-import styles from "./SectionOne.module.css";
-import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
 import { motion } from "framer-motion";
+import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
+import styles from "./SectionOne.module.css";
 
 const SectionOne = () => {
   const containerGreetingText = {
-    hidden: { opacity: 0, x: 20 },
+    hidden: { opacity: 0, y: -20 },
     show: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         delay: 1.8,
@@ -21,9 +21,9 @@ const SectionOne = () => {
   };
 
   const containerNameLets = {
-    hidden: { opacity: 0, x: 20 },
+    hidden: { opacity: 0, y: -20 },
     show: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         delay: 2,
@@ -32,9 +32,9 @@ const SectionOne = () => {
   };
 
   const containerDescriptionText = {
-    hidden: { opacity: 0, x: 20 },
+    hidden: { opacity: 0, y: -20 },
     show: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         delay: 2.2,
@@ -43,9 +43,9 @@ const SectionOne = () => {
   };
 
   const containerButton = {
-    hidden: { opacity: 0, x: 20 },
+    hidden: { opacity: 0, y: -20 },
     show: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         delay: 2.4,

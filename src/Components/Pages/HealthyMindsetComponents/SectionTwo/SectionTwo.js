@@ -27,7 +27,11 @@ const SectionTwo = () => {
           </div>
 
           <div className={styles.button__container}>
-            <Button onText={"Prototype"} onHealthyMindset={true}></Button>
+            <Button
+              onText={"Prototype"}
+              onHealthyMindset={true}
+              onPrototype={true}
+            />
           </div>
         </div>
         <div className={styles.container__right__section}>

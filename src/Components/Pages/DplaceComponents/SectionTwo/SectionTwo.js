@@ -1,10 +1,11 @@
 import React from "react";
 
+import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
 import styles from "./SectionTwo.module.css";
 
 const SectionTwo = () => {
   return (
-    <div>
+    <ScrollAnimation onDelay={0.6}>
       <section className={styles.section__two__container}>
         <div className={styles.container__center__section}>
           <div className={styles.container__image}>
@@ -16,7 +17,7 @@ const SectionTwo = () => {
           </div>
         </div>
       </section>
-    </div>
+    </ScrollAnimation>
   );
 };
 

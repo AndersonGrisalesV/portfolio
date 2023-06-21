@@ -11,18 +11,72 @@ const Button = ({
   onHealthyMindset = false,
   onCodeFinder = false,
   onGroceryShop = false,
+  onDemo = false,
+  onGithub = false,
+  onPrototype = false,
+  onCaseStudy = false,
+  onContact = false,
 }) => {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
     if (onDplace) {
-      navigate("/projects/dplace");
+      if (onDplace && onDemo && !onGithub) {
+        window.open("https://dplace-3d5f4.web.app/api/homepage", "_blank");
+      } else if (onDplace && onGithub && !onDemo) {
+        window.open("https://github.com/AndersonGrisalesV/Dplace", "_blank");
+      } else {
+        navigate("/projects/dplace");
+      }
     } else if (onHealthyMindset) {
-      navigate("/projects/healthy_mindset");
+      if (onHealthyMindset && onPrototype && !onCaseStudy) {
+        window.open(
+          "https://www.figma.com/proto/eawkMUgZSmeyglFFxIWllc/High-fidelity-prototype---mental-health-app?node-id=8-22&scaling=scale-down&page-id=0%3A1&starting-point-node-id=8%3A8",
+          "_blank"
+        );
+      } else if (onHealthyMindset && onCaseStudy && !onPrototype) {
+        window.open(
+          "https://docs.google.com/presentation/d/1L_0qUooYrqq8DQgHFDZOUfoLBaCXS9NjpXNMPE-1ipQ/edit?usp=sharing",
+          "_blank"
+        );
+      } else {
+        navigate("/projects/healthy_mindset");
+      }
     } else if (onCodeFinder) {
-      navigate("/projects/code_finder");
+      if (onCodeFinder && onPrototype && !onCaseStudy) {
+        window.open(
+          "https://xd.adobe.com/view/243b6b53-eb1e-4dd7-bd43-ac473f80d19f-7168/screen/e14be693-6e54-4551-b8ea-3e214af5b800?fullscreen",
+          "_blank"
+        );
+      } else if (onCodeFinder && onCaseStudy && !onPrototype) {
+        window.open(
+          "https://docs.google.com/presentation/d/1aNsC1xWy0AtMXy4l-ebe_rCy4TtZ-b9uWVGE9bfV5yE/edit?usp=sharing",
+          "_blank"
+        );
+      } else {
+        navigate("/projects/code_finder");
+      }
     } else if (onGroceryShop) {
-      navigate("/projects/grocery_shop");
+      if (onGroceryShop && onPrototype && !onCaseStudy) {
+        window.open(
+          "https://www.figma.com/proto/XLGfxEtU1R2laO9ZdUochN/Grocery-shop---High-fidelity-prototype?node-id=37-50&scaling=scale-down&page-id=0%3A1&starting-point-node-id=37%3A50",
+          "_blank"
+        );
+      } else if (onGroceryShop && onCaseStudy && !onPrototype) {
+        window.open(
+          "https://docs.google.com/presentation/d/1B8UOE2cjvnf1tlX8no2UZwQqTAax9JhWljGFT1LfcNE/edit#slide=id.p",
+          "_blank"
+        );
+      } else {
+        navigate("/projects/grocery_shop");
+      }
+    } else if (onContact) {
+      window.open(
+        "https://mail.google.com/mail/?view=cm&fs=1&to=grisalesvargasanderson@gmail.com&su=Let's talk&body=",
+        "_blank"
+      );
+    } else if (onGithub) {
+      window.open("https://github.com/AndersonGrisalesV", "_blank");
     }
   };
 

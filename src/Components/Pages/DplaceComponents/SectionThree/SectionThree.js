@@ -1,53 +1,238 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
+import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
+import { motion, useInView, useAnimation } from "framer-motion";
 import styles from "./SectionThree.module.css";
 
 const SectionThree = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  const container = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delayChildren: 0.8,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
+  const containerTitle = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.6,
+      },
+    },
+  };
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
   return (
     <div>
       <section className={styles.section__three__container}>
         <div className={styles.container__center__section}>
-          <div className={styles.responsive__some__features__text}>
+          <motion.div
+            variants={containerTitle}
+            initial="hidden"
+            animate={mainControls}
+            className={styles.responsive__some__features__text}
+          >
             <h1 className={styles.some__text}>Some</h1>
             <h1 className={styles.features__text}>Features</h1>
-          </div>
+          </motion.div>
 
-          <div className={styles.container__description__text}>
-            <ul className={styles.description__text}>
-              <li>Login/SignUp User Account</li>
-              <li>Login SingIn With Email</li>
-              <li>Update Profile Name/Email/Password/ProfilePicture</li>
-              <li>Delete Own User</li>
-              <li>Add New Posts</li>
-              <li>Update Post Title/Description/Address/Image/PostDate</li>
-              <li>Like/Unlike Posts</li>
-              <li>Search Posts by Title</li>
-              <li>Delete Own Posts</li>
-              <li>Add New Comments on Posts</li>
-              <li>Update Comment Text/CommentDate</li>
-              <li>Delete Own Comments</li>
-              <li>
+          <div ref={ref}>
+            <motion.ul
+              variants={container}
+              initial="hidden"
+              animate={mainControls}
+              className={styles.description__text}
+            >
+              <motion.li
+                key={0}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Login/SignUp User Account
+              </motion.li>
+              <motion.li
+                key={1}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Login SingIn With Email
+              </motion.li>
+              <motion.li
+                key={2}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Update Profile Name/Email/Password/ProfilePicture
+              </motion.li>
+              <motion.li
+                key={3}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Delete Own User
+              </motion.li>
+              <motion.li
+                key={4}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Add New Posts
+              </motion.li>
+              <motion.li
+                key={5}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Update Post Title/Description/Address/Image/PostDate
+              </motion.li>
+              <motion.li
+                key={6}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Like/Unlike Posts
+              </motion.li>
+              <motion.li
+                key={7}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Search Posts by Title
+              </motion.li>
+              <motion.li
+                key={8}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Delete Own Posts
+              </motion.li>
+              <motion.li
+                key={9}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Add New Comments on Posts
+              </motion.li>
+              <motion.li
+                key={10}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Update Comment Text/CommentDate
+              </motion.li>
+              <motion.li
+                key={11}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
+                Delete Own Comments
+              </motion.li>
+              <motion.li
+                key={12}
+                variants={item}
+                whileHover={{
+                  scale: 1.08,
+                  x: 0,
+                  transition: { duration: 0.05 },
+                }}
+              >
                 Map integration: Places shared by users are displayed on Google
                 maps for easy navigation and visualization
-              </li>
-            </ul>
+              </motion.li>
+            </motion.ul>
           </div>
-
           <div className={styles.container__images}>
-            <div className={styles.images__left}>
-              <img
-                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400194/LeftImages_syimlg.svg"
-                alt="Dplace_left_images"
-                className={styles.social__media__image}
-              />
-            </div>
-            <div className={styles.images__right}>
-              <img
-                src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400195/RightImages_rtbmi4.svg"
-                alt="Dplace_right_images"
-                className={styles.social__media__image}
-              />
-            </div>
+            <ScrollAnimation onDelay={0.6}>
+              <div className={styles.images__left}>
+                <img
+                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400194/LeftImages_syimlg.svg"
+                  alt="Dplace_left_images"
+                  className={styles.social__media__image}
+                />
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation onDelay={0.6}>
+              <div className={styles.images__right}>
+                <img
+                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400195/RightImages_rtbmi4.svg"
+                  alt="Dplace_right_images"
+                  className={styles.social__media__image}
+                />
+              </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>

@@ -38,7 +38,7 @@ const SectionSix = () => {
         </div>
       </section>
       <div className={styles.button__container}>
-        <Button onText={"Case study"} onCodeFinder={true}></Button>
+        <Button onText={"Case study"} onCodeFinder={true} onCaseStudy={true} />
       </div>
     </div>
   );

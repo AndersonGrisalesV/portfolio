@@ -48,7 +48,7 @@ const SectionFive = () => {
           <div className={styles.container__buttons}>
             <ScrollAnimation onDelay={0.6}>
               <div className={styles.button__container}>
-                <Button onText={"Let's talk!"} />
+                <Button onText={"Let's talk!"} onContact={true} />
               </div>
             </ScrollAnimation>
             <ScrollAnimation onDelay={0.8}>
@@ -77,7 +77,7 @@ const SectionFive = () => {
                     className={styles.social__media__image}
                   />
                 </a>
-                <a href="mailto:your-email@example.com" custom={2}>
+                <a href="mailto:grisalesvargasanderson@gmail.com" custom={2}>
                   <img
                     src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684183917/Portfolio/ButtonGmail_vv0rur.svg"
                     alt="Gmail"
