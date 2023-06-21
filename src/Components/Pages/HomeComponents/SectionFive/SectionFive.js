@@ -1,10 +1,9 @@
 import React from "react";
 
-import styles from "./SectionFive.module.css";
 import Button from "../../../shared/UIElements/Button";
-import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
 
-import { motion } from "framer-motion";
+import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+import styles from "./SectionFive.module.css";
 
 const SectionFive = () => {
   const handleLinkedInClick = () => {
@@ -29,13 +28,13 @@ const SectionFive = () => {
     <div>
       <section className={styles.section__five__container} id="contact">
         <div className={styles.container__center__section}>
-          <ScrollAnimation onDelay={0.4}>
+          <IndividualAnimation onDelay={0.4}>
             <div className={styles.container__getin__touch__text}>
               <h1 className={styles.getin__text}>Get In</h1>
               <h1 className={styles.touch__text}>Touch</h1>
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation onDelay={0.4}>
+          </IndividualAnimation>
+          <IndividualAnimation onDelay={0.4}>
             <div className={styles.container__description__text}>
               <p className={styles.description__text}>
                 Let's work together, and build something great!
@@ -44,14 +43,14 @@ const SectionFive = () => {
                 <br />
               </p>
             </div>
-          </ScrollAnimation>
+          </IndividualAnimation>
           <div className={styles.container__buttons}>
-            <ScrollAnimation onDelay={0.6}>
+            <IndividualAnimation onDelay={0.6}>
               <div className={styles.button__container}>
                 <Button onText={"Let's talk!"} onContact={true} />
               </div>
-            </ScrollAnimation>
-            <ScrollAnimation onDelay={0.8}>
+            </IndividualAnimation>
+            <IndividualAnimation onDelay={0.8}>
               <div className={styles.container__social__media}>
                 <a
                   href="https://www.linkedin.com/"
@@ -86,7 +85,7 @@ const SectionFive = () => {
                   />
                 </a>
               </div>
-            </ScrollAnimation>
+            </IndividualAnimation>
           </div>
         </div>
       </section>

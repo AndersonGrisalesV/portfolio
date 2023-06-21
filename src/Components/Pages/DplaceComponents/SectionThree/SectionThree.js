@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
+import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
 import { motion, useInView, useAnimation } from "framer-motion";
 import styles from "./SectionThree.module.css";
 
@@ -215,7 +215,7 @@ const SectionThree = () => {
             </motion.ul>
           </div>
           <div className={styles.container__images}>
-            <ScrollAnimation onDelay={0.6}>
+            <IndividualAnimation onDelay={0.6}>
               <div className={styles.images__left}>
                 <img
                   src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400194/LeftImages_syimlg.svg"
@@ -223,8 +223,8 @@ const SectionThree = () => {
                   className={styles.social__media__image}
                 />
               </div>
-            </ScrollAnimation>
-            <ScrollAnimation onDelay={0.6}>
+            </IndividualAnimation>
+            <IndividualAnimation onDelay={0.6}>
               <div className={styles.images__right}>
                 <img
                   src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400195/RightImages_rtbmi4.svg"
@@ -232,7 +232,7 @@ const SectionThree = () => {
                   className={styles.social__media__image}
                 />
               </div>
-            </ScrollAnimation>
+            </IndividualAnimation>
           </div>
         </div>
       </section>

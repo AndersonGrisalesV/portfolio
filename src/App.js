@@ -9,35 +9,44 @@ import "./App.css";
 import CodeFinder from "./Components/Pages/CodeFinder";
 import GroceryShop from "./Components/Pages/GroceryShop";
 import Loader from "./Components/shared/Loaders/Loader";
-import Logo from "./imgs/ExpressJS.png";
-import { Helmet } from "react-helmet";
 
 function App() {
   const location = useLocation();
-
-  const handleFavicon = () => {
-    // Replace this logic with your own to determine the favicon based on the URL
-    const currentUrl = window.location.pathname;
-    let faviconPath = "";
-
-    faviconPath = "../src/imgs/favicon.ico";
-
-    return <link rel="icon" type="image/x-icon" href={faviconPath} />;
-  };
 
   useEffect(() => {
     const currentURL = window.location.href;
     let scrollbarColor = "#038d87";
     let scrollbarColorHover = "#04a39b";
     let selectionColor = "#038d87";
-
+    let link = document.querySelector("link[rel~='icon']");
+    // link.href = "";
+    link.loading = true;
     if (currentURL.includes("home")) {
+      // effect to update icon accordingly
+      // link = document.createElement("link");
+      // link.rel = "icon";
+      // document.getElementsByTagName("head")[0].appendChild(link);
+
       document.title = "Anderson Grisales";
+      // setTimeout(() => {
+      link.href =
+        "https://res.cloudinary.com/doa4qiuc2/image/upload/v1687382248/Portfolio/IconHome_jypgdt.svg";
+      // }, "1000");
 
       scrollbarColor = "#038d87"; // Set the desired color for specific URL
       scrollbarColorHover = "#04c0b7";
     } else if (currentURL.includes("dplace")) {
+      // effect to update icon accordingly
+
+      // link = document.createElement("link");
+      // link.rel = "icon";
+      // document.getElementsByTagName("head")[0].appendChild(link);
+      // link.href =
+      //   "https://cdn.dribbble.com/users/46511/screenshots/1756041/loader-spinning.gif";
       document.title = "Project Dplace";
+
+      link.href =
+        "https://res.cloudinary.com/doa4qiuc2/image/upload/v1684359106/Portfolio/projects/Dplace/DplaceLogo_jbfqhp.svg";
 
       scrollbarColor = "#da4453"; // Set the desired color for specific URL
       scrollbarColorHover = "#dd5c69"; // Set the desired hover color for specific URL
@@ -46,17 +55,24 @@ function App() {
     } else if (currentURL.includes("healthy")) {
       document.title = "Project Healthy Mindset";
 
+      link.href =
+        "https://res.cloudinary.com/doa4qiuc2/image/upload/v1685647871/Portfolio/projects/HealthyMindset/healthyMindsetLogo_vdfbtg.svg";
+
       scrollbarColor = "#008540"; // Set the desired color for specific URL
       scrollbarColorHover = "#019F4D"; // Set the desired hover color for specific URL
       selectionColor = "#008540";
     } else if (currentURL.includes("finder")) {
       document.title = "Project Code Finder";
+      link.href =
+        "https://res.cloudinary.com/doa4qiuc2/image/upload/v1687384723/Portfolio/projects/CodeFinder/IconCode_uxay9w.svg";
 
       scrollbarColor = "#E02C50"; // Set the desired color for specific URL
       scrollbarColorHover = "#F83058"; // Set the desired hover color for specific URL
       selectionColor = "#E02C50";
     } else if (currentURL.includes("grocery")) {
       document.title = "Project Grocery Shop";
+      link.href =
+        "https://res.cloudinary.com/doa4qiuc2/image/upload/v1687384951/Portfolio/projects/GroceryShop/IconGrocery_g9l1zu.svg";
 
       scrollbarColor = "#2368A8"; // Set the desired color for specific URL
       scrollbarColorHover = "#2979C2"; // Set the desired hover color for specific URL
@@ -79,7 +95,6 @@ function App() {
 
   return (
     <div className="main__container">
-      <Helmet>{handleFavicon()} </Helmet>
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/projects/dplace" element={<Dplace />} />

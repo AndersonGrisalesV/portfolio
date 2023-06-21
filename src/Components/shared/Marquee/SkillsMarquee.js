@@ -1,12 +1,13 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+
+import IndividualAnimation from "../ScrollAnimation/IndividualAnimation";
 import styles from "./SkillsMarquee.module.css";
-import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 
 const SkillsMarquee = () => {
   return (
     <div>
-      <ScrollAnimation onDelay={0.8}>
+      <IndividualAnimation onDelay={0.8}>
         <Marquee
           pauseOnClick={true}
           speed={80}
@@ -62,9 +63,9 @@ const SkillsMarquee = () => {
             />
           </div>
         </Marquee>
-      </ScrollAnimation>
+      </IndividualAnimation>
 
-      <ScrollAnimation onDelay={0.8}>
+      <IndividualAnimation onDelay={0.8}>
         <Marquee
           pauseOnClick={true}
           speed={100}
@@ -161,7 +162,7 @@ const SkillsMarquee = () => {
             />
           </div>
         </Marquee>
-      </ScrollAnimation>
+      </IndividualAnimation>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const IndividualAnimation = ({
@@ -15,6 +15,28 @@ const IndividualAnimation = ({
     if (isInView) {
       mainControls.start("visible");
     }
+    // const mq = window.matchMedia("(min-width: 1601px)");
+
+    // const handleMediaQueryChange = (event) => {
+    //   if (event.matches) {
+    //     setBigScreenSize(true);
+    //     setOnlyOnce(true);
+    //   } else {
+    //     setBigScreenSize(false);
+    //   }
+    // };
+
+    // mq.addEventListener("change", handleMediaQueryChange); // Use 'change' event instead
+
+    // // Initial check when component mounts
+    // if (mq.matches) {
+    //   setBigScreenSize(true);
+    // }
+
+    // // Cleanup function to remove listener
+    // return () => {
+    //   mq.removeEventListener("change", handleMediaQueryChange);
+    // };
   }, [isInView, mainControls]);
 
   return (
@@ -33,6 +55,7 @@ const IndividualAnimation = ({
           duration: onDuration ? onDuration : 0.4,
           //   ease: [0, 0.71, 0.2, 1.01],
           delay: onDelay ? onDelay : 0,
+          // delay: bigScreenSize ? 4 : o,
         }}
       >
         {children}

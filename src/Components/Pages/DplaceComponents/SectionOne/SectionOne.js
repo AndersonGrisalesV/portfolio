@@ -2,44 +2,10 @@ import React from "react";
 
 import Button from "../../../shared/UIElements/Button";
 
-import { motion } from "framer-motion";
 import styles from "./SectionOne.module.css";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
 
 const SectionOne = () => {
-  const containerImageText = {
-    hidden: { opacity: 0, y: -20 },
-    show: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.8,
-      },
-    },
-  };
-
-  const containerDescriptionText = {
-    hidden: { opacity: 0, y: -20 },
-    show: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 1.1,
-      },
-    },
-  };
-
-  const containerButton = {
-    hidden: { opacity: 0, y: -20 },
-    show: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 1.4,
-      },
-    },
-  };
-
   return (
     <div>
       <section className={styles.section__one__container}>

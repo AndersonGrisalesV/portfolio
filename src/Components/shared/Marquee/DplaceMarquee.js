@@ -1,12 +1,13 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
+
+import IndividualAnimation from "../ScrollAnimation/IndividualAnimation";
 import styles from "./DplaceMarquee.module.css";
 
 const DplaceMarquee = () => {
   return (
     <div>
-      <ScrollAnimation onDelay={0.6}>
+      <IndividualAnimation onDelay={0.6}>
         <Marquee
           pauseOnClick={true}
           speed={45}
@@ -121,7 +122,7 @@ const DplaceMarquee = () => {
             />
           </div>
         </Marquee>
-      </ScrollAnimation>
+      </IndividualAnimation>
     </div>
   );
 };

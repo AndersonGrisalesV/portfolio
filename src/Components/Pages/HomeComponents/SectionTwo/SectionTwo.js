@@ -3,15 +3,15 @@ import React from "react";
 import Spline from "@splinetool/react-spline";
 import Marquee from "react-fast-marquee";
 
-import styles from "./SectionTwo.module.css";
 import SkillsMarquee from "../../../shared/Marquee/SkillsMarquee";
-import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
+import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+import styles from "./SectionTwo.module.css";
 
 const SectionTwo = () => {
   return (
     <div>
       <section className={styles.section__two__container} id="expertise">
-        <ScrollAnimation onDelay={0.8}>
+        <IndividualAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.responsive__skills__expertise__text}>
               <h1 className={styles.skills__text}>Skills &</h1>
@@ -36,9 +36,9 @@ const SectionTwo = () => {
               </p>
             </div>
           </div>
-        </ScrollAnimation>
+        </IndividualAnimation>
         <div className={styles.container__skills__section}>
-          <SkillsMarquee />
+          {/* <SkillsMarquee /> */}
         </div>
         {/* <div className={styles.container__right__section}> */}
         {/* <Spline

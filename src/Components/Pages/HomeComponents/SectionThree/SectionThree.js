@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 import Card from "../../../shared/UIElements/Card";
+
+import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
 import styles from "./SectionThree.module.css";
-import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
 
 const SectionThree = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -23,7 +24,7 @@ const SectionThree = () => {
   }, []);
 
   const cardCodeFinder = (
-    <ScrollAnimation onDelay={0.8}>
+    <IndividualAnimation onDelay={0.8}>
       <Card
         onImg={
           "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683749039/Portfolio/codefinder_s8egbl.svg"
@@ -34,11 +35,11 @@ const SectionThree = () => {
         }
         onCodeFinder={true}
       />
-    </ScrollAnimation>
+    </IndividualAnimation>
   );
 
   const cardHealthyMindset = (
-    <ScrollAnimation onDelay={0.8}>
+    <IndividualAnimation onDelay={0.8}>
       <Card
         onImg={
           "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748837/Portfolio/healthy_mindset_zf4jwe.svg"
@@ -49,21 +50,21 @@ const SectionThree = () => {
         }
         onHealthyMindset={true}
       />
-    </ScrollAnimation>
+    </IndividualAnimation>
   );
 
   return (
     <div>
-      <ScrollAnimation>
+      <IndividualAnimation>
         <div className={styles.responsive__my__projects__text}>
           <h1 className={styles.my__text}>My</h1>
           <h1 className={styles.projects__text}>Projects</h1>
         </div>
-      </ScrollAnimation>
+      </IndividualAnimation>
 
       <section className={styles.section__three__container} id="work">
         <div className={styles.container__cards__left}>
-          <ScrollAnimation onDelay={0.8}>
+          <IndividualAnimation onDelay={0.8}>
             <Card
               onImg={
                 "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748938/Portfolio/dplace_baoklg.svg"
@@ -74,18 +75,18 @@ const SectionThree = () => {
               }
               onDplace={true}
             />
-          </ScrollAnimation>
+          </IndividualAnimation>
           {isMobile ? cardHealthyMindset : cardCodeFinder}
         </div>
         <div className={styles.container__cards__right}>
-          <ScrollAnimation onDelay={0.8}>
+          <IndividualAnimation onDelay={0.8}>
             <div className={styles.my__projects__text__container}>
               <h1 className={styles.my__text}>My</h1>
               <h1 className={styles.projects__text}>Projects</h1>
             </div>
-          </ScrollAnimation>
+          </IndividualAnimation>
           {isMobile ? cardCodeFinder : cardHealthyMindset}
-          <ScrollAnimation onDelay={0.8}>
+          <IndividualAnimation onDelay={0.6}>
             <Card
               onImg={
                 "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748742/Portfolio/grocery_shop_gliuhh.svg"
@@ -96,7 +97,7 @@ const SectionThree = () => {
               }
               onGroceryShop={true}
             />
-          </ScrollAnimation>
+          </IndividualAnimation>
         </div>
       </section>
     </div>

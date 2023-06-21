@@ -36,8 +36,8 @@ const Home = () => {
         <div className={styles.home__container__animation}>
           <NavBar />
           <SectionOne />
-          <SectionTwo />
 
+          <SectionTwo />
           <SectionThree />
 
           <SectionFour />

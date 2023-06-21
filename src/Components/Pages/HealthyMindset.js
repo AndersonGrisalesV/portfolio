@@ -38,7 +38,6 @@ const HealthyMindset = () => {
           <NavBar onHealthyMindset={true} />
 
           <SectionOne />
-
           <SectionTwo />
 
           <SectionThree />

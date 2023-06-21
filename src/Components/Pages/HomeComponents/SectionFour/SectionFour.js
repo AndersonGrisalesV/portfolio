@@ -1,37 +1,35 @@
 import React from "react";
 
+import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
 import styles from "./SectionFour.module.css";
-import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
-
-import { motion } from "framer-motion";
 
 const SectionFour = () => {
   return (
     <div>
       <div className={styles.responsive__container__left__section}>
-        <ScrollAnimation onDelay={0.8}>
+        <IndividualAnimation onDelay={0.8}>
           <div className={styles.responsive__container__kanji__section}>
             <img
               src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1683757800/Portfolio/Lovekanji_bpvmac.svg"
               alt="kanji love"
             />
           </div>
-        </ScrollAnimation>
+        </IndividualAnimation>
       </div>
 
       <section className={styles.section__four__container} id="about">
         <div className={styles.container__left__section}>
-          <ScrollAnimation onDelay={0.8}>
+          <IndividualAnimation onDelay={0.8}>
             <div className={styles.container__kanji__section}>
               <img
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1683757800/Portfolio/Lovekanji_bpvmac.svg"
                 alt="kanji love"
               />
             </div>
-          </ScrollAnimation>
+          </IndividualAnimation>
         </div>
 
-        <ScrollAnimation onDelay={0.8}>
+        <IndividualAnimation onDelay={0.8}>
           <div className={styles.container__right__section}>
             <div className={styles.responsive__about__me__text}>
               <h1 className={styles.about__text}>About</h1>
@@ -52,7 +50,7 @@ const SectionFour = () => {
               </p>
             </div>
           </div>
-        </ScrollAnimation>
+        </IndividualAnimation>
       </section>
     </div>
   );
