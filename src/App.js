@@ -19,30 +19,17 @@ function App() {
     let scrollbarColorHover = "#04a39b";
     let selectionColor = "#038d87";
     let link = document.querySelector("link[rel~='icon']");
-    // link.href = "";
+
     link.loading = true;
     if (currentURL.includes("home")) {
-      // effect to update icon accordingly
-      // link = document.createElement("link");
-      // link.rel = "icon";
-      // document.getElementsByTagName("head")[0].appendChild(link);
-
       document.title = "Anderson Grisales";
-      // setTimeout(() => {
+
       link.href =
         "https://res.cloudinary.com/doa4qiuc2/image/upload/v1687382248/Portfolio/IconHome_jypgdt.svg";
-      // }, "1000");
 
       scrollbarColor = "#038d87"; // Set the desired color for specific URL
       scrollbarColorHover = "#04c0b7";
     } else if (currentURL.includes("dplace")) {
-      // effect to update icon accordingly
-
-      // link = document.createElement("link");
-      // link.rel = "icon";
-      // document.getElementsByTagName("head")[0].appendChild(link);
-      // link.href =
-      //   "https://cdn.dribbble.com/users/46511/screenshots/1756041/loader-spinning.gif";
       document.title = "Project Dplace";
 
       link.href =

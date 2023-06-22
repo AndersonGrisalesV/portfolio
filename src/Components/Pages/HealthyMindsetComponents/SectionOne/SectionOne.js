@@ -1,7 +1,7 @@
 import React from "react";
 
-import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
 import styles from "./SectionOne.module.css";
+import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
 
 const SectionOne = () => {
   return (
@@ -20,14 +20,14 @@ const SectionOne = () => {
               <h1 className={styles.healthy__mindset__text}>Mindset</h1>
             </div>
           </IndividualAnimation>
-          <IndividualAnimation onDelay={1.1}>
-            <div className={styles.container__image}>
+          <div className={styles.container__image}>
+            <IndividualAnimation onDelay={1.1}>
               <img
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685647875/Portfolio/projects/HealthyMindset/healthyMindsetSectionOne_rrrfb6.svg"
                 alt="Healthy_Mindset_image"
               />
-            </div>
-          </IndividualAnimation>
+            </IndividualAnimation>
+          </div>
         </div>
       </section>
     </div>

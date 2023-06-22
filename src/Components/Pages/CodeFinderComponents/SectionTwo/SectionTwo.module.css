@@ -31,10 +31,6 @@
   margin: 0px;
 }
 
-.button__container {
-  /* margin-top: 62px; */
-}
-
 @media only screen and (max-width: 666px) {
   .description__text {
     font-size: var(--fz-md);

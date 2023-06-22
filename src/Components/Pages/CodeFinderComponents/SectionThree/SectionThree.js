@@ -9,8 +9,8 @@ const SectionThree = () => {
     <div>
       <section className={styles.section__three__container}>
         <div className={styles.container__left__section}>
-          <IndividualAnimation onDelay={0.8}>
-            <div className={styles.container__images}>
+          <div className={styles.container__images}>
+            <IndividualAnimation onDelay={0.8}>
               <Card
                 onImg={
                   "https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742493/Portfolio/projects/CodeFinder/Group_194_cpmevy.svg"
@@ -18,19 +18,19 @@ const SectionThree = () => {
                 onImgDescription={"code finder section three image"}
                 onCardCodeFinder={true}
               />
-            </div>
-          </IndividualAnimation>
+            </IndividualAnimation>
+          </div>
         </div>
         <div className={styles.container__right__section}>
-          <IndividualAnimation onDelay={0.8}>
-            <div className={styles.container__identifying__requirements__text}>
+          <div className={styles.container__identifying__requirements__text}>
+            <IndividualAnimation onDelay={0.8}>
               <h1 className={styles.identifying__text}>Identifying user</h1>
               <h1 className={styles.requirements__text}>requirements</h1>
-            </div>
-          </IndividualAnimation>
+            </IndividualAnimation>
+          </div>
 
-          <IndividualAnimation onDelay={0.8}>
-            <div className={styles.container__description__text}>
+          <div className={styles.container__description__text}>
+            <IndividualAnimation onDelay={0.8}>
               <p className={styles.description__text}>
                 After the emphasize phase and preliminary competitive audit with
                 the user I gained a better understanding of the target user's
@@ -49,8 +49,8 @@ const SectionThree = () => {
                 selected structure aimed to simplify the user experience, making
                 it easy to use.
               </p>
-            </div>
-          </IndividualAnimation>
+            </IndividualAnimation>
+          </div>
         </div>
       </section>
     </div>

@@ -39,7 +39,6 @@ const CodeFinder = () => {
           <SectionOne />
 
           <SectionTwo />
-
           <SectionThree />
 
           <SectionFour />

@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./Footer.module.css";
+import IndividualAnimation from "../ScrollAnimation/IndividualAnimation";
 
 const Footer = ({ onDplace = false, onHealthyMindset = false }) => {
   const currentYear = new Date().getFullYear();
@@ -15,10 +16,12 @@ const Footer = ({ onDplace = false, onHealthyMindset = false }) => {
           : styles.section__footer
       }`}
     >
-      <div className={styles.container__footer}>
-        <p>Anderson</p>
-        <p>&copy; {currentYear}</p>
-      </div>
+      <IndividualAnimation onDelay={0.8}>
+        <div className={styles.container__footer}>
+          <p>Anderson</p>
+          <p>&copy; {currentYear}</p>
+        </div>
+      </IndividualAnimation>
     </footer>
   );
 };

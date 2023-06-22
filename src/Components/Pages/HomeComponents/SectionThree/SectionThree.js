@@ -24,7 +24,7 @@ const SectionThree = () => {
   }, []);
 
   const cardCodeFinder = (
-    <IndividualAnimation onDelay={0.8}>
+    <IndividualAnimation onDelay={isMobile ? 0.4 : 0.6}>
       <Card
         onImg={
           "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683749039/Portfolio/codefinder_s8egbl.svg"
@@ -39,7 +39,7 @@ const SectionThree = () => {
   );
 
   const cardHealthyMindset = (
-    <IndividualAnimation onDelay={0.8}>
+    <IndividualAnimation onDelay={isMobile ? 0.4 : 0.8}>
       <Card
         onImg={
           "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748837/Portfolio/healthy_mindset_zf4jwe.svg"
@@ -86,7 +86,7 @@ const SectionThree = () => {
             </div>
           </IndividualAnimation>
           {isMobile ? cardCodeFinder : cardHealthyMindset}
-          <IndividualAnimation onDelay={0.6}>
+          <IndividualAnimation onDelay={isMobile ? 0.4 : 0.6}>
             <Card
               onImg={
                 "https://res.cloudinary.com/doa4qiuc2/image/upload/v1683748742/Portfolio/grocery_shop_gliuhh.svg"

@@ -7,6 +7,9 @@ import Animation from "./Animation";
 import { motion } from "framer-motion";
 import ScrollAnimation from "../../../shared/ScrollAnimation/ScrollAnimation";
 import styles from "./SectionOne.module.css";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useMemo } from "react";
 
 const SectionOne = () => {
   const containerGreetingText = {
@@ -52,6 +55,36 @@ const SectionOne = () => {
       },
     },
   };
+  const texts = useMemo(() => [" ", "code", " ", "design", "learn"], []);
+  const [currentTextIndex, setCurrentTextIndex] = useState(() =>
+    Math.floor(Math.random() * texts.length)
+  );
+  const [currentText, setCurrentText] = useState("");
+
+  useEffect(() => {
+    let timeoutId;
+
+    const typeText = () => {
+      if (currentText.length < texts[currentTextIndex].length) {
+        setCurrentText(
+          (prevText) => prevText + texts[currentTextIndex][prevText.length]
+        );
+        timeoutId = setTimeout(typeText, 180); // Adjust the delay as needed
+      } else {
+        timeoutId = setTimeout(() => {
+          setCurrentText("");
+          setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+          timeoutId = setTimeout(typeText, 1400); // Delay before starting the next text
+        }, 2000);
+      }
+    };
+
+    timeoutId = setTimeout(typeText, 180); // Initial delay before starting the first text
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [texts, currentTextIndex, currentText]);
 
   return (
     <div>
@@ -82,7 +115,8 @@ const SectionOne = () => {
             className={styles.responsive__lets__design__text}
           >
             <h1 className={styles.lets__text}>Let's</h1>
-            <h1 className={styles.design__text}>design</h1>
+            <h1 className={styles.design__text}>{currentText}</h1>
+            <span className={styles.cursor}>|</span>
           </motion.div>
 
           <motion.div

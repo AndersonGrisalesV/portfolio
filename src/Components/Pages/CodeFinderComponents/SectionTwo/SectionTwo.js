@@ -9,25 +9,25 @@ const SectionTwo = () => {
     <div>
       <section className={styles.section__two__container}>
         <div className={styles.container__center__section}>
-          <IndividualAnimation onDelay={0.8}>
-            <div className={styles.button__container}>
+          <div className={styles.button__container}>
+            <IndividualAnimation onDelay={0.95}>
               <Button
                 onText={"Prototype"}
                 onCodeFinder={true}
                 onPrototype={true}
               />
-            </div>
-          </IndividualAnimation>
-          <IndividualAnimation onDelay={0.8}>
-            <div className={styles.container__description__text}>
+            </IndividualAnimation>
+          </div>
+          <div className={styles.container__description__text}>
+            <IndividualAnimation onDelay={0.95}>
               <p className={styles.description__text}>
                 CodeFinder is an online platform that offers coding tutorials,
                 official documentation, coding snippets, and Q&A sections for
                 individuals of all ages seeking to learn how to code or those in
                 search of a specific coding tutorial.
               </p>
-            </div>
-          </IndividualAnimation>
+            </IndividualAnimation>
+          </div>
         </div>
       </section>
     </div>

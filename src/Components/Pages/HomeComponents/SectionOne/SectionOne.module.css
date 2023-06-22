@@ -93,6 +93,39 @@
   white-space: nowrap;
   margin: 0;
   margin-left: 12px;
+  opacity: 0;
+  animation: fade-in 0.9s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transition: 1s;
+  }
+  to {
+    opacity: 1;
+    transition: 1s;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  font-size: 58px;
+  color: #038d87;
+  margin-left: -10px;
+  animation: blinkCursor 1s infinite;
+}
+
+@keyframes blinkCursor {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .description__text {
