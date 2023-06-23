@@ -113,6 +113,12 @@ body {
   background: var(--scrollbar-color-hover);
 }
 
+:focus {
+  outline: none;
+  border: solid 1px var(--scrollbar-color);
+  border-color: var(--scrollbar-color);
+}
+
 @media only screen and (max-width: 960px) {
   .container__hamburguerMenu {
     display: flex;

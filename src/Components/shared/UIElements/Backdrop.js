@@ -5,8 +5,15 @@ import styles from "./Backdrop.module.css";
 
 const Backdrop = (props) => {
   return ReactDOM.createPortal(
-    <div className={styles.backdrop} onClick={props.onClick}></div>,
-    document.getElementById("backdrop-hook")
+    <div
+      className={
+        props.onResume === true ? styles.backdrop__password : styles.backdrop
+      }
+      onClick={props.onClick}
+    ></div>,
+    document.getElementById(
+      `${props.onResume ? "resume-backdrop-hook" : "backdrop-hook"}`
+    )
   );
 };
 

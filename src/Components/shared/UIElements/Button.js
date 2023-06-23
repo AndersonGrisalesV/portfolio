@@ -16,6 +16,10 @@ const Button = ({
   onPrototype = false,
   onCaseStudy = false,
   onContact = false,
+  onResume = false,
+  onHandleOpenModalPassword = null,
+  onUnlock = false,
+  onClose = null,
 }) => {
   const navigate = useNavigate();
 
@@ -77,6 +81,14 @@ const Button = ({
       );
     } else if (onGithub) {
       window.open("https://github.com/AndersonGrisalesV", "_blank");
+    } else if (onResume) {
+      if (onHandleOpenModalPassword) {
+        onHandleOpenModalPassword();
+      }
+    } else if (onUnlock) {
+      const pdfUrl = "https://v4.brittanychiang.com/resume.pdf";
+      window.open(pdfUrl, "_blank");
+      onClose();
     }
   };
 
