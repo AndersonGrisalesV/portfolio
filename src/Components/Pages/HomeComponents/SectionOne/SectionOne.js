@@ -110,7 +110,9 @@ const SectionOne = () => {
   return (
     <React.Fragment>
       {openPasswordModal && (
-        <Password onCloseDrawerHandler={closeDrawerHandler} />
+        <div className={styles.container__password}>
+          <Password onCloseDrawerHandler={closeDrawerHandler} />
+        </div>
       )}
 
       <div>

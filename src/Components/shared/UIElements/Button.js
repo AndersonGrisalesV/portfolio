@@ -1,8 +1,8 @@
 import React, { useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import styles from "./Button.module.css";
 import { motion } from "framer-motion";
+import styles from "./Button.module.css";
 
 const Button = ({
   onText,
@@ -86,9 +86,9 @@ const Button = ({
         onHandleOpenModalPassword();
       }
     } else if (onUnlock) {
-      const pdfUrl = "https://v4.brittanychiang.com/resume.pdf";
-      window.open(pdfUrl, "_blank");
-      onClose();
+      // const pdfUrl = "https://v4.brittanychiang.com/resume.pdf";
+      // window.open(pdfUrl, "_blank");
+      // onClose();
     }
   };
 
