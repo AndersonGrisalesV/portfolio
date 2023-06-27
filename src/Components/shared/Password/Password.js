@@ -38,15 +38,17 @@ const Password = ({ onCloseDrawerHandler }) => {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const correctPassword = "1234";
+  const correctPassword = process.env.REACT_APP_LETTER;
 
   const handleSubmitForm = (event) => {
     event.preventDefault();
 
     if (password === correctPassword) {
       setErrorMessage("");
-      // Password is correct, redirect to resume
-      // window.location.href = "/resume.pdf";
+      const pdfUrl =
+        "https://drive.google.com/file/d/1kqtl8oAVJrEw7gG9pqj-gVeXx9V-nkDu/view?usp=drive_link";
+      window.open(pdfUrl, "_blank");
+      onCloseDrawerHandler();
     } else {
       // Password is incorrect, display error message
       setErrorMessage("You need access to see this.");

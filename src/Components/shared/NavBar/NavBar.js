@@ -22,6 +22,7 @@ const NavBar = ({
   onHealthyMindset = false,
   onCodeFinder = false,
   onGroceryShop = false,
+  onNotFound = false,
 }) => {
   const [visibleNavBar, setVisibleNavBar] = useState(true);
 
@@ -54,7 +55,13 @@ const NavBar = ({
       return () => clearTimeout(timeoutId);
     };
 
-    if (onDplace || onHealthyMindset || onCodeFinder || onGroceryShop) {
+    if (
+      onDplace ||
+      onHealthyMindset ||
+      onCodeFinder ||
+      onGroceryShop ||
+      onNotFound
+    ) {
       navigate("/home");
       setTimeout(() => {
         scrollToTop(nameToScroolHome);
@@ -231,7 +238,11 @@ const NavBar = ({
             )}
           </div>
 
-          {!onDplace && !onHealthyMindset && !onCodeFinder && !onGroceryShop ? (
+          {!onDplace &&
+          !onHealthyMindset &&
+          !onCodeFinder &&
+          !onGroceryShop &&
+          !onNotFound ? (
             <React.Fragment>
               <motion.ul
                 variants={container}
@@ -442,6 +453,7 @@ const NavBar = ({
             !onHealthyMindset &&
             !onCodeFinder &&
             !onGroceryShop &&
+            !onNotFound &&
             ReactDOM.createPortal(
               <motion.div
                 initial={{

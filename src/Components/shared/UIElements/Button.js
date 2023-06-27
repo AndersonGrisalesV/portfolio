@@ -18,8 +18,7 @@ const Button = ({
   onContact = false,
   onResume = false,
   onHandleOpenModalPassword = null,
-  onUnlock = false,
-  onClose = null,
+  onHome = false,
 }) => {
   const navigate = useNavigate();
 
@@ -85,10 +84,8 @@ const Button = ({
       if (onHandleOpenModalPassword) {
         onHandleOpenModalPassword();
       }
-    } else if (onUnlock) {
-      // const pdfUrl = "https://v4.brittanychiang.com/resume.pdf";
-      // window.open(pdfUrl, "_blank");
-      // onClose();
+    } else if (onHome) {
+      navigate("/home");
     }
   };
 
