@@ -185,12 +185,12 @@ const SectionOne = () => {
             }}
             className={styles.container__right__section}
           >
-            {/* <Spline
-            style={{ width: "100%", height: "105%" }}
-            scene="https://draft.spline.design/QEyFXPMY8XipyAPj/scene.splinecode"
-            // scene="https://draft.spline.design/xrVUj38x49AYHkQ3/scene.splinecode"
-            //scene="https://draft.spline.design/ke-925JRMxdge4-o/scene.splinecode"
-          /> */}
+            <Spline
+              style={{ width: "100%", height: "105%" }}
+              scene="https://draft.spline.design/QEyFXPMY8XipyAPj/scene.splinecode"
+              // scene="https://draft.spline.design/xrVUj38x49AYHkQ3/scene.splinecode"
+              //scene="https://draft.spline.design/ke-925JRMxdge4-o/scene.splinecode"
+            />
           </motion.div>
         </section>
       </div>
