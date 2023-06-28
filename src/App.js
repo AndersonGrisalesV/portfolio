@@ -83,7 +83,10 @@ function App() {
   return (
     <div className="main__container">
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route
+          path="https://andersongrisalesv.github.io/Portfolio/home"
+          element={<Home />}
+        />
         <Route path="/projects/dplace" element={<Dplace />} />
         <Route path="/projects/healthy_mindset" element={<HealthyMindset />} />
         <Route path="/projects/code_finder" element={<CodeFinder />} />
