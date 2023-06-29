@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
-    "@splinetool/runtime": "^0.9.269",
+    "@splinetool/runtime": "^0.9.374",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -26,8 +26,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -50,5 +48,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://AndersonGrisalesV.github.io/portfolio"
+  "homepage": "https://localhost:3000/home"
 }

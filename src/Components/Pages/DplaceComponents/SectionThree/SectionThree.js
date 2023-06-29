@@ -218,7 +218,7 @@ const SectionThree = () => {
             <IndividualAnimation onDelay={0.6}>
               <div className={styles.images__left}>
                 <img
-                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400194/LeftImages_syimlg.svg"
+                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400194/Portfolio/projects/Dplace/LeftImages_syimlg.svg"
                   alt="Dplace_left_images"
                   className={styles.social__media__image}
                 />
@@ -227,7 +227,7 @@ const SectionThree = () => {
             <IndividualAnimation onDelay={0.6}>
               <div className={styles.images__right}>
                 <img
-                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400195/RightImages_rtbmi4.svg"
+                  src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400195/Portfolio/projects/Dplace/RightImages_rtbmi4.svg"
                   alt="Dplace_right_images"
                   className={styles.social__media__image}
                 />

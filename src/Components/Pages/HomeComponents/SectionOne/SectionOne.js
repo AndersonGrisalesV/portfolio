@@ -1,12 +1,11 @@
-import React from "react";
+import React, { Suspense, lazy, useRef } from "react";
 
 import Button from "../../../shared/UIElements/Button";
-import Spline from "@splinetool/react-spline";
+
 import ReactDOM from "react-dom";
 import Animation from "./Animation";
 import { motion } from "framer-motion";
-
-import styles from "./SectionOne.module.css";
+import Spline from "@splinetool/react-spline";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useMemo } from "react";
@@ -14,8 +13,26 @@ import Password from "../../../shared/Password/Password";
 import Backdrop from "../../../shared/UIElements/Backdrop";
 import SideDrawer from "../../../shared/UIElements/SideDrawer";
 
+import styles from "./SectionOne.module.css";
+import Loader from "../../../shared/Loaders/Loader";
+
 const SectionOne = () => {
+  // const Spline = React.lazy(() => import("@splinetool/react-spline"));
+
   const [openPasswordModal, setOpenPasswordModal] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [timer, setTimer] = useState(true);
+  const [delayLoader, setDelayLoader] = useState(true);
+
+  setTimeout(() => {
+    setLoading(false);
+  }, 2000);
+  setTimeout(() => {
+    setTimer(false);
+  }, 2000);
+  setTimeout(() => {
+    setDelayLoader(false);
+  }, 3000);
 
   const handleOpenModalPassword = () => {
     setOpenPasswordModal(true);
@@ -174,23 +191,49 @@ const SectionOne = () => {
           </div>
           {/* </ScrollAnimation> */}
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ rotate: 0, scale: 1 }}
             transition={{
-              type: "spring",
-              stiffness: 90,
-              damping: 20,
-              duration: 2,
+              // type: "spring",
+              // stiffness: 90,
+
+              duration: 6,
               delay: 1.8,
             }}
             className={styles.container__right__section}
           >
-            <Spline
-              style={{ width: "100%", height: "105%" }}
-              scene="https://draft.spline.design/QEyFXPMY8XipyAPj/scene.splinecode"
-              // scene="https://draft.spline.design/xrVUj38x49AYHkQ3/scene.splinecode"
-              //scene="https://draft.spline.design/ke-925JRMxdge4-o/scene.splinecode"
-            />
+            {loading ? (
+              ""
+            ) : (
+              <React.Fragment>
+                <div className={styles.container__loader}>
+                  {delayLoader ? (
+                    <Loader
+                      onMascot={true}
+                      style={{ visibility: timer ? "hidden" : "visible" }}
+                    />
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <React.Fragment>
+                  {!loading ? (
+                    <Spline
+                      className={styles.spline__animation}
+                      style={{
+                        width: "100%",
+                        height: "105%",
+                        opacity: timer ? 0 : 1,
+                        transition: "opacity 0.5s ease-in-out",
+                        visibility: timer ? "hidden" : "visible",
+                      }}
+                      scene="https://draft.spline.design/oPijw1bLoJbCO9ZF/scene.splinecode"
+                      // scene="https://draft.spline.design/3vA0ze-dDwcxSyyc/scene.splinecode"
+                    />
+                  ) : (
+                    ""
+                  )}
+                </React.Fragment>
+              </React.Fragment>
+            )}
           </motion.div>
         </section>
       </div>

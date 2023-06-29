@@ -158,6 +158,25 @@
   bottom: 0;
 }
 
+.container__loader {
+}
+
+.spline__animation {
+  animation: fadeInSpline 5s ease-in forwards;
+}
+
+@keyframes fadeInSpline {
+  from {
+    opacity: 0;
+    transition: opacity 0.9s ease-in;
+    /* transform: translateX(2%); */
+  }
+  to {
+    opacity: 1;
+    transition: opacity 0.9s ease-in;
+  }
+}
+
 @media only screen and (max-width: 10000px) {
   .section__container {
     box-sizing: border-box;

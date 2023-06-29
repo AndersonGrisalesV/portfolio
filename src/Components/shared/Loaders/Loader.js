@@ -7,6 +7,7 @@ const Loader = ({
   onLoaderHealthyMindset = false,
   onLoaderCodeFinder = false,
   onLoaderGroceryShop = false,
+  onMascot = false,
 }) => {
   const [visibleLogo, setVisibleLogo] = useState("LogoZero");
   const [reload, setReload] = useState(false);
@@ -51,9 +52,9 @@ const Loader = ({
 
   return (
     <div
-      className={`${styles.container__loader} ${
-        reload ? styles.container__loader__animation : ""
-      }`}
+      className={`${
+        onMascot ? styles.container__loader__mascot : styles.container__loader
+      } ${reload ? styles.container__loader__animation : ""}`}
     >
       <svg
         viewBox="0 0 120 86"
