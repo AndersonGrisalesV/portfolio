@@ -5,7 +5,7 @@ import styles from "./SectionFour.module.css";
 
 const SectionFour = () => {
   return (
-    <div>
+    <div id="about">
       <div className={styles.responsive__container__left__section}>
         <IndividualAnimation onDelay={0.8}>
           <div className={styles.responsive__container__kanji__section}>
@@ -17,7 +17,7 @@ const SectionFour = () => {
         </IndividualAnimation>
       </div>
 
-      <section className={styles.section__four__container} id="about">
+      <section className={styles.section__four__container}>
         <div className={styles.container__left__section}>
           <IndividualAnimation onDelay={0.8}>
             <div className={styles.container__kanji__section}>

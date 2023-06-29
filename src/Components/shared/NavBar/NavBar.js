@@ -330,6 +330,7 @@ const NavBar = ({
                     to="work"
                     smooth={true}
                     duration={10}
+                    // offset={100}
                     // onClick={() => {
                     //   scrollToTop("work");
                     // }}
@@ -358,6 +359,7 @@ const NavBar = ({
                     to="about"
                     smooth={true}
                     duration={10}
+                    // offset={-200}
                     // onClick={() => {
                     //   scrollToTop("about");
                     // }}

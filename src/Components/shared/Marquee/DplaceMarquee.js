@@ -7,7 +7,7 @@ import styles from "./DplaceMarquee.module.css";
 const DplaceMarquee = () => {
   return (
     <div>
-      <IndividualAnimation onDelay={0.6}>
+      <IndividualAnimation onDelay={0.3}>
         <Marquee
           pauseOnClick={true}
           speed={45}

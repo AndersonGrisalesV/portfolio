@@ -38,11 +38,12 @@ const Home = () => {
           <NavBar />
           <SectionOne />
 
-          {/* <SectionTwo />
+          <SectionTwo />
+
           <SectionThree />
 
           <SectionFour />
-          <SectionFive /> */}
+          <SectionFive />
           <Footer />
         </div>
       )}

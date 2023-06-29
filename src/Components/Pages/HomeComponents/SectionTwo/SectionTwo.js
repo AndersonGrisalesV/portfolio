@@ -9,8 +9,8 @@ import styles from "./SectionTwo.module.css";
 
 const SectionTwo = () => {
   return (
-    <div>
-      <section className={styles.section__two__container} id="expertise">
+    <div id="expertise">
+      <section className={styles.section__two__container}>
         <IndividualAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.responsive__skills__expertise__text}>
@@ -38,7 +38,7 @@ const SectionTwo = () => {
           </div>
         </IndividualAnimation>
         <div className={styles.container__skills__section}>
-          {/* <SkillsMarquee /> */}
+          <SkillsMarquee />
         </div>
         {/* <div className={styles.container__right__section}> */}
         {/* <Spline
@@ -48,7 +48,7 @@ const SectionTwo = () => {
       </section>
 
       <div className={styles.responsive__marquee}>
-        {/* <SkillsMarquee /> */}
+        <SkillsMarquee />
       </div>
     </div>
   );

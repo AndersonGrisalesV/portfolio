@@ -52,9 +52,9 @@ const Loader = ({
 
   return (
     <div
-      className={`${
-        onMascot ? styles.container__loader__mascot : styles.container__loader
-      } ${reload ? styles.container__loader__animation : ""}`}
+      className={`${styles.container__loader} ${
+        reload ? styles.container__loader__animation : ""
+      }`}
     >
       <svg
         viewBox="0 0 120 86"

@@ -15,6 +15,7 @@ import SideDrawer from "../../../shared/UIElements/SideDrawer";
 
 import styles from "./SectionOne.module.css";
 import Loader from "../../../shared/Loaders/Loader";
+import LogoLoading from "../../../shared/NavBar/Logos/LogoLoading.svg";
 
 const SectionOne = () => {
   // const Spline = React.lazy(() => import("@splinetool/react-spline"));
@@ -159,8 +160,11 @@ const SectionOne = () => {
               className={styles.responsive__lets__design__text}
             >
               <h1 className={styles.lets__text}>Let's</h1>
-              <h1 className={styles.design__text}>{currentText}</h1>
-              <span className={styles.cursor}>|</span>
+              <h1 className={styles.design__text}>
+                {currentText}
+                <span className={styles.cursor}>|</span>
+              </h1>
+              {/* <span className={styles.cursor}>|</span> */}
             </motion.div>
 
             <motion.div
@@ -204,33 +208,37 @@ const SectionOne = () => {
               ""
             ) : (
               <React.Fragment>
-                <div className={styles.container__loader}>
-                  {delayLoader ? (
-                    <Loader
-                      onMascot={true}
-                      style={{ visibility: timer ? "hidden" : "visible" }}
+                {delayLoader ? (
+                  ""
+                ) : (
+                  // <Loader
+                  //   onMascot={true}
+                  //   style={{ visibility: timer ? "hidden" : "visible" }}
+                  // />
+                  <div className={styles.container__loader}>
+                    <img
+                      className={styles.image__logo}
+                      src={LogoLoading}
+                      alt="Logo"
                     />
-                  ) : (
-                    ""
-                  )}
-                </div>
+                  </div>
+                )}
                 <React.Fragment>
-                  {!loading ? (
-                    <Spline
-                      className={styles.spline__animation}
-                      style={{
-                        width: "100%",
-                        height: "105%",
-                        opacity: timer ? 0 : 1,
-                        transition: "opacity 0.5s ease-in-out",
-                        visibility: timer ? "hidden" : "visible",
-                      }}
-                      scene="https://draft.spline.design/oPijw1bLoJbCO9ZF/scene.splinecode"
-                      // scene="https://draft.spline.design/3vA0ze-dDwcxSyyc/scene.splinecode"
-                    />
-                  ) : (
-                    ""
-                  )}
+                  {!loading
+                    ? ""
+                    : // <Spline
+                      //   className={styles.spline__animation}
+                      //   style={{
+                      //     width: "100%",
+                      //     height: "105%",
+                      //     opacity: timer ? 0 : 1,
+                      //     transition: "opacity 0.5s ease-in-out",
+                      //     visibility: timer ? "hidden" : "visible",
+                      //   }}
+                      //   scene="https://draft.spline.design/oPijw1bLoJbCO9ZF/scene.splinecode"
+                      //   // scene="https://draft.spline.design/3vA0ze-dDwcxSyyc/scene.splinecode"
+                      // />
+                      ""}
                 </React.Fragment>
               </React.Fragment>
             )}

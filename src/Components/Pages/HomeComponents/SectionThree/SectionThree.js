@@ -54,7 +54,7 @@ const SectionThree = () => {
   );
 
   return (
-    <div>
+    <div id="work">
       <IndividualAnimation>
         <div className={styles.responsive__my__projects__text}>
           <h1 className={styles.my__text}>My</h1>
@@ -62,7 +62,7 @@ const SectionThree = () => {
         </div>
       </IndividualAnimation>
 
-      <section className={styles.section__three__container} id="work">
+      <section className={styles.section__three__container}>
         <div className={styles.container__cards__left}>
           <IndividualAnimation onDelay={0.8}>
             <Card
