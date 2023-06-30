@@ -1,37 +1,33 @@
-import React, { Suspense, lazy, useRef } from "react";
+import React, { useRef } from "react";
 
 import Button from "../../../shared/UIElements/Button";
 
-import ReactDOM from "react-dom";
-import Animation from "./Animation";
 import { motion } from "framer-motion";
 import Spline from "@splinetool/react-spline";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useMemo } from "react";
 import Password from "../../../shared/Password/Password";
-import Backdrop from "../../../shared/UIElements/Backdrop";
-import SideDrawer from "../../../shared/UIElements/SideDrawer";
 
 import styles from "./SectionOne.module.css";
-import Loader from "../../../shared/Loaders/Loader";
+
 import LogoLoading from "../../../shared/NavBar/Logos/LogoLoading.svg";
 import MascotPlaceHolder from "../../../shared/NavBar/Logos/MascotPlaceHolder.svg";
 
 const SectionOne = () => {
-  // const Spline = React.lazy(() => import("@splinetool/react-spline"));
+  const texts = useMemo(() => [" ", "code", " ", "design", " ", "learn"], []);
 
   const [openPasswordModal, setOpenPasswordModal] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [timer, setTimer] = useState(true);
+  // const [timer, setTimer] = useState(true);
   const [delayLoader, setDelayLoader] = useState(true);
 
   setTimeout(() => {
     setLoading(false);
   }, 2000);
-  setTimeout(() => {
-    setTimer(false);
-  }, 2000);
+  // setTimeout(() => {
+  //   setTimer(false);
+  // }, 2000);
   setTimeout(() => {
     setDelayLoader(false);
   }, 3000);
@@ -95,7 +91,7 @@ const SectionOne = () => {
       },
     },
   };
-  const texts = useMemo(() => [" ", "code", " ", "design", " ", "learn"], []);
+
   const [currentTextIndex, setCurrentTextIndex] = useState(() =>
     Math.floor(Math.random() * texts.length)
   );
@@ -135,7 +131,7 @@ const SectionOne = () => {
     mq.addEventListener("change", handleResize);
     setShowMascotPlaceHolder(true);
     setDelayLoader(true);
-    console.log(mq.matches);
+
     if (!isMobile) {
       setShowMascotPlaceHolder(false);
       setTimeout(() => {
@@ -145,6 +141,16 @@ const SectionOne = () => {
       mq.removeEventListener("change", handleResize);
     }
   }, [isMobile]);
+
+  const mascot = useRef();
+
+  function onLoad(spline) {
+    const obj = spline.findObjectByName("Camera");
+    // save the object in a ref for later use
+    mascot.current = obj;
+    // obj.visible = false;
+    console.log(mascot.current);
+  }
 
   return (
     <React.Fragment>
@@ -257,25 +263,30 @@ const SectionOne = () => {
                   ) : (
                     ""
                   )
+
                   // <Loader
                   //   onMascot={true}
                   //   style={{ visibility: timer ? "hidden" : "visible" }}
                   // />
                 }
+
                 <React.Fragment>
                   {!loading && !showMascotPlaceHolder ? (
                     <Spline
+                      onLoad={onLoad}
                       className={styles.spline__animation}
                       style={{
                         width: "100%",
                         height: "105%",
-                        opacity: showMascotPlaceHolder ? 0 : 1,
+                        display: showMascotPlaceHolder ? "none" : "block",
                         transition: "opacity 0.5s ease-in-out",
-                        visibility: showMascotPlaceHolder
-                          ? "hidden"
-                          : "visible",
+                        // visibility: showMascotPlaceHolder
+                        // //   ? "visible"
+                        //   : "hidden",
                       }}
-                      scene="https://draft.spline.design/oPijw1bLoJbCO9ZF/scene.splinecode"
+                      scene="https://prod.spline.design/mTrvEh8lCBeDU00r/scene.splinecode"
+                      // scene="https://draft.spline.design/eCPRIY3SM5ZzCmeL/scene.splinecode"
+                      // scene="https://draft.spline.design/oPijw1bLoJbCO9ZF/scene.splinecode"
                       // scene="https://draft.spline.design/3vA0ze-dDwcxSyyc/scene.splinecode"
                     />
                   ) : (
