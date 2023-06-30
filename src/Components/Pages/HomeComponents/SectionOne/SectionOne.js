@@ -16,6 +16,7 @@ import SideDrawer from "../../../shared/UIElements/SideDrawer";
 import styles from "./SectionOne.module.css";
 import Loader from "../../../shared/Loaders/Loader";
 import LogoLoading from "../../../shared/NavBar/Logos/LogoLoading.svg";
+import MascotPlaceHolder from "../../../shared/NavBar/Logos/MascotPlaceHolder.svg";
 
 const SectionOne = () => {
   // const Spline = React.lazy(() => import("@splinetool/react-spline"));
@@ -125,6 +126,26 @@ const SectionOne = () => {
     };
   }, [texts, currentTextIndex, currentText]);
 
+  const [isMobile, setIsMobile] = useState(false);
+  const [showMascotPlaceHolder, setShowMascotPlaceHolder] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mq.matches);
+    const handleResize = () => setIsMobile(mq.matches);
+    mq.addEventListener("change", handleResize);
+    setShowMascotPlaceHolder(true);
+    setDelayLoader(true);
+    console.log(mq.matches);
+    if (!isMobile) {
+      setShowMascotPlaceHolder(false);
+      setTimeout(() => {
+        setDelayLoader(false);
+      }, 3000);
+      // setShowMascotPlaceHolder(false);
+      mq.removeEventListener("change", handleResize);
+    }
+  }, [isMobile]);
+
   return (
     <React.Fragment>
       {openPasswordModal && (
@@ -208,37 +229,58 @@ const SectionOne = () => {
               ""
             ) : (
               <React.Fragment>
-                {delayLoader ? (
-                  ""
-                ) : (
+                {
+                  delayLoader ? (
+                    <div className={styles.container__loader}>
+                      {showMascotPlaceHolder ? (
+                        <img
+                          className={styles.image__mascot}
+                          src={MascotPlaceHolder}
+                          alt="Logo"
+                        />
+                      ) : (
+                        <img
+                          className={styles.image__logo}
+                          src={LogoLoading}
+                          alt="Logo"
+                        />
+                      )}
+                    </div>
+                  ) : showMascotPlaceHolder ? (
+                    <div className={styles.container__loader}>
+                      <img
+                        className={styles.image__mascot}
+                        src={MascotPlaceHolder}
+                        alt="Logo"
+                      />
+                    </div>
+                  ) : (
+                    ""
+                  )
                   // <Loader
                   //   onMascot={true}
                   //   style={{ visibility: timer ? "hidden" : "visible" }}
                   // />
-                  <div className={styles.container__loader}>
-                    <img
-                      className={styles.image__logo}
-                      src={LogoLoading}
-                      alt="Logo"
-                    />
-                  </div>
-                )}
+                }
                 <React.Fragment>
-                  {!loading
-                    ? ""
-                    : // <Spline
-                      //   className={styles.spline__animation}
-                      //   style={{
-                      //     width: "100%",
-                      //     height: "105%",
-                      //     opacity: timer ? 0 : 1,
-                      //     transition: "opacity 0.5s ease-in-out",
-                      //     visibility: timer ? "hidden" : "visible",
-                      //   }}
-                      //   scene="https://draft.spline.design/oPijw1bLoJbCO9ZF/scene.splinecode"
-                      //   // scene="https://draft.spline.design/3vA0ze-dDwcxSyyc/scene.splinecode"
-                      // />
-                      ""}
+                  {!loading && !showMascotPlaceHolder ? (
+                    <Spline
+                      className={styles.spline__animation}
+                      style={{
+                        width: "100%",
+                        height: "105%",
+                        opacity: showMascotPlaceHolder ? 0 : 1,
+                        transition: "opacity 0.5s ease-in-out",
+                        visibility: showMascotPlaceHolder
+                          ? "hidden"
+                          : "visible",
+                      }}
+                      scene="https://draft.spline.design/oPijw1bLoJbCO9ZF/scene.splinecode"
+                      // scene="https://draft.spline.design/3vA0ze-dDwcxSyyc/scene.splinecode"
+                    />
+                  ) : (
+                    ""
+                  )}
                 </React.Fragment>
               </React.Fragment>
             )}

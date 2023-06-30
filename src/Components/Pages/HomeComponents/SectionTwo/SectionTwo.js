@@ -10,7 +10,7 @@ import styles from "./SectionTwo.module.css";
 const SectionTwo = () => {
   return (
     <div id="expertise">
-      <section className={styles.section__two__container}>
+      <section className={styles.section__two__container} id="expertise">
         <IndividualAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.responsive__skills__expertise__text}>

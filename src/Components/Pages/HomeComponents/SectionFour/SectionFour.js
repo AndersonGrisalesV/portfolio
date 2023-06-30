@@ -17,7 +17,7 @@ const SectionFour = () => {
         </IndividualAnimation>
       </div>
 
-      <section className={styles.section__four__container}>
+      <section className={styles.section__four__container} id="about">
         <div className={styles.container__left__section}>
           <IndividualAnimation onDelay={0.8}>
             <div className={styles.container__kanji__section}>

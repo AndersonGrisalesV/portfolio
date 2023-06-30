@@ -56,7 +56,7 @@ const SectionThree = () => {
   return (
     <div id="work">
       <IndividualAnimation>
-        <div className={styles.responsive__my__projects__text}>
+        <div className={styles.responsive__my__projects__text} id="work">
           <h1 className={styles.my__text}>My</h1>
           <h1 className={styles.projects__text}>Projects</h1>
         </div>
