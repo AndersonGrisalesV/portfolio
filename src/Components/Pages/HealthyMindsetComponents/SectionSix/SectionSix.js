@@ -14,6 +14,7 @@ const SectionSix = () => {
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685647872/Portfolio/projects/HealthyMindset/healthyMindsetSectionSixOne_vzpfsj.svg"
                 alt="Healthy_Mindset_Section_Six_One_images"
                 className={styles.social__media__image}
+                loading="lazy"
               />
             </div>
           </div>
@@ -25,6 +26,7 @@ const SectionSix = () => {
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685647876/Portfolio/projects/HealthyMindset/healthyMindsetSectionSixTwo_p6selp.svg"
                 alt="Healthy_Mindset_Section_Six_Two_images"
                 className={styles.social__media__image}
+                loading="lazy"
               />
             </div>
           </div>

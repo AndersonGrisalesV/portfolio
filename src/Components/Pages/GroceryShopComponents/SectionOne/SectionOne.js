@@ -45,6 +45,7 @@ const SectionOne = () => {
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742987/Portfolio/projects/GroceryShop/GroceryShopimageSectionOne_qdnzmd.svg"
                 alt="Grocery_Shop_Section_One_images"
                 className={styles.grocery__shop__image}
+                loading="lazy"
               />
             </IndividualAnimation>
           </div>

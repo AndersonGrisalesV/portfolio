@@ -17,6 +17,7 @@ const SectionOne = () => {
                   src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684359106/Portfolio/projects/Dplace/DplaceLogo_jbfqhp.svg"
                   alt="Dplace_image"
                   className={styles.social__media__image}
+                  loading="lazy"
                 />
               </div>
               <h1 className={styles.place__text}>place</h1>

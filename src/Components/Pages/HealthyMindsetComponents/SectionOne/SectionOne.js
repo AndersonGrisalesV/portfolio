@@ -15,6 +15,7 @@ const SectionOne = () => {
                 <img
                   src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685647871/Portfolio/projects/HealthyMindset/healthyMindsetLogo_vdfbtg.svg"
                   alt="Healthy_Mindset_Logo_Text"
+                  loading="lazy"
                 />
               </div>
               <h1 className={styles.healthy__mindset__text}>Mindset</h1>
@@ -25,6 +26,7 @@ const SectionOne = () => {
               <img
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685647875/Portfolio/projects/HealthyMindset/healthyMindsetSectionOne_rrrfb6.svg"
                 alt="Healthy_Mindset_image"
+                loading="lazy"
               />
             </IndividualAnimation>
           </div>

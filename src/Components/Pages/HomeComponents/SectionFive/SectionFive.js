@@ -62,6 +62,7 @@ const SectionFive = () => {
                     alt="LinkedIn"
                     onClick={handleLinkedInClick}
                     className={styles.social__media__image}
+                    loading="lazy"
                   />
                 </a>
                 <a
@@ -74,6 +75,7 @@ const SectionFive = () => {
                     alt="Github"
                     onClick={handleGithubClick}
                     className={styles.social__media__image}
+                    loading="lazy"
                   />
                 </a>
                 <a href="mailto:grisalesvargasanderson@gmail.com" custom={2}>
@@ -82,6 +84,7 @@ const SectionFive = () => {
                     alt="Gmail"
                     onClick={handleGmailClick}
                     className={styles.social__media__image}
+                    loading="lazy"
                   />
                 </a>
               </div>

@@ -34,6 +34,7 @@ const SectionFive = () => {
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742985/Portfolio/projects/GroceryShop/GroceryShopimageSectionFive_ytdahu.svg"
                 alt="Grocery_Shop_Section_Five_images"
                 className={styles.project__vision__image}
+                loading="lazy"
               />
             </div>
           </div>

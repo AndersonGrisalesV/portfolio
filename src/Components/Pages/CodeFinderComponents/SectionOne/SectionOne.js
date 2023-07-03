@@ -21,6 +21,7 @@ const SectionOne = () => {
                 <img
                   src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742691/Portfolio/projects/CodeFinder/CodeFinderImage1SectionOne_m0jvox.svg"
                   alt="Code_Finder_Section_One_Left_Image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -30,6 +31,7 @@ const SectionOne = () => {
                   src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742493/Portfolio/projects/CodeFinder/ImageTwo_vmguit.svg"
                   alt="Code_Finder_Section_One_Right_Image"
                   className={styles.section__one__image__two}
+                  loading="lazy"
                 />
               </div>
             </div>

@@ -30,7 +30,7 @@ const SectionOne = () => {
   // }, 2000);
   setTimeout(() => {
     setDelayLoader(false);
-  }, 3000);
+  }, 5000);
 
   const handleOpenModalPassword = () => {
     setOpenPasswordModal(true);
@@ -92,16 +92,22 @@ const SectionOne = () => {
     },
   };
 
-  const [currentTextIndex, setCurrentTextIndex] = useState(() =>
-    Math.floor(Math.random() * texts.length)
-  );
+  const [currentTextIndex, setCurrentTextIndex] = useState(() => {
+    const initialIndex = Math.floor(Math.random() * texts.length);
+    return initialIndex >= 0 && initialIndex < texts.length ? initialIndex : 0;
+  });
   const [currentText, setCurrentText] = useState("");
 
   useEffect(() => {
     let timeoutId;
 
     const typeText = () => {
-      if (currentText.length < texts[currentTextIndex].length) {
+      if (
+        currentTextIndex !== null &&
+        currentTextIndex >= 0 &&
+        currentTextIndex < texts.length &&
+        currentText.length < texts[currentTextIndex].length
+      ) {
         setCurrentText(
           (prevText) => prevText + texts[currentTextIndex][prevText.length]
         );
@@ -129,13 +135,13 @@ const SectionOne = () => {
     setIsMobile(mq.matches);
     const handleResize = () => setIsMobile(mq.matches);
     mq.addEventListener("change", handleResize);
-    setShowMascotPlaceHolder(true);
-    setDelayLoader(true);
+    setShowMascotPlaceHolder(mq.matches);
+    // setDelayLoader(mq.matches);
 
     if (!isMobile) {
-      setShowMascotPlaceHolder(false);
+      // setShowMascotPlaceHolder(false);
       setTimeout(() => {
-        setDelayLoader(false);
+        // setDelayLoader(false);
       }, 3000);
       // setShowMascotPlaceHolder(false);
       mq.removeEventListener("change", handleResize);
@@ -220,81 +226,116 @@ const SectionOne = () => {
               />
             </motion.div>
           </div>
-          {/* </ScrollAnimation> */}
+
           <motion.div
             transition={{
-              // type: "spring",
-              // stiffness: 90,
-
               duration: 6,
               delay: 1.8,
             }}
             className={styles.container__right__section}
           >
-            {loading ? (
-              ""
-            ) : (
-              <React.Fragment>
-                {
-                  delayLoader ? (
-                    <div className={styles.container__loader}>
-                      {showMascotPlaceHolder ? (
-                        <img
-                          className={styles.image__mascot}
-                          src={MascotPlaceHolder}
-                          alt="Logo"
-                        />
-                      ) : (
-                        <img
-                          className={styles.image__logo}
-                          src={LogoLoading}
-                          alt="Logo"
-                        />
-                      )}
-                    </div>
-                  ) : showMascotPlaceHolder ? (
-                    <div className={styles.container__loader}>
-                      <img
-                        className={styles.image__mascot}
-                        src={MascotPlaceHolder}
-                        alt="Logo"
-                      />
-                    </div>
-                  ) : (
-                    ""
-                  )
-
-                  // <Loader
-                  //   onMascot={true}
-                  //   style={{ visibility: timer ? "hidden" : "visible" }}
-                  // />
+            <div
+              className={
+                delayLoader || isMobile
+                  ? styles.container__loader
+                  : styles.container__hidden
+              }
+            >
+              <img
+                className={
+                  delayLoader ? styles.image__logo : styles.image__logo__hidden
                 }
+                // style={{ visibility: delayLoader ? "hidden" : "visible" }}
+                src={LogoLoading}
+                alt="Logo"
+                loading="lazy"
+              />
 
-                <React.Fragment>
-                  {!loading && !showMascotPlaceHolder ? (
-                    <Spline
-                      onLoad={onLoad}
-                      className={styles.spline__animation}
-                      style={{
-                        width: "100%",
-                        height: "105%",
-                        display: showMascotPlaceHolder ? "none" : "block",
-                        transition: "opacity 0.5s ease-in-out",
-                        // visibility: showMascotPlaceHolder
-                        // //   ? "visible"
-                        //   : "hidden",
-                      }}
-                      scene="https://prod.spline.design/mTrvEh8lCBeDU00r/scene.splinecode"
-                      // scene="https://draft.spline.design/eCPRIY3SM5ZzCmeL/scene.splinecode"
-                      // scene="https://draft.spline.design/oPijw1bLoJbCO9ZF/scene.splinecode"
-                      // scene="https://draft.spline.design/3vA0ze-dDwcxSyyc/scene.splinecode"
+              <img
+                className={
+                  isMobile ? styles.image__mascot : styles.image__mascot__hidden
+                }
+                src={MascotPlaceHolder}
+                alt="Logo"
+                loading="lazy"
+              />
+            </div>
+            {!isMobile && (
+              <React.Fragment>
+                {delayLoader ? (
+                  <div className={styles.container__loader}>
+                    <img
+                      className={styles.image__logo}
+                      // style={{ visibility: delayLoader ? "hidden" : "visible" }}
+                      src={LogoLoading}
+                      alt="Logo"
+                      loading="lazy"
                     />
-                  ) : (
-                    ""
-                  )}
-                </React.Fragment>
+                  </div>
+                ) : (
+                  <Spline
+                    // onLoad={onLoad}
+                    // className={styles.spline__animation}
+                    style={{
+                      width: "100%",
+                      height: "105%",
+                      display: delayLoader ? "none" : "block",
+                      // visibility: delayLoader ? "hidden" : "visible",
+                      // opacity: delayLoader ? 0 : 1,
+                      // transition: "opacity 0.1s ease-in-out",
+                    }}
+                    scene="https://prod.spline.design/mTrvEh8lCBeDU00r/scene.splinecode"
+                  />
+                )}
               </React.Fragment>
             )}
+            {/* {delayLoader ? (
+              <div
+                className={styles.container__loader}
+                // style={{ visibility: isMobile ? "hidden" : "visible" }}
+              >
+                <img
+                  className={styles.image__logo}
+                  src={LogoLoading}
+                  alt="Logo"
+                />
+              </div>
+            ) : (
+              <React.Fragment>
+                {isMobile && (
+                  <div className={styles.container__loader}>
+                    <img
+                      className={styles.image__mascot}
+                      src={MascotPlaceHolder}
+                      alt="Logo"
+                    />
+                  </div>
+                )}
+              </React.Fragment>
+            )} */}
+            {/* {!showMascotPlaceHolder && (
+              <Spline
+                onLoad={onLoad}
+                className={styles.spline__animation}
+                style={{
+                  width: "100%",
+                  height: "105%",
+                  display: isMobile ? "none" : "block",
+                  visibility: isMobile ? "hidden" : "visible",
+                  transition: "opacity 0.1s ease-in-out",
+                }}
+                scene="https://prod.spline.design/mTrvEh8lCBeDU00r/scene.splinecode"
+              />
+            )} */}
+            {/* {showMascotPlaceHolder && (
+              <div className={styles.container__loader}>
+                <img
+                  className={styles.image__mascot}
+                  src={MascotPlaceHolder}
+                  alt="Logo"
+                />
+              </div>
+            )} */}
           </motion.div>
         </section>
       </div>

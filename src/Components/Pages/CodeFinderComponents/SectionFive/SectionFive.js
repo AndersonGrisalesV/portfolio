@@ -47,6 +47,7 @@ const SectionFive = () => {
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742491/Portfolio/projects/CodeFinder/ImageFour_roffmw.svg"
                 alt="Code_Finder_Section_five_image"
                 className={styles.section__five__image__one}
+                loading="lazy"
               />
             </div>
           </div>

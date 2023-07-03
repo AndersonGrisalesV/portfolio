@@ -31,7 +31,7 @@ const Card = ({
             : styles.image__container
         }`}
       >
-        <img src={onImg} alt={onImgDescription} />
+        <img src={onImg} alt={onImgDescription} loading="lazy" />
       </div>
       {onText ? (
         <React.Fragment>

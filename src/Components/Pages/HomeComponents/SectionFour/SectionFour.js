@@ -12,6 +12,7 @@ const SectionFour = () => {
             <img
               src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1683757800/Portfolio/Lovekanji_bpvmac.svg"
               alt="kanji love"
+              loading="lazy"
             />
           </div>
         </IndividualAnimation>
@@ -24,6 +25,7 @@ const SectionFour = () => {
               <img
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1683757800/Portfolio/Lovekanji_bpvmac.svg"
                 alt="kanji love"
+                loading="lazy"
               />
             </div>
           </IndividualAnimation>

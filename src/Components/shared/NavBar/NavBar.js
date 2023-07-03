@@ -229,6 +229,7 @@ const NavBar = ({
                       ? LogoGroceryShop
                       : Logo
                   }`}
+                  loading="lazy"
                   alt="Logo"
                   onClick={() => {
                     handleNavBarLinksClicks("home");

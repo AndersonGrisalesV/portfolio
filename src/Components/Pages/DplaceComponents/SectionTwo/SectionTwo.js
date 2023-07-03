@@ -14,6 +14,7 @@ const SectionTwo = () => {
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1684444225/Portfolio/projects/Dplace/Dplace_SectionTwo_ak0ydx.svg"
                 alt="Dplace_sectiontwo_image"
                 className={styles.social__media__image}
+                loading="lazy"
               />
             </IndividualAnimation>
           </div>

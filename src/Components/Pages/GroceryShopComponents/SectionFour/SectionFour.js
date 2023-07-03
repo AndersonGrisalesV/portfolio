@@ -28,6 +28,7 @@ const SectionFour = () => {
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742985/Portfolio/projects/GroceryShop/GroceryShopimageSectionFourImageTwo_tj8cgb.svg"
                 alt="Grocery_Shop_Section_four_images_Two"
                 className={styles.section__four__image__one}
+                loading="lazy"
               />
             </div>
           </div>

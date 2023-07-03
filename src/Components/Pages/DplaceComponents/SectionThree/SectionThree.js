@@ -221,6 +221,7 @@ const SectionThree = () => {
                   src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400194/Portfolio/projects/Dplace/LeftImages_syimlg.svg"
                   alt="Dplace_left_images"
                   className={styles.social__media__image}
+                  loading="lazy"
                 />
               </div>
             </IndividualAnimation>
@@ -230,6 +231,7 @@ const SectionThree = () => {
                   src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685400195/Portfolio/projects/Dplace/RightImages_rtbmi4.svg"
                   alt="Dplace_right_images"
                   className={styles.social__media__image}
+                  loading="lazy"
                 />
               </div>
             </IndividualAnimation>
