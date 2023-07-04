@@ -279,12 +279,13 @@ const SectionOne = () => {
                     style={{
                       width: "100%",
                       height: "105%",
-                      display: delayLoader ? "none" : "block",
+                      // display: delayLoader ? "none" : "flex",
+                      // display: delayLoader ? "none" : "block",
                       // visibility: delayLoader ? "hidden" : "visible",
                       // opacity: delayLoader ? 0 : 1,
                       // transition: "opacity 0.1s ease-in-out",
                     }}
-                    scene="https://prod.spline.design/mTrvEh8lCBeDU00r/scene.splinecode"
+                    scene="https://draft.spline.design/tivv5dBVV4Tq87Ov/scene.splinecode"
                   />
                 )}
               </React.Fragment>

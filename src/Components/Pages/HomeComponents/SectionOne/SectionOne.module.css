@@ -255,6 +255,13 @@
   }
 }
 
+.show__animation {
+  display: flex;
+}
+.hide__animation {
+  display: none;
+}
+
 @media only screen and (max-width: 10000px) {
   .section__container {
     box-sizing: border-box;
@@ -1155,7 +1162,7 @@
 
 @media only screen and (max-width: 184px) {
   .container__right__section {
-    top: 908px;
+    top: 956px;
     left: -104px;
   }
 
