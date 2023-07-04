@@ -188,16 +188,16 @@ const SectionOne = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      setIsAnimationVisible(document.visibilityState === "visible");
-    };
+  // useEffect(() => {
+  //   const handleVisibilityChange = () => {
+  //     setIsAnimationVisible(document.visibilityState === "visible");
+  //   };
 
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
+  //   document.addEventListener("visibilitychange", handleVisibilityChange);
+  //   return () => {
+  //     document.removeEventListener("visibilitychange", handleVisibilityChange);
+  //   };
+  // }, []);
 
   return (
     <React.Fragment>
@@ -285,7 +285,9 @@ const SectionOne = () => {
             >
               <img
                 className={
-                  delayLoader ? styles.image__logo : styles.image__logo__hidden
+                  delayLoader && !isMobile
+                    ? styles.image__logo
+                    : styles.image__logo__hidden
                 }
                 // style={{ visibility: delayLoader ? "hidden" : "visible" }}
                 src={LogoLoading}

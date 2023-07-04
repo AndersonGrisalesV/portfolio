@@ -38,17 +38,6 @@ const SectionTwo = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      setIsMarqueeVisible(document.visibilityState === "visible");
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
-
   return (
     <div id="expertise">
       <section className={styles.section__two__container} id="expertise">

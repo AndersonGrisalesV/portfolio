@@ -37,17 +37,6 @@ const SectionFour = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      setIsMarqueeVisible(document.visibilityState === "visible");
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
-
   return (
     <div>
       <section className={styles.section__four__container}>
