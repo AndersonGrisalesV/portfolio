@@ -66,7 +66,8 @@ const SkillsMarquee = () => {
       <IndividualAnimation>
         <Marquee
           pauseOnClick={true}
-          speed={100}
+          speed={80}
+          delay={-20}
           direction="left"
           gradient={true}
           gradientColor={[13, 18, 23, 0.5]}

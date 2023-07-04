@@ -150,6 +150,11 @@
   .description__text {
     font-size: var(--fz-sm);
   }
+
+  .project__vision__image {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 @media only screen and (max-width: 344px) {
@@ -159,6 +164,11 @@
 
   .container__refining__the__text h1 {
     white-space: normal;
+  }
+
+  .project__vision__image {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -173,5 +183,10 @@
   .description__text {
     padding-left: 42px;
     padding-right: 42px;
+  }
+
+  .project__vision__image {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

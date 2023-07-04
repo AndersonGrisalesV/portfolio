@@ -78,7 +78,7 @@ const SectionTwo = () => {
       </section>
 
       <div className={styles.responsive__marquee}>
-        {isMarqueeVisible && <SkillsMarquee />}
+        <SkillsMarquee />
       </div>
     </div>
   );
