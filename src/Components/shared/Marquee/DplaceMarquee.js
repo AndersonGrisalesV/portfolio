@@ -4,14 +4,15 @@ import Marquee from "react-fast-marquee";
 import IndividualAnimation from "../ScrollAnimation/IndividualAnimation";
 import styles from "./DplaceMarquee.module.css";
 
-const DplaceMarquee = () => {
+const DplaceMarquee = ({ onPlay = false }) => {
   return (
     <div>
-      <IndividualAnimation onDelay={0.3}>
+      <IndividualAnimation>
         <Marquee
+          play={onPlay ? true : false}
           pauseOnClick={true}
           speed={45}
-          delay={-20}
+          // delay={-20}
           direction="left"
           gradient={true}
           gradientColor={[13, 18, 23, 0.5]}

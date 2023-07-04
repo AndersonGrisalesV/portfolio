@@ -158,6 +158,47 @@ const SectionOne = () => {
     console.log(mascot.current);
   }
 
+  const animationRef = useRef(null);
+  const [isAnimationVisible, setIsAnimationVisible] = useState(false);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1, // Adjust this threshold as needed
+    };
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        setIsAnimationVisible(entry.isIntersecting);
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+    const currentMarqueeRef = animationRef.current;
+
+    if (currentMarqueeRef) {
+      observer.observe(currentMarqueeRef);
+    }
+
+    return () => {
+      if (currentMarqueeRef) {
+        observer.unobserve(currentMarqueeRef);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      setIsAnimationVisible(document.visibilityState === "visible");
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
+
   return (
     <React.Fragment>
       {openPasswordModal && (
@@ -233,6 +274,7 @@ const SectionOne = () => {
               delay: 1.8,
             }}
             className={styles.container__right__section}
+            ref={animationRef}
           >
             <div
               className={
@@ -279,6 +321,7 @@ const SectionOne = () => {
                     style={{
                       width: "100%",
                       height: "105%",
+                      visibility: isAnimationVisible ? "visible" : "hidden",
                       // display: delayLoader ? "none" : "flex",
                       // display: delayLoader ? "none" : "block",
                       // visibility: delayLoader ? "hidden" : "visible",

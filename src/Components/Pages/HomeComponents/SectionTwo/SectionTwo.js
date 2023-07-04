@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import Spline from "@splinetool/react-spline";
 import Marquee from "react-fast-marquee";
@@ -8,6 +8,47 @@ import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnima
 import styles from "./SectionTwo.module.css";
 
 const SectionTwo = () => {
+  const marqueeRef = useRef(null);
+  const [isMarqueeVisible, setIsMarqueeVisible] = useState(false);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1, // Adjust this threshold as needed
+    };
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        setIsMarqueeVisible(entry.isIntersecting);
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+    const currentMarqueeRef = marqueeRef.current;
+
+    if (currentMarqueeRef) {
+      observer.observe(currentMarqueeRef);
+    }
+
+    return () => {
+      if (currentMarqueeRef) {
+        observer.unobserve(currentMarqueeRef);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      setIsMarqueeVisible(document.visibilityState === "visible");
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
+
   return (
     <div id="expertise">
       <section className={styles.section__two__container} id="expertise">
@@ -37,8 +78,8 @@ const SectionTwo = () => {
             </div>
           </div>
         </IndividualAnimation>
-        <div className={styles.container__skills__section}>
-          <SkillsMarquee />
+        <div className={styles.container__skills__section} ref={marqueeRef}>
+          {isMarqueeVisible && <SkillsMarquee />}
         </div>
         {/* <div className={styles.container__right__section}> */}
         {/* <Spline
@@ -48,7 +89,7 @@ const SectionTwo = () => {
       </section>
 
       <div className={styles.responsive__marquee}>
-        <SkillsMarquee />
+        {isMarqueeVisible && <SkillsMarquee />}
       </div>
     </div>
   );
