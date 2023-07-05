@@ -82,7 +82,7 @@ function App() {
 
   return (
     <div className="main__container">
-      <Routes basename="/test">
+      <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/projects/dplace" element={<Dplace />} />
         <Route path="/projects/healthy_mindset" element={<HealthyMindset />} />

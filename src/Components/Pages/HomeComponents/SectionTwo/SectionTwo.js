@@ -77,8 +77,8 @@ const SectionTwo = () => {
           /> */}
       </section>
 
-      <div className={styles.responsive__marquee} ref={marqueeRef}>
-        {isMarqueeVisible && <SkillsMarquee />}
+      <div className={styles.responsive__marquee}>
+        <SkillsMarquee />
       </div>
     </div>
   );

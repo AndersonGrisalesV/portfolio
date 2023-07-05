@@ -9,6 +9,17 @@
   display: none;
 }
 
+.links {
+  cursor: pointer;
+}
+
+.active__link {
+  /* Add your desired styles for the active link */
+  background-color: transparent;
+  color: #19c78e;
+  /* Additional styles... */
+}
+
 @media only screen and (max-width: 960px) {
   .side__drawer {
     display: flex;
