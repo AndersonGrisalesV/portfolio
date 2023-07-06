@@ -18,13 +18,13 @@ const SectionOne = () => {
   const texts = useMemo(() => [" ", "code", " ", "design", " ", "learn"], []);
 
   const [openPasswordModal, setOpenPasswordModal] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [splineError, setSplineError] = useState(false);
   // const [timer, setTimer] = useState(true);
   const [delayLoader, setDelayLoader] = useState(true);
 
-  setTimeout(() => {
-    setLoading(false);
-  }, 2000);
+  // setTimeout(() => {
+  //   setLoading(false);
+  // }, 2000);
   // setTimeout(() => {
   //   setTimer(false);
   // }, 2000);
@@ -151,12 +151,22 @@ const SectionOne = () => {
   const mascot = useRef();
 
   function onLoad(spline) {
+    console.log(spline);
     const obj = spline.findObjectByName("Camera");
     // save the object in a ref for later use
     mascot.current = obj;
+
     // obj.visible = false;
-    console.log(mascot.current);
   }
+
+  useEffect(() => {
+    // console.log(mascot);
+    setTimeout(() => {
+      if (mascot.current === undefined) {
+        setSplineError(true);
+      }
+    }, 9000);
+  }, []);
 
   const animationRef = useRef(null);
   const [isAnimationVisible, setIsAnimationVisible] = useState(false);
@@ -317,21 +327,38 @@ const SectionOne = () => {
                     />
                   </div>
                 ) : (
-                  <Spline
-                    // onLoad={onLoad}
-                    // className={styles.spline__animation}
-                    style={{
-                      width: "100%",
-                      height: "105%",
-                      visibility: isAnimationVisible ? "visible" : "hidden",
-                      // display: delayLoader ? "none" : "flex",
-                      // display: delayLoader ? "none" : "block",
-                      // visibility: delayLoader ? "hidden" : "visible",
-                      // opacity: delayLoader ? 0 : 1,
-                      // transition: "opacity 0.1s ease-in-out",
-                    }}
-                    scene="https://draft.spline.design/tivv5dBVV4Tq87Ov/scene.splinecode"
-                  />
+                  <React.Fragment>
+                    {splineError ? (
+                      <div className={styles.container__loader}>
+                        <img
+                          className={
+                            splineError
+                              ? styles.image__mascot__failed__spline
+                              : styles.image__mascot__hidden
+                          }
+                          src={MascotPlaceHolder}
+                          alt="Logo"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : (
+                      <Spline
+                        onLoad={onLoad}
+                        // className={styles.spline__animation}
+                        style={{
+                          width: "100%",
+                          height: "105%",
+                          visibility: isAnimationVisible ? "visible" : "hidden",
+                          // display: delayLoader ? "none" : "flex",
+                          // display: delayLoader ? "none" : "block",
+                          // visibility: delayLoader ? "hidden" : "visible",
+                          // opacity: delayLoader ? 0 : 1,
+                          // transition: "opacity 0.1s ease-in-out",
+                        }}
+                        scene="https://draft.spline.design/tivv5dBVV4Tq87Ov/scene.splinecode"
+                      />
+                    )}
+                  </React.Fragment>
                 )}
               </React.Fragment>
             )}

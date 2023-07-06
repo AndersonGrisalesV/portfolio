@@ -12,7 +12,6 @@ import SectionFive from "../Pages/HomeComponents/SectionFive/SectionFive";
 import Footer from "./.././shared/Footer/Footer";
 
 import styles from "./Home.module.css";
-import Spline from "@splinetool/react-spline";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);

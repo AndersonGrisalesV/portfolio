@@ -1,9 +1,9 @@
 .loader__container__animation {
-  animation: loader-container-fadeOut 0.4s ease-in backwards;
+  /* animation: loader-container-fadeOut 0.4s ease-in backwards; */
 }
 
 .dplace__container__animation {
-  animation: home-container-fadeOut 0.6s ease-in backwards;
+  /* animation: home-container-fadeOut 0.6s ease-in backwards; */
 }
 
 @keyframes loader-container-fadeOut {
