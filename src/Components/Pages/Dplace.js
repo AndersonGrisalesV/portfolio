@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import Loader from "../shared/Loaders/Loader";
-import NavBar from "./.././shared/NavBar/NavBar";
+import NavBar from "../shared/NavBar/NavBar";
 import SectionOne from "../Pages/DplaceComponents/SectionOne/SectionOne";
 import SectionTwo from "../Pages/DplaceComponents/SectionTwo/SectionTwo";
 import SectionThree from "../Pages/DplaceComponents/SectionThree/SectionThree";
 import SectionFour from "../Pages/DplaceComponents/SectionFour/SectionFour";
-
-import Footer from "./.././shared/Footer/Footer";
-
+import Footer from "../shared/Footer/Footer";
 import styles from "./Dplace.module.css";
 
 const Dplace = () => {
@@ -25,27 +22,28 @@ const Dplace = () => {
   }, []);
 
   return (
-    <React.Fragment>
-      {loading ? (
+    <div
+      className={`${styles.dplace__container__animation} ${
+        loading && styles.loading
+      }`}
+    >
+      {loading && (
         <div className={styles.loader__container__animation}>
-          <Loader onLoaderDplace={true} />
-        </div>
-      ) : (
-        <div className={styles.dplace__container__animation}>
-          <NavBar onDplace={true} />
-
-          <SectionOne />
-
-          <SectionTwo />
-
-          <SectionThree />
-
-          <SectionFour />
-
-          <Footer onDplace={true} />
+          <Loader onLoaderDplace />
         </div>
       )}
-    </React.Fragment>
+
+      {!loading && (
+        <React.Fragment>
+          <NavBar onDplace />
+          <SectionOne />
+          <SectionTwo />
+          <SectionThree />
+          <SectionFour />
+          <Footer onDplace />
+        </React.Fragment>
+      )}
+    </div>
   );
 };
 

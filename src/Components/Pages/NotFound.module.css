@@ -5,9 +5,10 @@
   align-items: center;
   justify-content: center;
 
-  padding: 10%;
-  height: 100vh;
-  margin-top: 124px;
+  padding: 2%;
+  min-height: 100vh;
+  margin-top: 18px;
+  /* margin-top: 124px; */
   /* max-width: 800px; */
 }
 
@@ -80,11 +81,7 @@
   width: 70%;
 }
 
-@media only screen and (max-width: 1266px) {
-  /* .container {
-    margin-top: 94px;
-  } */
-}
+/* Responsive styles */
 
 @media only screen and (max-width: 966px) {
   .number {
@@ -96,11 +93,7 @@
   }
 }
 
-/* Responsive styles */
 @media only screen and (max-width: 768px) {
-  .container {
-    margin-top: 164px;
-  }
   .number {
     font-size: var(--fz-glg);
   }
@@ -111,30 +104,9 @@
 }
 
 @media only screen and (max-width: 640px) {
-  .container {
-    margin-top: 168px;
-  }
   .container__svg svg {
     width: 200px;
     height: 200px;
-  }
-}
-
-@media only screen and (max-width: 566px) {
-  .container {
-    margin-top: 170px;
-  }
-}
-
-@media only screen and (max-width: 490px) {
-  .container {
-    margin-top: 190px;
-  }
-}
-
-@media only screen and (max-width: 344px) {
-  .container {
-    margin-top: 210px;
   }
 }
 

@@ -1,8 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import Spline from "@splinetool/react-spline";
-import Marquee from "react-fast-marquee";
-
 import SkillsMarquee from "../../../shared/Marquee/SkillsMarquee";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
 import styles from "./SectionTwo.module.css";
@@ -70,11 +67,6 @@ const SectionTwo = () => {
         <div className={styles.container__skills__section} ref={marqueeRef}>
           {isMarqueeVisible && <SkillsMarquee />}
         </div>
-        {/* <div className={styles.container__right__section}> */}
-        {/* <Spline
-            style={{ width: "100%", height: "100%" }}
-            scene="https://draft.spline.design/cKkZ8nclvPv8ZdJ6/scene.splinecode"
-          /> */}
       </section>
 
       <div className={styles.responsive__marquee}>

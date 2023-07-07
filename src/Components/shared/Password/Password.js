@@ -39,14 +39,14 @@ const Password = ({ onCloseDrawerHandler }) => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const correctPassword = process.env.REACT_APP_LETTER;
+  const document = process.env.DOCUMENT;
 
   const handleSubmitForm = (event) => {
     event.preventDefault();
 
     if (password === correctPassword) {
       setErrorMessage("");
-      const pdfUrl =
-        "https://drive.google.com/file/d/1kqtl8oAVJrEw7gG9pqj-gVeXx9V-nkDu/view?usp=drive_link";
+      const pdfUrl = `"${document}"`;
       window.open(pdfUrl, "_blank");
       onCloseDrawerHandler();
     } else {

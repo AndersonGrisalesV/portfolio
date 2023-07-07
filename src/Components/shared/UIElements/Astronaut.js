@@ -62,8 +62,8 @@ const NotFoundSVG = () => (
         y2="115.656"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#19C78E" />
-        <stop offset="1" stop-color="#3C9CE6" />
+        <stop stopColor="#19C78E" />
+        <stop offset="1" stopColor="#3C9CE6" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_749_74"
@@ -73,8 +73,8 @@ const NotFoundSVG = () => (
         y2="59.9692"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#19C78E" />
-        <stop offset="1" stop-color="#3C9CE6" />
+        <stop stopColor="#19C78E" />
+        <stop offset="1" stopColor="#3C9CE6" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_749_74"
@@ -84,8 +84,8 @@ const NotFoundSVG = () => (
         y2="194.073"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#19C78E" />
-        <stop offset="1" stop-color="#3C9CE6" />
+        <stop stopColor="#19C78E" />
+        <stop offset="1" stopColor="#3C9CE6" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_749_74"
@@ -95,8 +95,8 @@ const NotFoundSVG = () => (
         y2="261.204"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#19C78E" />
-        <stop offset="1" stop-color="#3C9CE6" />
+        <stop stopColor="#19C78E" />
+        <stop offset="1" stopColor="#3C9CE6" />
       </linearGradient>
       <linearGradient
         id="paint4_linear_749_74"
@@ -106,8 +106,8 @@ const NotFoundSVG = () => (
         y2="268.769"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#19C78E" />
-        <stop offset="1" stop-color="#3C9CE6" />
+        <stop stopColor="#19C78E" />
+        <stop offset="1" stopColor="#3C9CE6" />
       </linearGradient>
       <linearGradient
         id="paint5_linear_749_74"
@@ -117,8 +117,8 @@ const NotFoundSVG = () => (
         y2="32.1454"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#19C78E" />
-        <stop offset="1" stop-color="#3C9CE6" />
+        <stop stopColor="#19C78E" />
+        <stop offset="1" stopColor="#3C9CE6" />
       </linearGradient>
       <linearGradient
         id="paint6_linear_749_74"
@@ -128,8 +128,8 @@ const NotFoundSVG = () => (
         y2="65.4394"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#19C78E" />
-        <stop offset="1" stop-color="#3C9CE6" />
+        <stop stopColor="#19C78E" />
+        <stop offset="1" stopColor="#3C9CE6" />
       </linearGradient>
       <linearGradient
         id="paint7_linear_749_74"
@@ -139,8 +139,8 @@ const NotFoundSVG = () => (
         y2="80.9792"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#19C78E" />
-        <stop offset="1" stop-color="#3C9CE6" />
+        <stop stopColor="#19C78E" />
+        <stop offset="1" stopColor="#3C9CE6" />
       </linearGradient>
       <linearGradient
         id="paint8_linear_749_74"
@@ -150,8 +150,8 @@ const NotFoundSVG = () => (
         y2="149.557"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#19C78E" />
-        <stop offset="1" stop-color="#3C9CE6" />
+        <stop stopColor="#19C78E" />
+        <stop offset="1" stopColor="#3C9CE6" />
       </linearGradient>
       <linearGradient
         id="paint9_linear_749_74"
@@ -161,8 +161,8 @@ const NotFoundSVG = () => (
         y2="176.67"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#19C78E" />
-        <stop offset="1" stop-color="#3C9CE6" />
+        <stop stopColor="#19C78E" />
+        <stop offset="1" stopColor="#3C9CE6" />
       </linearGradient>
       <linearGradient
         id="paint10_linear_749_74"
@@ -172,8 +172,8 @@ const NotFoundSVG = () => (
         y2="257.261"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#19C78E" />
-        <stop offset="1" stop-color="#3C9CE6" />
+        <stop stopColor="#19C78E" />
+        <stop offset="1" stopColor="#3C9CE6" />
       </linearGradient>
     </defs>
   </svg>

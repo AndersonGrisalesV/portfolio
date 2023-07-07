@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -24,55 +24,67 @@ const NavBar = ({
   onGroceryShop = false,
   onNotFound = false,
 }) => {
-  const [visibleNavBar, setVisibleNavBar] = useState(true);
-
-  const [openHamburguerMenu, setOpenHamburguerMenu] = useState(false);
-
-  const [animationHamburguerMenu, setAnimationHamburguerMenu] = useState(false);
-
-  const [activeLink, setActiveLink] = useState("home");
-
-  const [delayShowgHamburguerMenu, setDelayShowHamburguerMenu] =
-    useState(false);
-
+  const [state, setState] = useState({
+    visibleNavBar: true,
+    openHamburguerMenu: false,
+    animationHamburguerMenu: false,
+    activeLink: "home",
+    delayShowHamburguerMenu: false,
+  });
   const navigate = useNavigate();
 
-  const handleNavBarLinksClicks = (nameToScroolHome) => {
-    const scrollToTop = (sectionName) => {
-      scroll.scrollToTop({
-        duration: 10, // Adjust the duration as desired
-        smooth: "easeOutQuart", // Adjust the easing function as desired
-      });
-      // Simulate a delay of 500 milliseconds
-      const delay = 650;
+  const handleNavBarLinksClicks = useCallback(
+    (nameToScrollHome) => {
+      const scrollToTop = (sectionName) => {
+        scroll.scrollToTop({
+          duration: 10, // Adjust the duration as desired
+          smooth: "easeOutQuart", // Adjust the easing function as desired
+        });
+        // Simulate a delay of 500 milliseconds
+        const delay = 650;
 
-      // Set the active link after the delay
-      const timeoutId = setTimeout(() => {
-        setActiveLink(sectionName);
-      }, delay);
+        // Set the active link after the delay
+        const timeoutId = setTimeout(() => {
+          setState((prevState) => ({
+            ...prevState,
+            visibleNavBar: sectionName,
+          }));
+        }, delay);
 
-      // Clean up the timeout when the component unmounts or when the active link changes
-      return () => clearTimeout(timeoutId);
-    };
+        // Clean up the timeout when the component unmounts or when the active link changes
+        return () => clearTimeout(timeoutId);
+      };
 
-    if (
-      onDplace ||
-      onHealthyMindset ||
-      onCodeFinder ||
-      onGroceryShop ||
-      onNotFound
-    ) {
-      navigate("/home");
-      setTimeout(() => {
-        scrollToTop(nameToScroolHome);
-      }, 200);
-    } else {
-      scrollToTop(nameToScroolHome);
-    }
-  };
+      if (
+        onDplace ||
+        onHealthyMindset ||
+        onCodeFinder ||
+        onGroceryShop ||
+        onNotFound
+      ) {
+        navigate("/home");
+        setTimeout(() => {
+          scrollToTop(nameToScrollHome);
+        }, 200);
+      } else {
+        scrollToTop(nameToScrollHome);
+      }
+    },
+    [
+      onDplace,
+      onHealthyMindset,
+      onCodeFinder,
+      onGroceryShop,
+      onNotFound,
+      navigate,
+    ]
+  );
 
   const closeDrawerHandler = () => {
-    setOpenHamburguerMenu(false);
+    setState((prevState) => ({
+      ...prevState,
+      openHamburguerMenu: false,
+    }));
   };
 
   useEffect(() => {
@@ -81,32 +93,41 @@ const NavBar = ({
     window.onscroll = function () {
       let currentScrollPos = window.scrollY;
       if (prevScrollPos > currentScrollPos) {
-        setVisibleNavBar(true);
-        setAnimationHamburguerMenu(true);
+        setState((prevState) => ({
+          ...prevState,
+          visibleNavBar: true,
+          animationHamburguerMenu: true,
+        }));
       } else {
-        setVisibleNavBar(false);
+        setState((prevState) => ({
+          ...prevState,
+          visibleNavBar: false,
+        }));
       }
       prevScrollPos = currentScrollPos;
     };
 
-    if (visibleNavBar) {
-      // setTimeout(() => {
-      setDelayShowHamburguerMenu(true);
-      // }, 0);
+    if (state.visibleNavBar) {
+      setState((prevState) => ({
+        ...prevState,
+        delayShowHamburguerMenu: true,
+      }));
     } else {
-      setDelayShowHamburguerMenu(false);
+      setState((prevState) => ({
+        ...prevState,
+        delayShowHamburguerMenu: false,
+      }));
     }
-  }, [visibleNavBar]);
+  }, [state.visibleNavBar]);
 
   useEffect(() => {
-    if (openHamburguerMenu) {
+    if (state.openHamburguerMenu) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "scroll";
     }
-  }, [openHamburguerMenu]);
+  }, [state.openHamburguerMenu]);
 
-  // Add an effect to listen to scroll events
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "expertise", "work", "about", "contact"];
@@ -121,7 +142,10 @@ const NavBar = ({
             scrollPosition >= offsetTop &&
             scrollPosition < offsetTop + offsetHeight
           ) {
-            setActiveLink(section);
+            setState((prevState) => ({
+              ...prevState,
+              activeLink: section,
+            }));
 
             break;
           }
@@ -142,7 +166,11 @@ const NavBar = ({
     setIsMobile(mq.matches);
     const handleResize = () => setIsMobile(mq.matches);
     mq.addEventListener("change", handleResize);
-    setOpenHamburguerMenu(false);
+
+    setState((prevState) => ({
+      ...prevState,
+      openHamburguerMenu: false,
+    }));
     if (!isMobile) {
       mq.removeEventListener("change", handleResize);
     }
@@ -169,22 +197,29 @@ const NavBar = ({
     },
   };
 
+  const handleToggle = () => {
+    setState((prevState) => ({
+      ...prevState,
+      openHamburguerMenu: !prevState.openHamburguerMenu,
+    }));
+  };
+
   return (
     <React.Fragment>
-      {openHamburguerMenu && (
+      {state.openHamburguerMenu && (
         <Backdrop onClick={closeDrawerHandler} onResume={false} />
       )}
       <SideDrawer
-        show={openHamburguerMenu}
+        show={state.openHamburguerMenu}
         onClick={closeDrawerHandler}
         onClose={closeDrawerHandler}
       />
       {/* //create here a portal and execute when user clicks to go to home to be able to load the page and have the loader as a placeholder */}
       <div
         className={`${styles.nav__bar} ${
-          visibleNavBar ? "" : styles.nav__bar__hidden
+          state.visibleNavBar ? "" : styles.nav__bar__hidden
         }`}
-        style={{ transitionDelay: visibleNavBar ? "0ms" : "300ms" }}
+        style={{ transitionDelay: state.visibleNavBar ? "0ms" : "300ms" }}
       >
         <div
           className={`${
@@ -194,7 +229,7 @@ const NavBar = ({
           }`}
         >
           <div className={styles.logo}>
-            {visibleNavBar && (
+            {state.visibleNavBar && (
               <motion.div
                 whileTap={{
                   scale: 0.88,
@@ -211,15 +246,15 @@ const NavBar = ({
                   //   transition: { duration: 0.05 },
                   // }}
                   initial={{
-                    scale: !animationHamburguerMenu ? 0 : 0.9,
+                    scale: !state.animationHamburguerMenu ? 0 : 0.9,
                   }}
                   animate={{ rotate: 0, scale: 1 }}
                   transition={{
                     type: "spring",
                     stiffness: 90,
                     damping: 5,
-                    duration: !animationHamburguerMenu ? 2 : 0.01,
-                    delay: !animationHamburguerMenu ? 0.17 : 0.01,
+                    duration: !state.animationHamburguerMenu ? 2 : 0.01,
+                    delay: !state.animationHamburguerMenu ? 0.17 : 0.01,
                   }}
                   className={styles.image__logo}
                   src={`${
@@ -269,7 +304,7 @@ const NavBar = ({
                     className={`${styles.links} ${
                       onDplace || onHealthyMindset
                         ? ""
-                        : activeLink === "home"
+                        : state.activeLink === "home"
                         ? styles.active__link
                         : ""
                     }`}
@@ -299,7 +334,7 @@ const NavBar = ({
                     className={`${styles.links} ${
                       onDplace
                         ? styles.active__link__dplace
-                        : activeLink === "expertise"
+                        : state.activeLink === "expertise"
                         ? styles.active__link
                         : ""
                     }`}
@@ -328,7 +363,7 @@ const NavBar = ({
                     className={`${styles.links} ${
                       onDplace
                         ? styles.active__link__dplace
-                        : activeLink === "work"
+                        : state.activeLink === "work"
                         ? styles.active__link
                         : ""
                     }`}
@@ -357,7 +392,7 @@ const NavBar = ({
                     className={`${styles.links} ${
                       onDplace
                         ? styles.active__link__dplace
-                        : activeLink === "about"
+                        : state.activeLink === "about"
                         ? styles.active__link
                         : ""
                     }`}
@@ -386,7 +421,7 @@ const NavBar = ({
                     className={`${styles.links} ${
                       onDplace
                         ? styles.active__link__dplace
-                        : activeLink === "contact"
+                        : state.activeLink === "contact"
                         ? styles.active__link
                         : ""
                     }`}
@@ -426,36 +461,10 @@ const NavBar = ({
             ""
           )}
         </div>
-        {/* 
-        {!delayShowgHamburguerMenu &&
-          !onDplace &&
-          !onHealthyMindset &&
-          !onCodeFinder &&
-          !onGroceryShop && (
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ rotate: 0, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 90,
-                damping: 5,
-                duration: 0.5,
-              }}
-              className={styles.menu__responsive}
-            >
-              <Hamburger
-                color="linear-gradient(90deg, #19c78e, #3c9ce5)"
-                hideOutline={false}
-                size="30"
-                rounded
-                toggled={openHamburguerMenu}
-                toggle={setOpenHamburguerMenu}
-              />
-            </motion.div>
-          )} */}
+
         <React.Fragment>
-          {delayShowgHamburguerMenu &&
-            visibleNavBar &&
+          {state.delayShowHamburguerMenu &&
+            state.visibleNavBar &&
             !onDplace &&
             !onHealthyMindset &&
             !onCodeFinder &&
@@ -464,8 +473,8 @@ const NavBar = ({
             ReactDOM.createPortal(
               <motion.div
                 initial={{
-                  scale: !animationHamburguerMenu ? 0 : 0.9,
-                  y: animationHamburguerMenu ? -16 : 0,
+                  scale: !state.animationHamburguerMenu ? 0 : 0.9,
+                  y: state.animationHamburguerMenu ? -16 : 0,
                 }}
                 animate={{
                   rotate: 0,
@@ -475,19 +484,19 @@ const NavBar = ({
                 transition={{
                   type: "spring",
                   stiffness: 90,
-                  damping: !animationHamburguerMenu ? 5 : 18,
-                  duration: !animationHamburguerMenu ? 2 : 0.28,
-                  delay: !animationHamburguerMenu ? 0.6 : 0,
+                  damping: !state.animationHamburguerMenu ? 5 : 18,
+                  duration: !state.animationHamburguerMenu ? 2 : 0.28,
+                  delay: !state.animationHamburguerMenu ? 0.6 : 0,
                 }}
-                style={{ opacity: visibleNavBar ? "1" : "0" }}
+                style={{ opacity: state.visibleNavBar ? "1" : "0" }}
               >
                 <Hamburger
                   color="linear-gradient(90deg, #19c78e, #3c9ce5)"
                   hideOutline={false}
                   size="30"
                   rounded
-                  toggled={openHamburguerMenu}
-                  toggle={setOpenHamburguerMenu}
+                  toggled={state.openHamburguerMenu}
+                  toggle={handleToggle}
                 />
               </motion.div>,
               document.getElementById("hamburguer-hook")

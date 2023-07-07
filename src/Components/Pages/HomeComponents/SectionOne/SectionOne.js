@@ -362,53 +362,6 @@ const SectionOne = () => {
                 )}
               </React.Fragment>
             )}
-            {/* {delayLoader ? (
-              <div
-                className={styles.container__loader}
-                // style={{ visibility: isMobile ? "hidden" : "visible" }}
-              >
-                <img
-                  className={styles.image__logo}
-                  src={LogoLoading}
-                  alt="Logo"
-                />
-              </div>
-            ) : (
-              <React.Fragment>
-                {isMobile && (
-                  <div className={styles.container__loader}>
-                    <img
-                      className={styles.image__mascot}
-                      src={MascotPlaceHolder}
-                      alt="Logo"
-                    />
-                  </div>
-                )}
-              </React.Fragment>
-            )} */}
-            {/* {!showMascotPlaceHolder && (
-              <Spline
-                onLoad={onLoad}
-                className={styles.spline__animation}
-                style={{
-                  width: "100%",
-                  height: "105%",
-                  display: isMobile ? "none" : "block",
-                  visibility: isMobile ? "hidden" : "visible",
-                  transition: "opacity 0.1s ease-in-out",
-                }}
-                scene="https://prod.spline.design/mTrvEh8lCBeDU00r/scene.splinecode"
-              />
-            )} */}
-            {/* {showMascotPlaceHolder && (
-              <div className={styles.container__loader}>
-                <img
-                  className={styles.image__mascot}
-                  src={MascotPlaceHolder}
-                  alt="Logo"
-                />
-              </div>
-            )} */}
           </motion.div>
         </section>
       </div>
