@@ -1,5 +1,5 @@
 <div align="center">
-   <a href='https://www.figma.com/proto/qz8k6QPvRqlpSG5KjuLtd2/Portfolio'>
+   <a href="https://andersongrisalesv.github.io/portfolio/#/home">
         <img src="https://user-images.githubusercontent.com/94204560/228659183-bf7b8217-a654-4383-8927-6f5714584226.png" width=20% height=20%>
   </a>
   <div align="center">
