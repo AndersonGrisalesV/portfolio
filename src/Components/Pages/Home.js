@@ -7,7 +7,6 @@ import SectionThree from "../Pages/HomeComponents/SectionThree/SectionThree";
 import SectionFour from "../Pages/HomeComponents/SectionFour/SectionFour";
 import SectionFive from "../Pages/HomeComponents/SectionFive/SectionFive";
 import Footer from "../shared/Footer/Footer";
-import styles from "./Home.module.css";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);

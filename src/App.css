@@ -65,7 +65,6 @@ body {
 ::-webkit-scrollbar {
   width: 5px;
   height: 0px;
-  /* height: 5px; */
   background-color: transparent;
 }
 
