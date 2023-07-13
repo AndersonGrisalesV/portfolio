@@ -13,12 +13,12 @@
 
 
 
+
 <div align="center">
-  <a href='https://www.figma.com/proto/qz8k6QPvRqlpSG5KjuLtd2/Portfolio'>
-      <img src='https://user-images.githubusercontent.com/94204560/228685166-ee1de9d2-c282-4bec-9043-81bc4d5c4345.png'>
+  <a href="https://www.figma.com/proto/qz8k6QPvRqlpSG5KjuLtd2/Portfolio">
+      <img src="https://user-images.githubusercontent.com/94204560/253392928-8eb81eb6-ff51-460b-a703-cdc25faafd81.png">
   </a>
 </div>
-
 
 
 
