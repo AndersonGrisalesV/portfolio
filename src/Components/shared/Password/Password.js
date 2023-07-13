@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
-
-import Backdrop from "../UIElements/Backdrop";
-import Button from "../UIElements/Button";
-
 import { FaEye, FaEyeSlash, FaTimes } from "react-icons/fa";
+
 import { motion } from "framer-motion";
+import Backdrop from "../UIElements/Backdrop";
 
 import styles from "./Password.module.css";
 
 const Password = ({ onCloseDrawerHandler }) => {
   const cardRef = useRef(null);
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -18,47 +19,42 @@ const Password = ({ onCloseDrawerHandler }) => {
       }
     };
 
-    document.addEventListener("keydown", handleKeyDown);
+    if (typeof document !== "undefined") {
+      document.addEventListener("keydown", handleKeyDown);
+    }
 
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      if (typeof document !== "undefined") {
+        document.removeEventListener("keydown", handleKeyDown);
+      }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
-  const [showPassword, setShowPassword] = useState(false);
-
   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
+    setShowPassword((prevShowPassword) => !prevShowPassword);
   };
-
-  const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const correctPassword = process.env.REACT_APP_LETTER;
-  const document = process.env.DOCUMENT;
 
   const handleSubmitForm = (event) => {
     event.preventDefault();
 
-    if (password === correctPassword) {
+    if (password === process.env.REACT_APP_LETTER) {
       setErrorMessage("");
-      const pdfUrl = `"${document}"`;
-      window.open(pdfUrl, "_blank");
+      window.open(process.env.REACT_APP_DOCUMENT_URL, "_blank");
       onCloseDrawerHandler();
     } else {
-      // Password is incorrect, display error message
       setErrorMessage("You need access to see this.");
     }
   };
 
   return (
-    <React.Fragment>
+    <>
       <Backdrop onClick={onCloseDrawerHandler} onResume={true} />
-      <div className={styles.container} ref={cardRef}>
+      <div ref={cardRef}>
         <div className={styles.card}>
           <div className={styles.close__icon} onClick={onCloseDrawerHandler}>
             <FaTimes />
@@ -73,7 +69,6 @@ const Password = ({ onCloseDrawerHandler }) => {
                   type={showPassword ? "text" : "password"}
                   onChange={handlePasswordChange}
                 />
-
                 <div
                   className={styles.container__icon}
                   onClick={togglePasswordVisibility}
@@ -89,25 +84,17 @@ const Password = ({ onCloseDrawerHandler }) => {
               <div className={styles.button__container}>
                 <motion.button
                   type="submit"
-                  className={`${styles.button} "" ${styles.button__light}}`}
+                  className={`${styles.button} ${styles.button__light}`}
                   whileTap={{ scale: 0.98, x: 0 }}
-                  // onClick={handleButtonClick}
                 >
                   Unlock
                 </motion.button>
-                {/* <Button
-                  onText={"Unlock"}
-                  onChangebackground={true}
-                  onUnlock={true}
-                  // onPassword={handlePassword}
-                  onClose={onCloseDrawerHandler}
-                /> */}
               </div>
             </div>
           </form>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

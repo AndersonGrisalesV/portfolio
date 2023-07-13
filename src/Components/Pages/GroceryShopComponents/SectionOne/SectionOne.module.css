@@ -80,9 +80,6 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 1266px) {
-}
-
 @media only screen and (max-width: 1199px) {
   .section__one__container {
     box-sizing: border-box;
@@ -107,15 +104,6 @@
   }
 }
 
-@media only screen and (max-width: 966px) {
-}
-
-@media only screen and (max-width: 866px) {
-}
-
-@media only screen and (max-width: 766px) {
-}
-
 @media only screen and (max-width: 666px) {
   .grocery__text {
     font-size: var(--fz-slg);
@@ -135,9 +123,6 @@
     padding-left: 40px;
     padding-right: 40px;
   }
-}
-
-@media only screen and (max-width: 566px) {
 }
 
 @media only screen and (max-width: 490px) {

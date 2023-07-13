@@ -7,15 +7,14 @@ import LogoDplace from "./Logos/LogoDplace.svg";
 import LogoHealthyMindset from "./Logos/LogoHealthyMindset.svg";
 import LogoCodeFinder from "./Logos/LogoCodeFinder.svg";
 import LogoGroceryShop from "./Logos/LogoGroceryShop.svg";
-import HamburguerMenuButton from "./HamburguerMenuButton";
+
 import Backdrop from "../UIElements/Backdrop";
 import SideDrawer from "../UIElements/SideDrawer";
 import Hamburger from "hamburger-react";
-// import "../../../App.css";
+
 import Button from "../UIElements/Button";
 import { motion } from "framer-motion";
 import styles from "./NavBar.module.css";
-import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 
 const NavBar = ({
   onDplace = false,
@@ -90,7 +89,7 @@ const NavBar = ({
   useEffect(() => {
     let prevScrollPos = window.scrollY;
 
-    window.onscroll = function () {
+    const handleScroll = () => {
       let currentScrollPos = window.scrollY;
       if (prevScrollPos > currentScrollPos) {
         setState((prevState) => ({
@@ -107,6 +106,13 @@ const NavBar = ({
       prevScrollPos = currentScrollPos;
     };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     if (state.visibleNavBar) {
       setState((prevState) => ({
         ...prevState,
@@ -119,14 +125,6 @@ const NavBar = ({
       }));
     }
   }, [state.visibleNavBar]);
-
-  useEffect(() => {
-    if (state.openHamburguerMenu) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "scroll";
-    }
-  }, [state.openHamburguerMenu]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -240,11 +238,6 @@ const NavBar = ({
                 }}
               >
                 <motion.img
-                  // whileHover={{
-                  //   scale: 1.08,
-                  //   x: 0,
-                  //   transition: { duration: 0.05 },
-                  // }}
                   initial={{
                     scale: !state.animationHamburguerMenu ? 0 : 0.9,
                   }}
@@ -370,10 +363,6 @@ const NavBar = ({
                     to="work"
                     smooth={true}
                     duration={10}
-                    // offset={100}
-                    // onClick={() => {
-                    //   scrollToTop("work");
-                    // }}
                   >
                     Work
                   </Link>
@@ -399,10 +388,6 @@ const NavBar = ({
                     to="about"
                     smooth={true}
                     duration={10}
-                    // offset={-200}
-                    // onClick={() => {
-                    //   scrollToTop("about");
-                    // }}
                   >
                     About
                   </Link>
@@ -429,9 +414,6 @@ const NavBar = ({
                     smooth={true}
                     duration={10}
                     offset={-100}
-                    // onClick={() => {
-                    //   scrollToTop("contact");
-                    // }}
                   >
                     Contact
                   </Link>

@@ -68,10 +68,6 @@
   gap: 145px;
 }
 
-.button__container {
-  /* margin-top: 63px; */
-}
-
 .container__images {
   display: flex;
   position: relative;
@@ -111,15 +107,6 @@
   .button__container {
     margin-bottom: 60px;
   }
-}
-
-@media only screen and (max-width: 966px) {
-}
-
-@media only screen and (max-width: 866px) {
-}
-
-@media only screen and (max-width: 766px) {
 }
 
 @media only screen and (max-width: 666px) {

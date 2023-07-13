@@ -1,15 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense, memo } from "react";
+
 import Loader from "../shared/Loaders/Loader";
 import NavBar from "../shared/NavBar/NavBar";
-import SectionOne from "../Pages/HealthyMindsetComponents/SectionOne/SectionOne";
-import SectionTwo from "../Pages/HealthyMindsetComponents/SectionTwo/SectionTwo";
-import SectionThree from "../Pages/HealthyMindsetComponents/SectionThree/SectionThree";
-import SectionFour from "../Pages/HealthyMindsetComponents/SectionFour/SectionFour";
-import SectionFive from "../Pages/HealthyMindsetComponents/SectionFive/SectionFive";
-import SectionSix from "../Pages/HealthyMindsetComponents/SectionSix/SectionSix";
-import SectionSeven from "../Pages/HealthyMindsetComponents/SectionSeven/SectionSeven";
 import Footer from "../shared/Footer/Footer";
-import styles from "./HealthyMindset.module.css";
+
+const LazySectionOne = lazy(() =>
+  import("../Pages/HealthyMindsetComponents/SectionOne/SectionOne")
+);
+const LazySectionTwo = lazy(() =>
+  import("../Pages/HealthyMindsetComponents/SectionTwo/SectionTwo")
+);
+const LazySectionThree = lazy(() =>
+  import("../Pages/HealthyMindsetComponents/SectionThree/SectionThree")
+);
+const LazySectionFour = lazy(() =>
+  import("../Pages/HealthyMindsetComponents/SectionFour/SectionFour")
+);
+const LazySectionFive = lazy(() =>
+  import("../Pages/HealthyMindsetComponents/SectionFive/SectionFive")
+);
+const LazySectionSix = lazy(() =>
+  import("../Pages/HealthyMindsetComponents/SectionSix/SectionSix")
+);
+const LazySectionSeven = lazy(() =>
+  import("../Pages/HealthyMindsetComponents/SectionSeven/SectionSeven")
+);
 
 const HealthyMindset = () => {
   const [loading, setLoading] = useState(true);
@@ -25,13 +40,9 @@ const HealthyMindset = () => {
   }, []);
 
   return (
-    <div
-      className={`${styles.healthyMindset__container__animation} ${
-        loading && styles.loading
-      }`}
-    >
+    <div>
       {loading && (
-        <div className={styles.loader__container__animation}>
+        <div>
           <Loader onLoaderHealthyMindset />
         </div>
       )}
@@ -39,18 +50,28 @@ const HealthyMindset = () => {
       {!loading && (
         <React.Fragment>
           <NavBar onHealthyMindset />
-          <SectionOne />
-          <SectionTwo />
-          <SectionThree />
-          <SectionFour />
-          <SectionFive />
-          <SectionSix />
-          <SectionSeven />
-          <Footer onHealthyMindset />
+          <Suspense>
+            <MemoizedSectionOne />
+            <MemoizedSectionTwo />
+            <MemoizedSectionThree />
+            <MemoizedSectionFour />
+            <MemoizedSectionFive />
+            <MemoizedSectionSix />
+            <MemoizedSectionSeven />
+            <Footer onHealthyMindset />
+          </Suspense>
         </React.Fragment>
       )}
     </div>
   );
 };
+
+const MemoizedSectionOne = memo(LazySectionOne);
+const MemoizedSectionTwo = memo(LazySectionTwo);
+const MemoizedSectionThree = memo(LazySectionThree);
+const MemoizedSectionFour = memo(LazySectionFour);
+const MemoizedSectionFive = memo(LazySectionFive);
+const MemoizedSectionSix = memo(LazySectionSix);
+const MemoizedSectionSeven = memo(LazySectionSeven);
 
 export default HealthyMindset;

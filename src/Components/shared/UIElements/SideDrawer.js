@@ -1,46 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { CSSTransition } from "react-transition-group";
-import Button from "./Button";
-import styles from "./SideDrawer.module.css";
-
 import { Link, animateScroll as scroll } from "react-scroll";
 
-const SideDrawer = (props) => {
-  const [activeLink, setActiveLink] = useState("home");
+import Button from "./Button";
+import { CSSTransition } from "react-transition-group";
 
-  const handleNavBarLinksClicks = (nameToScroolHome) => {
-    const scrollToTop = (sectionName) => {
-      scroll.scrollToTop({
-        duration: 10, // Adjust the duration as desired
-        smooth: "easeOutQuart", // Adjust the easing function as desired
-      });
-      // Simulate a delay of 500 milliseconds
-      const delay = 650;
+import styles from "./SideDrawer.module.css";
 
-      // Set the active link after the delay
-      const timeoutId = setTimeout(() => {
-        setActiveLink(sectionName);
-      }, delay);
+const handleNavBarLinksClicks = (nameToScrollHome, setActiveLink, onClose) => {
+  const scrollToTop = (sectionName) => {
+    scroll.scrollToTop({
+      duration: 10,
+      smooth: "easeOutQuart",
+    });
 
-      // Clean up the timeout when the component unmounts or when the active link changes
-      return () => clearTimeout(timeoutId);
-    };
+    const delay = 650;
+    const timeoutId = setTimeout(() => {
+      setActiveLink(sectionName);
+    }, delay);
 
-    scrollToTop(nameToScroolHome);
-    props.onClose();
+    return () => clearTimeout(timeoutId);
   };
 
+  scrollToTop(nameToScrollHome);
+  onClose();
+};
+
+const SideDrawer = ({ show, onClick, onClose }) => {
+  const [activeLink, setActiveLink] = useState("home");
+
   const content = (
-    <div className={`${props.show === false ? styles.container : ""}`}>
-      <CSSTransition
-        in={props.show}
-        timeout={200}
-        classNames="right-to-left"
-        // mountOnEnter
-        // unmountOnExit
-      >
-        <aside className={styles.side__drawer} onClick={props.onClick}>
+    <div className={`${show === false ? styles.container : ""}`}>
+      <CSSTransition in={show} timeout={200} classNames="right-to-left">
+        <aside className={styles.side__drawer} onClick={onClick}>
           <ol className={styles.navbar__links__responsive}>
             <li className={styles.navbar__item__responsive}>
               <Link
@@ -51,9 +43,9 @@ const SideDrawer = (props) => {
                 smooth={true}
                 duration={10}
                 offset={-100}
-                onClick={() => {
-                  handleNavBarLinksClicks("home");
-                }}
+                onClick={() =>
+                  handleNavBarLinksClicks("home", setActiveLink, onClose)
+                }
               >
                 Home
               </Link>
@@ -66,9 +58,9 @@ const SideDrawer = (props) => {
                 to="expertise"
                 smooth={true}
                 duration={10}
-                onClick={() => {
-                  handleNavBarLinksClicks("expertise");
-                }}
+                onClick={() =>
+                  handleNavBarLinksClicks("expertise", setActiveLink, onClose)
+                }
               >
                 Expertise
               </Link>
@@ -81,9 +73,9 @@ const SideDrawer = (props) => {
                 to="work"
                 smooth={true}
                 duration={10}
-                onClick={() => {
-                  handleNavBarLinksClicks("work");
-                }}
+                onClick={() =>
+                  handleNavBarLinksClicks("work", setActiveLink, onClose)
+                }
               >
                 Work
               </Link>
@@ -96,9 +88,9 @@ const SideDrawer = (props) => {
                 to="about"
                 smooth={true}
                 duration={10}
-                onClick={() => {
-                  handleNavBarLinksClicks("about");
-                }}
+                onClick={() =>
+                  handleNavBarLinksClicks("about", setActiveLink, onClose)
+                }
               >
                 About
               </Link>
@@ -111,15 +103,15 @@ const SideDrawer = (props) => {
                 to="contact"
                 smooth={true}
                 duration={10}
-                onClick={() => {
-                  handleNavBarLinksClicks("contact");
-                }}
+                onClick={() =>
+                  handleNavBarLinksClicks("contact", setActiveLink, onClose)
+                }
               >
                 Contact
               </Link>
             </li>
             <div className={styles.container__button__sideDrawer}>
-              <Button onText={"Github"} onGithub={true} />
+              <Button onText="Github" onGithub={true} />
             </div>
           </ol>
         </aside>

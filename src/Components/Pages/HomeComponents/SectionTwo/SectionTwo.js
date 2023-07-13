@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import SkillsMarquee from "../../../shared/Marquee/SkillsMarquee";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
 import styles from "./SectionTwo.module.css";
 
 const SectionTwo = () => {

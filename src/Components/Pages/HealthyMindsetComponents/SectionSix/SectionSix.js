@@ -1,13 +1,14 @@
 import React from "react";
 
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
 import styles from "./SectionSix.module.css";
 
 const SectionSix = () => {
   return (
     <div>
       <section className={styles.section__six__container}>
-        <IndividualAnimation onDelay={0.8}>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.container__images}>
               <img
@@ -18,8 +19,8 @@ const SectionSix = () => {
               />
             </div>
           </div>
-        </IndividualAnimation>
-        <IndividualAnimation onDelay={0.8}>
+        </MemoizedIndividualAnimation>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__right__section}>
             <div className={styles.container__images}>
               <img
@@ -30,10 +31,12 @@ const SectionSix = () => {
               />
             </div>
           </div>
-        </IndividualAnimation>
+        </MemoizedIndividualAnimation>
       </section>
     </div>
   );
 };
+
+const MemoizedIndividualAnimation = React.memo(IndividualAnimation);
 
 export default SectionSix;

@@ -23,13 +23,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div
-      className={`${styles.home__container__animation} ${
-        loading && styles.loading
-      }`}
-    >
+    <div>
       {loading && (
-        <div className={styles.loader__container__animation}>
+        <div>
           <Loader />
         </div>
       )}

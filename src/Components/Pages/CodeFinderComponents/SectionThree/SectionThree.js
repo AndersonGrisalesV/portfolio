@@ -2,6 +2,7 @@ import React from "react";
 
 import Card from "../../../shared/UIElements/Card";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
 import styles from "./SectionThree.module.css";
 
 const SectionThree = () => {
@@ -11,13 +12,7 @@ const SectionThree = () => {
         <div className={styles.container__left__section}>
           <div className={styles.container__images}>
             <IndividualAnimation onDelay={0.8}>
-              <Card
-                onImg={
-                  "https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742493/Portfolio/projects/CodeFinder/Group_194_cpmevy.svg"
-                }
-                onImgDescription={"code finder section three image"}
-                onCardCodeFinder={true}
-              />
+              <MemoizedCard />
             </IndividualAnimation>
           </div>
         </div>
@@ -33,7 +28,7 @@ const SectionThree = () => {
             <IndividualAnimation onDelay={0.8}>
               <p className={styles.description__text}>
                 After the emphasize phase and preliminary competitive audit with
-                the user I gained a better understanding of the target user's
+                the user, I gained a better understanding of the target user's
                 needs and discovered that many of them struggle to find the
                 right coding tutorials due to scattered information on the
                 internet. I also found that many coding websites either offer
@@ -56,5 +51,13 @@ const SectionThree = () => {
     </div>
   );
 };
+
+const MemoizedCard = React.memo(() => (
+  <Card
+    onImg="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742493/Portfolio/projects/CodeFinder/Group_194_cpmevy.svg"
+    onImgDescription="code finder section three image"
+    onCardCodeFinder
+  />
+));
 
 export default SectionThree;

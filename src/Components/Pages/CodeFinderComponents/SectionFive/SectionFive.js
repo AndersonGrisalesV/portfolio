@@ -1,8 +1,10 @@
 import React from "react";
 
-import styles from "./SectionFive.module.css";
 import Card from "../../../shared/UIElements/Card";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
+import styles from "./SectionFive.module.css";
+
 const SectionFive = () => {
   return (
     <div>
@@ -10,28 +12,19 @@ const SectionFive = () => {
         <div className={styles.container__left__section}>
           <div className={styles.container__images}>
             <IndividualAnimation onDelay={0.8}>
-              <Card
-                onImg={
-                  "https://res.cloudinary.com/doa4qiuc2/image/upload/v1686082485/Portfolio/projects/CodeFinder/SectionFiveImageOne_klnmqq.svg"
-                }
-                onImgDescription={"code finder section five image one"}
-                onCardCodeFinder={true}
+              <MemoizedCard
+                onImg="https://res.cloudinary.com/doa4qiuc2/image/upload/v1686082485/Portfolio/projects/CodeFinder/SectionFiveImageOne_klnmqq.svg"
+                onImgDescription="code finder section five image one"
               />
 
-              <Card
-                onImg={
-                  "https://res.cloudinary.com/doa4qiuc2/image/upload/v1686082484/Portfolio/projects/CodeFinder/SectionFiveImageTwo_iolmmm.svg"
-                }
-                onImgDescription={"code finder section five image two"}
-                onCardCodeFinder={true}
+              <MemoizedCard
+                onImg="https://res.cloudinary.com/doa4qiuc2/image/upload/v1686082484/Portfolio/projects/CodeFinder/SectionFiveImageTwo_iolmmm.svg"
+                onImgDescription="code finder section five image two"
               />
 
-              <Card
-                onImg={
-                  "https://res.cloudinary.com/doa4qiuc2/image/upload/v1686082484/Portfolio/projects/CodeFinder/SectionFiveImageThree_vhe9kk.svg"
-                }
-                onImgDescription={"code finder section five image three"}
-                onCardCodeFinder={true}
+              <MemoizedCard
+                onImg="https://res.cloudinary.com/doa4qiuc2/image/upload/v1686082484/Portfolio/projects/CodeFinder/SectionFiveImageThree_vhe9kk.svg"
+                onImgDescription="code finder section five image three"
               />
             </IndividualAnimation>
           </div>
@@ -56,5 +49,9 @@ const SectionFive = () => {
     </div>
   );
 };
+
+const MemoizedCard = React.memo(({ onImg, onImgDescription }) => (
+  <Card onImg={onImg} onImgDescription={onImgDescription} onCardCodeFinder />
+));
 
 export default SectionFive;

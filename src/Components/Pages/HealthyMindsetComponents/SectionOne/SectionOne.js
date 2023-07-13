@@ -1,14 +1,15 @@
 import React from "react";
 
-import styles from "./SectionOne.module.css";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
+import styles from "./SectionOne.module.css";
 
 const SectionOne = () => {
   return (
     <div>
       <section className={styles.section__one__container}>
         <div className={styles.container__center__section}>
-          <IndividualAnimation onDelay={0.8}>
+          <MemoizedIndividualAnimation onDelay={0.8}>
             <div className={styles.container__healthy__mindset__image__text}>
               <h1 className={styles.healthy__mindset__text}>Healthy</h1>
               <div className={styles.container__image__logo}>
@@ -20,20 +21,22 @@ const SectionOne = () => {
               </div>
               <h1 className={styles.healthy__mindset__text}>Mindset</h1>
             </div>
-          </IndividualAnimation>
+          </MemoizedIndividualAnimation>
           <div className={styles.container__image}>
-            <IndividualAnimation onDelay={1.1}>
+            <MemoizedIndividualAnimation onDelay={1.1}>
               <img
                 src="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685647875/Portfolio/projects/HealthyMindset/healthyMindsetSectionOne_rrrfb6.svg"
                 alt="Healthy_Mindset_image"
                 loading="lazy"
               />
-            </IndividualAnimation>
+            </MemoizedIndividualAnimation>
           </div>
         </div>
       </section>
     </div>
   );
 };
+
+const MemoizedIndividualAnimation = React.memo(IndividualAnimation);
 
 export default SectionOne;

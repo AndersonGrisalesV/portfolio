@@ -45,15 +45,6 @@
   }
 }
 
-@media only screen and (max-width: 966px) {
-}
-
-@media only screen and (max-width: 866px) {
-}
-
-@media only screen and (max-width: 766px) {
-}
-
 @media only screen and (max-width: 666px) {
   .container__images {
     padding-left: 40px;
@@ -61,16 +52,10 @@
   }
 }
 
-@media only screen and (max-width: 566px) {
-}
-
 @media only screen and (max-width: 490px) {
   .section__six__container {
     margin-top: 140px;
   }
-}
-
-@media only screen and (max-width: 344px) {
 }
 
 @media only screen and (max-width: 180px) {

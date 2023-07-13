@@ -2,26 +2,25 @@ import React from "react";
 
 import Card from "../../../shared/UIElements/Card";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
 import styles from "./SectionFour.module.css";
 
 const SectionFour = () => {
   return (
     <div>
       <section className={styles.section__four__container}>
-        <IndividualAnimation onDelay={0.8}>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.container__images}>
-              <Card
-                onImg={
-                  "https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742987/Portfolio/projects/GroceryShop/GroceryShopimageSectionFourImageOne_ufaocv.svg"
-                }
-                onImgDescription={"grocery shop section four images one"}
-                onCardHealthyMindset={true}
+              <MemoizedCard
+                onImg="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742987/Portfolio/projects/GroceryShop/GroceryShopimageSectionFourImageOne_ufaocv.svg"
+                onImgDescription="grocery shop section four images one"
+                onCardHealthyMindset
               />
             </div>
           </div>
-        </IndividualAnimation>
-        <IndividualAnimation onDelay={0.8}>
+        </MemoizedIndividualAnimation>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__right__section}>
             <div className={styles.container__images}>
               <img
@@ -32,10 +31,13 @@ const SectionFour = () => {
               />
             </div>
           </div>
-        </IndividualAnimation>
+        </MemoizedIndividualAnimation>
       </section>
     </div>
   );
 };
+
+const MemoizedIndividualAnimation = React.memo(IndividualAnimation);
+const MemoizedCard = React.memo(Card);
 
 export default SectionFour;

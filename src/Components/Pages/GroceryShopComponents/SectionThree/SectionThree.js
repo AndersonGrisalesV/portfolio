@@ -2,13 +2,14 @@ import React from "react";
 
 import Card from "../../../shared/UIElements/Card";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
 import styles from "./SectionThree.module.css";
 
 const SectionThree = () => {
   return (
     <div>
       <section className={styles.section__three__container}>
-        <IndividualAnimation onDelay={0.8}>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.container__starting__the__text}>
               <h1 className={styles.starting__text}>Starting</h1>
@@ -27,23 +28,24 @@ const SectionThree = () => {
               </p>
             </div>
           </div>
-        </IndividualAnimation>
-        <IndividualAnimation onDelay={0.8}>
+        </MemoizedIndividualAnimation>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__right__section}>
             <div className={styles.container__images}>
-              <Card
-                onImg={
-                  "https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742985/Portfolio/projects/GroceryShop/GroceryShopimageSectionThree_jimsx4.svg"
-                }
-                onImgDescription={"grocery shop section three images"}
-                onCardHealthyMindset={true}
+              <MemoizedCard
+                onImg="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742985/Portfolio/projects/GroceryShop/GroceryShopimageSectionThree_jimsx4.svg"
+                onImgDescription="grocery shop section three images"
+                onCardHealthyMindset
               />
             </div>
           </div>
-        </IndividualAnimation>
+        </MemoizedIndividualAnimation>
       </section>
     </div>
   );
 };
+
+const MemoizedIndividualAnimation = React.memo(IndividualAnimation);
+const MemoizedCard = React.memo(Card);
 
 export default SectionThree;

@@ -4,11 +4,11 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./Components/Pages/Home";
 import Dplace from "./Components/Pages/Dplace";
 import HealthyMindset from "./Components/Pages/HealthyMindset";
-
-import "./App.css";
 import CodeFinder from "./Components/Pages/CodeFinder";
 import GroceryShop from "./Components/Pages/GroceryShop";
 import NotFound from "./Components/Pages/NotFound";
+
+import "./App.css";
 
 function App() {
   const location = useLocation();
@@ -81,17 +81,14 @@ function App() {
   }, [location]);
 
   return (
-    <div className="main__container">
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/projects/dplace" element={<Dplace />} />
-        <Route path="/projects/healthy_mindset" element={<HealthyMindset />} />
-        <Route path="/projects/code_finder" element={<CodeFinder />} />
-        <Route path="/projects/grocery_shop" element={<GroceryShop />} />
-        <Route path="*" element={<NotFound />} />
-        {/* <Route path="*" element={<p>Not Found!</p>} /> */}
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/home" element={<Home />} />
+      <Route path="/projects/dplace" element={<Dplace />} />
+      <Route path="/projects/healthy_mindset" element={<HealthyMindset />} />
+      <Route path="/projects/code_finder" element={<CodeFinder />} />
+      <Route path="/projects/grocery_shop" element={<GroceryShop />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 

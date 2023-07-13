@@ -1,14 +1,15 @@
 import React from "react";
 
 import Card from "../../../shared/UIElements/Card";
-import styles from "./SectionTwo.module.css";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
+import styles from "./SectionTwo.module.css";
 
 const SectionTwo = () => {
   return (
     <div>
       <section className={styles.section__two__container}>
-        <IndividualAnimation onDelay={0.8}>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.container__understanding__the__text}>
               <h1 className={styles.understanding__text}>Understanding</h1>
@@ -32,23 +33,24 @@ const SectionTwo = () => {
               </p>
             </div>
           </div>
-        </IndividualAnimation>
-        <IndividualAnimation onDelay={0.8}>
+        </MemoizedIndividualAnimation>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__right__section}>
             <div className={styles.container__images}>
-              <Card
-                onImg={
-                  "https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742985/Portfolio/projects/GroceryShop/GroceryShopimageSectionTwo_adku3x.svg"
-                }
-                onImgDescription={"grocery shop section two images"}
-                onCardHealthyMindset={true}
+              <MemoizedCard
+                onImg="https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742985/Portfolio/projects/GroceryShop/GroceryShopimageSectionTwo_adku3x.svg"
+                onImgDescription="grocery shop section two images"
+                onCardHealthyMindset
               />
             </div>
           </div>
-        </IndividualAnimation>
+        </MemoizedIndividualAnimation>
       </section>
     </div>
   );
 };
+
+const MemoizedIndividualAnimation = React.memo(IndividualAnimation);
+const MemoizedCard = React.memo(Card);
 
 export default SectionTwo;

@@ -3,13 +3,14 @@ import React from "react";
 import Card from "../../../shared/UIElements/Card";
 import Button from "../../../shared/UIElements/Button";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
 import styles from "./SectionSix.module.css";
 
 const SectionSix = () => {
   return (
     <div>
       <section className={styles.section__six__container}>
-        <IndividualAnimation onDelay={0.8}>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.container__design__conclusion__text}>
               <h1 className={styles.design__text}>Design</h1>
@@ -33,11 +34,11 @@ const SectionSix = () => {
               </p>
             </div>
           </div>
-        </IndividualAnimation>
-        <IndividualAnimation onDelay={0.8}>
+        </MemoizedIndividualAnimation>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__right__section}>
             <div className={styles.container__images}>
-              <Card
+              <MemoizedCard
                 onImg={
                   "https://res.cloudinary.com/doa4qiuc2/image/upload/v1685742985/Portfolio/projects/GroceryShop/GroceryShopimageSectionSix_mq2wnx.svg"
                 }
@@ -54,10 +55,13 @@ const SectionSix = () => {
               />
             </div>
           </div>
-        </IndividualAnimation>
+        </MemoizedIndividualAnimation>
       </section>
     </div>
   );
 };
+
+const MemoizedIndividualAnimation = React.memo(IndividualAnimation);
+const MemoizedCard = React.memo(Card);
 
 export default SectionSix;

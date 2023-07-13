@@ -19,15 +19,9 @@ const SectionOne = () => {
 
   const [openPasswordModal, setOpenPasswordModal] = useState(false);
   const [splineError, setSplineError] = useState(false);
-  // const [timer, setTimer] = useState(true);
+
   const [delayLoader, setDelayLoader] = useState(true);
 
-  // setTimeout(() => {
-  //   setLoading(false);
-  // }, 2000);
-  // setTimeout(() => {
-  //   setTimer(false);
-  // }, 2000);
   setTimeout(() => {
     setDelayLoader(false);
   }, 5000);
@@ -129,21 +123,14 @@ const SectionOne = () => {
   }, [texts, currentTextIndex, currentText]);
 
   const [isMobile, setIsMobile] = useState(false);
-  const [showMascotPlaceHolder, setShowMascotPlaceHolder] = useState(false);
+
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 768px)");
     setIsMobile(mq.matches);
     const handleResize = () => setIsMobile(mq.matches);
     mq.addEventListener("change", handleResize);
-    setShowMascotPlaceHolder(mq.matches);
-    // setDelayLoader(mq.matches);
 
     if (!isMobile) {
-      // setShowMascotPlaceHolder(false);
-      setTimeout(() => {
-        // setDelayLoader(false);
-      }, 3000);
-      // setShowMascotPlaceHolder(false);
       mq.removeEventListener("change", handleResize);
     }
   }, [isMobile]);
@@ -151,16 +138,12 @@ const SectionOne = () => {
   const mascot = useRef();
 
   function onLoad(spline) {
-    console.log(spline);
     const obj = spline.findObjectByName("Camera");
-    // save the object in a ref for later use
-    mascot.current = obj;
 
-    // obj.visible = false;
+    mascot.current = obj;
   }
 
   useEffect(() => {
-    // console.log(mascot);
     setTimeout(() => {
       if (mascot.current === undefined) {
         setSplineError(true);
@@ -197,17 +180,6 @@ const SectionOne = () => {
       }
     };
   }, []);
-
-  // useEffect(() => {
-  //   const handleVisibilityChange = () => {
-  //     setIsAnimationVisible(document.visibilityState === "visible");
-  //   };
-
-  //   document.addEventListener("visibilitychange", handleVisibilityChange);
-  //   return () => {
-  //     document.removeEventListener("visibilitychange", handleVisibilityChange);
-  //   };
-  // }, []);
 
   return (
     <React.Fragment>
@@ -248,7 +220,6 @@ const SectionOne = () => {
                 {currentText}
                 <span className={styles.cursor}>|</span>
               </h1>
-              {/* <span className={styles.cursor}>|</span> */}
             </motion.div>
 
             <motion.div
@@ -299,7 +270,6 @@ const SectionOne = () => {
                     ? styles.image__logo
                     : styles.image__logo__hidden
                 }
-                // style={{ visibility: delayLoader ? "hidden" : "visible" }}
                 src={LogoLoading}
                 alt="Logo"
                 loading="lazy"
@@ -320,7 +290,6 @@ const SectionOne = () => {
                   <div className={styles.container__loader}>
                     <img
                       className={styles.image__logo}
-                      // style={{ visibility: delayLoader ? "hidden" : "visible" }}
                       src={LogoLoading}
                       alt="Logo"
                       loading="lazy"
@@ -344,16 +313,10 @@ const SectionOne = () => {
                     ) : (
                       <Spline
                         onLoad={onLoad}
-                        // className={styles.spline__animation}
                         style={{
                           width: "100%",
                           height: "105%",
                           visibility: isAnimationVisible ? "visible" : "hidden",
-                          // display: delayLoader ? "none" : "flex",
-                          // display: delayLoader ? "none" : "block",
-                          // visibility: delayLoader ? "hidden" : "visible",
-                          // opacity: delayLoader ? 0 : 1,
-                          // transition: "opacity 0.1s ease-in-out",
                         }}
                         scene="https://draft.spline.design/tivv5dBVV4Tq87Ov/scene.splinecode"
                       />

@@ -1,15 +1,17 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 
 import styles from "./NotFound.module.css";
-import Astronaut from "../shared/UIElements/Astronaut";
-import Footer from "../shared/Footer/Footer";
-import NavBar from "../shared/NavBar/NavBar";
-import Button from "../shared/UIElements/Button";
+
+const NavBar = lazy(() => import("../shared/NavBar/NavBar"));
+const Button = lazy(() => import("../shared/UIElements/Button"));
+const Footer = lazy(() => import("../shared/Footer/Footer"));
 
 const NotFound = () => {
   return (
     <React.Fragment>
-      <NavBar onNotFound={true} />
+      <Suspense>
+        <NavBar onNotFound={true} />
+      </Suspense>
       <div className={styles.container}>
         <div className={styles.container__text}>
           <h1 className={styles.number}>404</h1>
@@ -195,7 +197,9 @@ const NotFound = () => {
           <Button onText={"Home"} onHome={true} />
         </div>
       </div>
-      <Footer />
+      <Suspense>
+        <Footer />
+      </Suspense>
     </React.Fragment>
   );
 };

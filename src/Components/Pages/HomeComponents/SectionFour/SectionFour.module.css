@@ -5,7 +5,6 @@
   margin-top: 202px;
   gap: 2.2%;
   width: 100%;
-
   justify-content: center;
   align-items: center;
 }
@@ -164,12 +163,10 @@
   .section__four__container {
     box-sizing: border-box;
     display: flex;
-
     position: relative;
     margin: 0px;
     margin-left: -62px;
     width: 100%;
-
     justify-content: flex-end;
     align-items: center;
   }
@@ -202,7 +199,6 @@
   .responsive__container__left__section img {
     width: 32%;
     height: 32%;
-    /* margin-right: 10px; */
   }
 }
 

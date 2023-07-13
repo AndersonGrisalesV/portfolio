@@ -6,8 +6,6 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  /* margin-top: 112px; */
-
   width: 100%;
 }
 
@@ -38,7 +36,7 @@
   background: linear-gradient(
     90deg,
     rgb(25, 199, 142, 1) 5%,
-    /* rgb(60, 156, 229, 1) 100%, */ rgb(60, 156, 229, 1) 150%
+    rgb(60, 156, 229, 1) 150%
   );
   background-clip: text;
   color: transparent;
@@ -73,7 +71,6 @@
     align-items: center;
     box-sizing: border-box;
     margin-top: 68px;
-
     width: 100%;
   }
 
@@ -116,9 +113,6 @@
   }
 }
 
-@media only screen and (max-width: 766px) {
-}
-
 @media only screen and (max-width: 666px) {
   .my__text {
     font-size: var(--fz-slg);
@@ -129,9 +123,6 @@
   }
 }
 
-@media only screen and (max-width: 566px) {
-}
-
 @media only screen and (max-width: 490px) {
   .my__text {
     font-size: var(--fz-smlg);
@@ -140,10 +131,4 @@
     font-size: var(--fz-smlg);
     margin-top: -12px;
   }
-}
-
-@media only screen and (max-width: 344px) {
-}
-
-@media only screen and (max-width: 200px) {
 }

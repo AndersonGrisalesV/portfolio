@@ -12,9 +12,7 @@
   background-color: #0d1217;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
-
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-
   z-index: 5;
 }
 
@@ -49,14 +47,12 @@
 
 .container__projects__logos {
   display: flex;
-
   justify-content: center;
 }
 
 .container__logo {
   flex: 1 1;
   display: flex;
-
   justify-content: center;
 }
 
@@ -69,7 +65,6 @@
   flex: auto;
   justify-content: flex-end;
   margin-right: 62px;
-  /* margin-left: 62px; */
   text-align: right;
 }
 
@@ -99,11 +94,6 @@
   cursor: pointer;
 }
 
-/* .links:hover {
-  background-color: transparent;
-  color: #19c78e;
-} */
-
 .navbar__button {
   font-family: "Overlock", cursive;
   font-weight: 500;
@@ -113,10 +103,8 @@
   height: 48px;
   color: #fff;
   opacity: 0.95;
-
   background-color: transparent;
   cursor: pointer;
-
   border-radius: 6px;
   box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
   border: solid 1px transparent;
@@ -136,36 +124,21 @@
 }
 
 .active__link {
-  /* Add your desired styles for the active link */
   background-color: transparent;
   color: #19c78e;
-  /* Additional styles... */
 }
 
-/* .active__link__dplace:hover {
-  background-color: transparent;
-  color: #da4453;
-} */
-
 @media only screen and (max-width: 960px) {
-  /* Small screens */
   .nav__bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
     width: 100%;
-
     position: fixed;
     background-color: #0d1217;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* 
-    background: transparent;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); */
-
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-
     z-index: 4;
   }
 
@@ -180,7 +153,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 95vh;
   }
 
@@ -197,7 +169,6 @@
 
   .navbar__item__responsive a {
     text-decoration: none;
-    /* Apply the clamp function to set the font size */
     font-size: clamp(var(--fz-lg), 2vw, var(--fz-sm));
     font-weight: 500;
     transition: all 0.3s ease;
@@ -224,10 +195,8 @@
     height: 48px;
     color: #fff;
     opacity: 0.95;
-
     background-color: transparent;
     cursor: pointer;
-
     border-radius: 6px;
     box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
     border: solid 1px transparent;
@@ -269,43 +238,34 @@
   }
 
   .menu {
-    /* height: 44.4px; */
     display: flex;
     position: relative;
     margin-right: 32px;
     justify-content: inherit;
     z-index: 4;
-
     justify-content: space-between;
     align-items: center;
-
     background-color: #0d1217;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
     z-index: 4;
   }
 
   .menu__responsive {
     margin-right: 28px;
   }
-
-  /* rest of the CSS for small screens */
 }
 
 @media only screen and (max-width: 760px) {
-  /* Small screens */
   .nav__bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
     width: 100%;
-
     position: fixed;
     background-color: #0d1217;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-
     z-index: 4;
   }
 
@@ -351,7 +311,6 @@
   .container__logo {
     flex: 1 1;
     display: flex;
-
     justify-content: inherit;
   }
 
@@ -364,15 +323,11 @@
   }
 
   .menu {
-    /* height: 34.4px; */
     display: flex;
     position: relative;
     z-index: 4;
-    /* margin-right: 32px; */
     justify-content: inherit;
   }
-
-  /* rest of the CSS for small screens */
 }
 
 @media (max-width: 600px) {
@@ -384,7 +339,6 @@
 
   .navbar__item__responsive a {
     text-decoration: none;
-    /* Apply the clamp function to set the font size */
     font-size: clamp(var(--fz-md), 2vw, var(--fz-sm));
     font-weight: 500;
     transition: all 0.3s ease;

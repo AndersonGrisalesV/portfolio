@@ -75,9 +75,6 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 1266px) {
-}
-
 @media only screen and (max-width: 1199px) {
   .section__three__container {
     box-sizing: border-box;
@@ -98,15 +95,6 @@
   }
 }
 
-@media only screen and (max-width: 966px) {
-}
-
-@media only screen and (max-width: 866px) {
-}
-
-@media only screen and (max-width: 766px) {
-}
-
 @media only screen and (max-width: 666px) {
   .starting__text {
     font-size: var(--fz-slg);
@@ -121,9 +109,6 @@
     font-size: var(--fz-md);
     width: calc(100% - 0px);
   }
-}
-
-@media only screen and (max-width: 566px) {
 }
 
 @media only screen and (max-width: 490px) {

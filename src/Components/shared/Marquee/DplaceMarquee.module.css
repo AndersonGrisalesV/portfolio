@@ -9,9 +9,7 @@
 }
 
 .image__wrapper img:hover {
-  transform: scale(
-    1.05
-  ); /* Increase the scale to make the image slightly bigger */
+  transform: scale(1.05);
 }
 
 @media only screen and (max-width: 966px) {
@@ -25,16 +23,10 @@
   }
 }
 
-@media only screen and (max-width: 866px) {
-}
-
 @media only screen and (max-width: 766px) {
   .image__wrapper img {
     height: 91px;
   }
-}
-
-@media only screen and (max-width: 666px) {
 }
 
 @media only screen and (max-width: 566px) {

@@ -2,13 +2,14 @@ import React from "react";
 
 import Button from "../../../shared/UIElements/Button";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
 import styles from "./SectionSix.module.css";
 
 const SectionSix = () => {
   return (
     <div>
       <section className={styles.section__six__container}>
-        <IndividualAnimation onDelay={0.8}>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.container__images}>
               <img
@@ -19,8 +20,8 @@ const SectionSix = () => {
               />
             </div>
           </div>
-        </IndividualAnimation>
-        <IndividualAnimation onDelay={0.8}>
+        </MemoizedIndividualAnimation>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__right__section}>
             <div className={styles.container__last__the__text}>
               <h1 className={styles.last__text}>Last thoughts on</h1>
@@ -41,19 +42,18 @@ const SectionSix = () => {
               </p>
             </div>
           </div>
-        </IndividualAnimation>
+        </MemoizedIndividualAnimation>
       </section>
-      <IndividualAnimation onDelay={0.4}>
+      <MemoizedIndividualAnimation onDelay={0.4}>
         <div className={styles.button__container}>
-          <Button
-            onText={"Case study"}
-            onCodeFinder={true}
-            onCaseStudy={true}
-          />
+          <MemoizedButton onText="Case study" onCodeFinder onCaseStudy />
         </div>
-      </IndividualAnimation>
+      </MemoizedIndividualAnimation>
     </div>
   );
 };
+
+const MemoizedIndividualAnimation = React.memo(IndividualAnimation);
+const MemoizedButton = React.memo(Button);
 
 export default SectionSix;

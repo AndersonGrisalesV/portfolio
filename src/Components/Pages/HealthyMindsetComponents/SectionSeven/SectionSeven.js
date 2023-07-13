@@ -2,16 +2,17 @@ import React from "react";
 
 import Button from "../../../shared/UIElements/Button";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
 import styles from "./SectionSeven.module.css";
 
 const SectionSeven = () => {
   return (
     <div>
       <section className={styles.section__seven__container}>
-        <IndividualAnimation onDelay={0.8}>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.container__conslusion__design__text}>
-              <h1 className={styles.conclusion__text}>Conslusion of the</h1>
+              <h1 className={styles.conclusion__text}>Conclusion of the</h1>
               <h1 className={styles.design__text}>design process</h1>
             </div>
 
@@ -30,8 +31,8 @@ const SectionSeven = () => {
               </p>
             </div>
           </div>
-        </IndividualAnimation>
-        <IndividualAnimation onDelay={0.8}>
+        </MemoizedIndividualAnimation>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__right__section}>
             <div className={styles.container__images}>
               <img
@@ -49,10 +50,12 @@ const SectionSeven = () => {
               />
             </div>
           </div>
-        </IndividualAnimation>
+        </MemoizedIndividualAnimation>
       </section>
     </div>
   );
 };
+
+const MemoizedIndividualAnimation = React.memo(IndividualAnimation);
 
 export default SectionSeven;

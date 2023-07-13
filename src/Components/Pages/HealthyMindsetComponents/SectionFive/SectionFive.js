@@ -2,13 +2,14 @@ import React from "react";
 
 import Card from "../../../shared/UIElements/Card";
 import IndividualAnimation from "../../../shared/ScrollAnimation/IndividualAnimation";
+
 import styles from "./SectionFive.module.css";
 
 const SectionFive = () => {
   return (
     <div>
       <section className={styles.section__five__container}>
-        <IndividualAnimation onDelay={0.8}>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__left__section}>
             <div className={styles.container__improving__visual__text}>
               <h1 className={styles.improving__text}>Improving the</h1>
@@ -27,8 +28,8 @@ const SectionFive = () => {
               </p>
             </div>
           </div>
-        </IndividualAnimation>
-        <IndividualAnimation onDelay={0.8}>
+        </MemoizedIndividualAnimation>
+        <MemoizedIndividualAnimation onDelay={0.8}>
           <div className={styles.container__right__section}>
             <div className={styles.container__images}>
               <Card
@@ -40,10 +41,12 @@ const SectionFive = () => {
               />
             </div>
           </div>
-        </IndividualAnimation>
+        </MemoizedIndividualAnimation>
       </section>
     </div>
   );
 };
+
+const MemoizedIndividualAnimation = React.memo(IndividualAnimation);
 
 export default SectionFive;

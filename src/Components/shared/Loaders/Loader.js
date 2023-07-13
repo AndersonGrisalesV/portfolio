@@ -7,7 +7,6 @@ const Loader = ({
   onLoaderHealthyMindset = false,
   onLoaderCodeFinder = false,
   onLoaderGroceryShop = false,
-  onMascot = false,
 }) => {
   const [visibleLogo, setVisibleLogo] = useState("LogoZero");
   const [reload, setReload] = useState(false);

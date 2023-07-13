@@ -77,9 +77,6 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 1266px) {
-}
-
 @media only screen and (max-width: 1199px) {
   .section__six__container {
     box-sizing: border-box;
@@ -102,15 +99,6 @@
   .last__thoughts__image {
     width: 100%;
   }
-}
-
-@media only screen and (max-width: 966px) {
-}
-
-@media only screen and (max-width: 866px) {
-}
-
-@media only screen and (max-width: 766px) {
 }
 
 @media only screen and (max-width: 666px) {
@@ -141,10 +129,6 @@
 }
 
 @media only screen and (max-width: 490px) {
-  /* .section__six__container {
-    margin-top: 140px;
-  } */
-
   .last__text {
     font-size: var(--fz-smlg);
     letter-spacing: 0.8px;
