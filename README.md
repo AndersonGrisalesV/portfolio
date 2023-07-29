@@ -1,7 +1,12 @@
+
+
 <div align="center">
    <a href="https://andersongrisalesv.github.io/portfolio/#/home">
         <img src="https://user-images.githubusercontent.com/94204560/228659183-bf7b8217-a654-4383-8927-6f5714584226.png" width=20% height=20%>
   </a>
+ <div align="center">
+   <h6>(Click the Logo to go to the website)</h6> 
+ </div>
   <div align="center">
  
    <img src="https://user-images.githubusercontent.com/94204560/228668125-6f0bf25b-e39b-4bdb-a23b-6cf458a6bc7f.png">
