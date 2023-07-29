@@ -27,6 +27,10 @@ const imageUrls = [
     alt: "Javascript",
   },
   {
+    src: "https://res.cloudinary.com/doa4qiuc2/image/upload/v1690671165/Portfolio/Typescript_eyzesv.png",
+    alt: "Typecript",
+  },
+  {
     src: "https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373587/Portfolio/HTML_qp3lay.png",
     alt: "HTML",
   },
@@ -89,6 +93,10 @@ const imageUrls = [
   {
     src: "https://res.cloudinary.com/doa4qiuc2/image/upload/v1682373589/Portfolio/NPM_aspgog.png",
     alt: "Npm",
+  },
+  {
+    src: "https://res.cloudinary.com/doa4qiuc2/image/upload/v1690670969/Portfolio/Python_zgbfm3.png",
+    alt: "Python",
   },
 ];
 
